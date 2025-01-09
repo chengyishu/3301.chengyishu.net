@@ -1,0 +1,1462 @@
+<!doctype html>
+<html style='font-size:18px !important'>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.428571; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-size-adjust: inherit; font-kerning: inherit; font-variant-alternates: inherit; font-variant-ligatures: inherit; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-position: inherit; font-variant-emoji: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-variation-settings: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; border-right-style: none; border-right-color: currentcolor; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: medium; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: medium !important; border-style: none !important; border-color: currentcolor !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; border-bottom-style: none; border-bottom-color: currentcolor; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: medium; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left-width: 0.25em; border-left-style: solid; border-left-color: rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+
+
+/*快速自定义配置*/
+:root {
+    --monospace: "Iosevka Curly", "JetBrains Mono", "Fira Code", "Cascadia Code", Menlo, "Ubuntu Mono", Consolas, HYZhengYuan; /*代码字体*/
+    --text-font: var(--monospace); /*正文字体*/
+    --title-font: var(--monospace); /*标题字体*/
+    --latex-font: var(--monospace); /*LaTeX字体(不含英语)*/
+    --text-line-height: 1.6; /*正文行间距*/
+    --code-line-height: 1.6; /*代码块行间距*/
+    --p-spacing: 0.8rem; /*段间距*/
+    --file-tree-text-size: 1.1rem; /*文件树大小*/
+    --toc-text-size: 1rem; /*大纲大小*/
+    --text-size: 14px; /*字体大小 推荐配置: 应用设置-外观-字体大小*/
+}/*
+ * MIT License
+ *
+ * Copyright (c) 2023 劉強東 https://github.com/liangjingkanji
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+@import url();
+@include-when-export url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --text-color: #333333;
+    --bg-color: #ffffff;
+    --control-text-color: var(--text-color);
+    --meta-content-color: var(--text-color);
+    --active-file-border-color: var(--drake-accent);
+    --rawblock-edit-panel-bd: var(--code-block-bg-color);
+    --item-hover-bg-color: #E5E5E596;
+    --active-file-bg-color: var(--item-hover-bg-color);
+
+    --blur-text-color: rgba(51, 51, 51, 0.5);
+    --drake-accent: #e95f59;
+    --drake-highlight: #d63200;
+    --a-color: #036aca;
+    --variable-color: var(--drake-highlight);
+    --outline-active-color: var(--a-color);
+    --code-block-bg-color: #2b2b2b;
+    --code-block-color: #A9B7C6;
+    --title-color: #135ce0;
+    --blockquote-border-color: #b2aec5;
+    --blockquote-color: #595959;
+    --blockquote-bg-color: #fff9f9;
+    --strong-color: var(--title-color);
+    --h2-underline-color: var(--title-color);
+    --horizontal-divider-color: var(--title-color);
+    --height-light-color: var(--drake-highlight);
+    --height-light-border-color: var(--drake-highlight);
+    --yaml-color: #777777;
+    --yaml-bg-color: #f7f7f7;
+    --footnotes-bg-color: #3c3d3e;
+    --footnotes-highlight: #FFD760;
+    --table-border-color: #dfe2e5;
+    --table-header-bg-color: #f6f8fa;
+    --table-bg-color: var(--bg-color);
+    --table-n2-bg-color: #f6f8fa;
+    --input-bg-color: var(--item-hover-bg-color);
+    --btn-hover-bg-color: var(--item-hover-bg-color);
+    --checkbox-checked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M425.984 726.016l384-384-59.99-61.995-324.01 324.011-152.021-152.021L213.973 512zm384-598.016q36.01 0 61.013 25.984T896 213.974v596.01q0 34.005-25.003 59.99t-61.013 25.983h-596.01q-36.011 0-61.014-25.984t-25.003-59.989v-596.01q0-34.006 25.003-59.99T213.973 128h596.011z' fill='%2365b73b'/%3E%3C/svg%3E");
+    --checkbox-unchecked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M810.667 213.333v597.334H213.333V213.333h597.334m0-85.333H213.333C166.4 128 128 166.4 128 213.333v597.334C128 857.6 166.4 896 213.333 896h597.334C857.6 896 896 857.6 896 810.667V213.333C896 166.4 857.6 128 810.667 128z' fill='%23333333'/%3E%3C/svg%3E");
+}
+
+html {
+    font-size: var(--text-size);
+}
+
+body {
+    font-family: var(--text-font) !important;
+    color: var(--text-color);
+    -webkit-font-feature-settings: "liga" on, "calt" on;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+p {
+    line-height: var(--text-line-height);
+}
+
+#write {
+    background-image: linear-gradient(90deg, rgba(60, 10, 30, .04) 3%, transparent 0), linear-gradient(1turn, rgba(60, 10, 30, .04) 3%, transparent 0);
+    background-size: 20px 20px;
+    background-position: 50%;
+}
+
+/*code block*/
+.md-fences {
+    font-size: 1rem;
+    padding: 0.5rem !important;
+    border-radius: 2px;
+    word-wrap: normal;
+    background-color: var(--code-block-bg-color);
+    color: var(--code-block-color);
+    border: none;
+    line-height: var(--code-line-height);
+}
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) *,
+.on-focus-mode .md-fences.md-focus .CodeMirror-code > :not(.CodeMirror-activeline) *,
+.on-focus-mode .md-htmlblock.md-focus .CodeMirror-code > :not(.CodeMirror-activeline) * {
+    color: #909090 !important
+}
+
+/*inline latex*/
+.MathJax {
+    font-size: 120% !important;
+}
+.MathJax text, .MathJax use {
+    font-family: var(--latex-font);
+}
+/*math-block latex*/
+.md-math-block .MathJax {
+    font-size: 130% !important;
+}
+
+/*mermaid*/
+[id^=mermaidChart] .cluster rect {
+    fill: var(--table-n2-bg-color) !important;
+    stroke: var(--table-border-color) !important;
+}
+[id^=mermaidChart] .grid .tick text,
+[id^=mermaidChart] .titleText {
+    fill: var(--text-color) !important;
+}
+[id^=mermaidChart] .clusters span.nodeLabel {
+    color: var(--text-color) !important;
+    line-height: 1.8rem;
+}
+[mermaid-type="journey"] line {
+    stroke: #7a7a7a !important;
+}
+[mermaid-type="journey"] .label {
+    color: #333 !important;
+}
+[id^=mermaidChart] .relationshipLabelBox {
+    fill: var(--bg-color) !important;
+    opacity: 1 !important;
+    background-color: var(--bg-color) !important;
+}
+[id^=mermaidChart] .legend {
+    fill: var(--text-color) !important;
+}
+[id^=mermaidChart] g.label {
+    font-size: 1rem !important;
+}
+[id^=mermaidChart] line.divider {
+    stroke: var(--table-border-color) !important;
+}
+[id^=mermaidChart] span.nodeLabel {
+    color: var(--code-block-color) !important;
+    line-height: 1.8rem;
+}
+tspan {
+    color: var(--text-color)
+}
+[id^=mermaidChart] .entityLabel {
+    fill: var(--code-block-color) !important;
+}
+[id^=mermaidChart] {
+    fill: var(--text-color) !important;
+}
+[id^=mermaidChart] rect.rect {
+    fill: rgba(175, 255, 212, 0.3) !important;
+}
+.md-diagram-panel-preview text.actor > tspan { /*方块文字*/
+    fill: var(--code-block-color) !important;
+    stroke: none !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+}
+.md-diagram-panel-preview .actor, .md-diagram-panel-preview .entityBox { /*方块*/
+    stroke: var(--table-border-color) !important;
+    fill: var(--code-block-bg-color) !important;
+}
+.md-diagram-panel-preview .actor-line { /*竖线*/
+    stroke: var(--text-color) !important;
+    stroke-width: 1px;
+}
+.md-diagram-panel-preview .messageLine0 { /*横线*/
+    stroke-width: 1.5;
+    stroke-dasharray: none;
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .messageLine1 { /*虚线*/
+    stroke-width: 1.5 !important;
+    stroke-dasharray: 2, 2 !important;
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .messageText { /*描述文字*/
+    fill: var(--text-color) !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+}
+.md-diagram-panel-preview .activation0 { /*长方形*/
+    fill: #e6e6e6 !important;
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .labelText, .md-diagram-panel-preview .labelText > tspan { /*循环标记*/
+    fill: var(--code-block-color) !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+    dominant-baseline: unset;
+    alignment-baseline: unset;
+}
+.md-diagram-panel-preview .labelBox { /*循环标记背景*/
+    stroke: var(--table-border-color) !important;
+    fill: var(--code-block-bg-color) !important;
+}
+.md-diagram-panel-preview .loopLine { /*循环标记虚线*/
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .loopText, .md-diagram-panel-preview .loopText > tspan { /*循环名称*/
+    fill: var(--text-color) !important;
+    font-size: 1rem !important;
+}
+.md-diagram-panel-preview .sequenceNumber { /*序号*/
+    fill: var(--bg-color) !important;
+}
+pre.md-fences-advanced.md-focus .md-fences-adv-panel {
+    border: none;
+}
+.md-diagram-panel-preview .edgePath .path { /*箭头*/
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .edgeLabel rect { /*条件文字背景*/
+    fill: var(--bg-color) !important;
+}
+.md-diagram-panel-preview .edgeLabel span { /*条件文字*/
+    color: var(--text-color) !important;
+    background: var(--bg-color) !important;
+}
+.md-diagram-panel-preview .node rect,
+.md-diagram-panel-preview .node circle,
+.md-diagram-panel-preview .node ellipse,
+.md-diagram-panel-preview .node polygon,
+.md-diagram-panel-preview .node path { /*形状*/
+    stroke: var(--table-border-color) !important;
+    fill: var(--code-block-bg-color) !important;
+}
+#write .md-diagram-panel .md-diagram-panel-preview div { /*形状内文字*/
+    color: var(--code-block-color);
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+}
+
+/*code snippet*/
+#write code, tt {
+    margin: 0 2px;
+    border-radius: 2px;
+    color: var(--drake-highlight);
+    background-color: #fff5f5;
+    padding: .065em .4em;
+}
+
+/*variable*/
+var {
+    color: var(--variable-color);
+    font-weight: bold;
+}
+
+/*raw block*/
+.md-rawblock-control:not(.md-rawblock-tooltip) {
+    border-radius: 2px 0 2px 2px;
+    padding: 0.2rem !important;
+}
+.md-rawblock:hover > .md-rawblock-container {
+    background: none;
+}
+.md-rawblock-input {
+    font-size: 1rem;
+}
+.md-rawblock-tooltip-btn:hover {
+    background: none;
+}
+.md-rawblock:hover > .md-rawblock-tooltip {
+    border-radius: 2px 2px 0 0;
+    margin-bottom: 2px !important;
+}
+.md-rawblock-tooltip.md-rawblock-control {
+    border-radius: 2px 2px 0 0;
+    color: var(--code-block-color);
+}
+.md-rawblock-tooltip-name {
+    color: var(--code-block-color);
+    opacity: 1;
+}
+
+/*quote block*/
+blockquote:before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 4px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--blockquote-border-color);
+    border-radius: 2px;
+}
+
+blockquote {
+    color: var(--blockquote-color);
+    border-radius: 2px;
+    padding: 10px 16px;
+    background-color: var(--blockquote-bg-color);
+    position: relative;
+    border-left: none;
+}
+
+strong {
+    color: var(--strong-color);
+    font-weight: bold;
+}
+#write blockquote strong {
+    color: var(--blockquote-color);
+}
+
+/*link*/
+#write a {
+    color: var(--a-color);
+    text-decoration: none;
+}
+#write h2 a .md-plain {
+    border-bottom: .2rem solid var(--a-color);
+}
+.on-focus-mode #write a .md-plain, .on-focus-mode .md-htmlblock-container a:hover {
+    border-bottom: .1rem solid var(--blur-text-color);
+}
+#write a .md-plain, .md-htmlblock-container a:hover,
+.on-focus-mode #write .md-focus a .md-plain, .md-focus .md-htmlblock-container a:hover {
+    border-bottom: .1rem solid var(--a-color);
+}
+[md-inline=link] a {
+    margin: 0 .2rem;
+}
+a:any-link {
+    color: var(--a-color);
+}
+
+img {
+    border-left: none;
+    border-right: none;
+    vertical-align: baseline;
+    border-radius: 2px;
+}
+
+#write {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px 100px;
+}
+#typora-source .CodeMirror-lines {
+    max-width: 1200px;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--title-font);
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+    color: var(--title-color);
+}
+
+h3.md-focus:before, h4.md-focus:before, h5.md-focus:before, h6.md-focus:before {
+    visibility: hidden;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.on-focus-mode h2.md-end-block.md-heading:not(.md-focus):not(.md-focus-container):after {
+    background-color: var(--blur-text-color) !important;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit !important;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit !important;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit !important;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit !important;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit !important;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit !important;
+}
+
+p, blockquote, ul, ol, dl, table {
+    margin: var(--p-spacing) 0;
+}
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+li {
+    margin: 0.5em 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: var(--horizontal-divider-color);
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul, ol {
+    padding-inline-start: 2em;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+.ty-table-edit {
+    margin-top: -1rem !important;
+}
+#write table {
+    margin-top: 1rem;
+    word-break: initial;
+    background-color: var(--table-bg-color);
+}
+table tr {
+    border-top: .1em solid var(--table-border-color);
+    margin: 0;
+    padding: 0;
+}
+table th {
+    font-weight: bold;
+    border: .1em solid var(--table-border-color);
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: .1em solid var(--table-border-color);
+    margin: 0;
+    padding: 6px 13px;
+}
+table thead {
+    background-color: var(--table-header-bg-color);
+}
+table tr:nth-child(2n) {
+    background-color: var(--table-n2-bg-color);
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+#write em {
+    padding: 0 5px 0 2px;
+}
+
+/* height light */
+#write mark {
+    border: .1em solid var(--height-light-border-color);
+    color: var(--height-light-color);
+    background-color: transparent;
+    padding: .1rem .5rem;
+    border-radius: 2rem;
+    margin: 0 .2rem;
+    font-size: .95rem;
+}
+
+/*shortcut*/
+kbd {
+    border: .1em solid #5b5b5e;
+    background: transparent;
+    color: var(--text-color);
+    margin: 0 .4rem;
+    font-family: var(--text-font) !important;
+    font-size: .95rem;
+    padding: .3em .4em;
+    border-radius: .4em;
+    box-shadow: .1em .1em .2em rgba(0, 0, 0, 0.3);
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 12px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+/*YAML*/
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.45;
+    background-color: var(--yaml-bg-color);
+    border: 0;
+    border-radius: 2px;
+    color: var(--yaml-color);
+    margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+    bottom: .375rem;
+}
+
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+.md-image > .md-meta {
+    border-radius: 2px;
+    font-family: initial;
+    padding: 2px 0 0 4px;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.typora-quick-open-item {
+    font-size: 1rem !important;
+    height: 50px;
+    padding-left: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#typora-quick-open {
+    box-shadow: 0 0 8px #00000045;
+    padding: 0;
+}
+
+.ty-quick-open-category.ty-has-prev .ty-quick-open-category-title {
+    border-top: none;
+}
+
+#typora-quick-open-input {
+    margin: 8px;
+    box-shadow: none;
+    border-radius: 2px;
+}
+
+#typora-quick-open-input input {
+    font-size: 1rem;
+    box-shadow: none;
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 32px;
+    max-height: 32px;
+    border: none;
+}
+
+.modal-dialog#typora-quick-open {
+    border-radius: 8px;
+}
+
+.ty-quick-open-category-title {
+    padding-left: 8px;
+    color: #BEBEBE;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+
+.typora-quick-open-item-path {
+    font-size: 0.8rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 1px;
+}
+
+/*search input*/
+.form-control {
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+}
+
+#md-searchpanel .btn {
+    border-radius: 2px;
+}
+
+#search-panel-replaceall-btn {
+    padding-right: 5px !important;
+    text-align: center !important;
+}
+
+#search-panel-replace-btn {
+    text-align: center !important;
+}
+
+#md-searchpanel input {
+    background: var(--input-bg-color);
+    border-radius: 2px;
+}
+
+.searchpanel-search-option-btn {
+    border-radius: 2px;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+}
+
+.searchpanel-search-option-btn.active {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: initial;
+}
+
+/*sidebar*/
+.file-library-node.file-tree-node.file-node-root {
+    font-size: var(--file-tree-text-size);
+}
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+.file-node-content {
+    display: flex;
+    align-items: center;
+}
+.file-node-open-state {
+    margin-right: .5rem;
+}
+.file-node-icon {
+    margin-right: .5rem;
+}
+
+#typora-sidebar {
+    font-size: inherit;
+    font-family: var(--title-font);
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+.file-list-item-summary, .file-list-item-parent-loc, .file-list-item-time, .file-list-item-summary {
+    font-size: 0.9rem !important;
+    font-family: var(--text-font);
+}
+
+.file-list-item-file-ext-part {
+    display: none;
+}
+
+.outline-item {
+    font-size: var(--toc-text-size);
+}
+
+/*footnotes mark*/
+#write .md-footnote {
+    background-color: inherit;
+    color: var(--drake-highlight);
+    font-size: 0.9rem;
+    border-radius: 0.9rem;
+    padding-left: 0;
+}
+
+#write .md-footnote:before {
+    content: "[";
+}
+
+#write .md-footnote:after {
+    content: "]";
+}
+
+/*footnotes content*/
+.md-hover-tip .code-tooltip-content {
+    border-radius: 2px;
+}
+
+/*footnotes title*/
+span.md-def-name {
+    padding-right: 3ch;
+    padding-left: 0;
+    position: relative;
+    font-weight: normal;
+}
+
+/*footnotes desc*/
+.footnotes {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--text-color);
+    position: relative;
+}
+
+/*footnotes tooltip text*/
+.code-tooltip-content .md-plain {
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+
+.code-tooltip-content code {
+    padding: 0 2px;
+    font-family: inherit;
+    color: var(--footnotes-highlight);
+    background-color: inherit;
+}
+
+.code-tooltip-content a {
+    color: var(--footnotes-highlight);
+}
+
+div.code-tooltip-content {
+    box-shadow: 0 0 8px #00000045;
+    background: var(--footnotes-bg-color);
+}
+
+.footnotes {
+    opacity: 1;
+}
+
+.md-def-name:after {
+    content: ". ^";
+    color: var(--text-color);
+}
+
+.md-def-footnote .md-def-name:before {
+    content: "";
+    color: var(--text-color);
+    position: absolute;
+}
+
+.md-def-name:before {
+    content: "";
+    color: var(--text-color);
+    position: absolute;
+}
+
+.md-content.md-url, .md-def-content.md-def-url.md-auto-disp {
+    text-decoration: none;
+    border-bottom: .1rem solid var(--text-color);
+}
+
+.CodeMirror-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.file-list-item-summary {
+    font-size: 1em;
+}
+
+.pin-outline #outline-content .outline-active strong, .pin-outline .outline-active {
+    font-weight: 500;
+    color: var(--outline-active-color);
+}
+
+.file-list-item.active {
+    border-left: 4px solid var(--drake-accent);
+}
+
+#md-searchpanel .btn:not(.close-btn):hover {
+    box-shadow: none;
+    background: var(--btn-hover-bg-color);
+}
+
+/*checkbox*/
+#write input[type=checkbox] {
+    opacity: 0;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+    margin-top: 0;
+    top: 0;
+}
+
+#write .ul-list li.md-task-list-item.task-list-done::before {
+    content: "";
+    background: var(--checkbox-checked) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+}
+#write .ul-list li.md-task-list-item.task-list-not-done::before {
+    content: "";
+    background: var(--checkbox-unchecked) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+}
+.task-list-item p {
+    line-height: 1.6rem;
+}
+
+/*insert table*/
+.btn {
+    border-radius: 2px;
+}
+
+.modal-content {
+    border-radius: 8px;
+}
+
+.btn-primary:hover, .btn-primary:active {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--drake-highlight);
+}
+
+.btn-primary {
+    background-color: transparent;
+    color: var(--drake-highlight);
+}
+
+.btn-default {
+    background-color: transparent;
+}
+
+.btn:active {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+#table-insert-col, #table-insert-row {
+    background: var(--input-bg-color);
+    border-radius: 2px;
+}
+
+/*preference panel*/
+#megamenu-content {
+    background-image: none !important;
+    background-color: var(--bg-color);
+}
+#top-titlebar {
+    height: inherit;
+    background-color: var(--bg-color);
+}
+#megamenu-menu-sidebar {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.long-btn {
+    width: inherit;
+    min-width: 300px;
+    border: 1px solid var(--text-color);
+    border-radius: 6px;
+}
+.megamenu-menu-panel h1 {
+    margin-bottom: 3rem;
+    text-align: left;
+}
+.megamenu-menu-panel h1, .megamenu-menu-panel h2 {
+    font-weight: normal;
+}
+#recent-file-panel-search-input {
+    height: 45px;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    padding-left: 8px;
+}
+#recent-file-panel-search-input::placeholder {
+    color: var(--text-color);
+    opacity: .5;
+}
+.megamenu-menu-header {
+    border-bottom: none;
+}
+#recent-file-panel-action-btn {
+    background: none;
+    border: none;
+}
+#recent-file-panel-action-btn-container {
+    float: none;
+    display: inline-block;
+}
+#top-titlebar .toolbar-icon.btn.hover, #top-titlebar .toolbar-icon.btn:hover {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--text-color);
+}
+.megamenu-menu-panel .btn:hover {
+    background-color: var(--btn-hover-bg-color) !important;
+    color: var(--text-color);
+}
+#recent-file-panel tbody tr:nth-child(2n-1),
+.megamenu-menu-panel table thead,
+.megamenu-menu-panel table tr {
+    background-color: transparent;
+}
+.megamenu-menu-panel table {
+    font-weight: normal;
+}
+#megamenu-back-btn {
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+.megamenu-menu-header #megamenu-menu-header-title {
+    color: var(--text-color);
+}
+header, .context-menu, .megamenu-content, footer {
+    font-family: var(--text-font);
+}
+.ty-preferences select {
+    padding-left: 2px;
+}
+.preference-item-hint {
+    font-size: 14px;
+}
+a.ty-link {
+    color: var(--a-color);
+    margin: 0 .2rem;
+}
+
+/**
+    code render
+    Name: IntelliJ IDEA darcula theme
+    From IntelliJ IDEA by JetBrains
+ */
+.cm-s-inner.CodeMirror {
+    background: none;
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-meta {
+    color: #BBB529;
+}
+.cm-s-inner span.cm-number {
+    color: #6897BB;
+}
+.cm-s-inner span.cm-keyword {
+    color: #CC7832;
+}
+.cm-s-inner span.cm-def {
+    color: #FFD760;
+}
+.cm-s-inner span.cm-variable {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-variable-2 {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-variable-3 {
+    color: #9876AA;
+}
+.cm-s-inner span.cm-type {
+    color: #AABBCC;
+}
+.cm-s-inner span.cm-property {
+    color: #FFC66D;
+}
+.cm-s-inner span.cm-operator {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-string {
+    color: #6A8759;
+}
+.cm-s-inner span.cm-string-2 {
+    color: #6A8759;
+}
+.cm-s-inner span.cm-comment {
+    color: #787878;
+}
+.cm-s-inner span.cm-link {
+    color: #CC7832;
+}
+.cm-s-inner span.cm-atom {
+    color: #CC7832;
+}
+.cm-s-inner span.cm-error {
+    color: #BC3F3C;
+}
+.cm-s-inner span.cm-tag {
+    color: #E8BF6A;
+}
+.cm-s-inner span.cm-quote {
+    color: #a6e22e;
+}
+.cm-s-inner span.cm-attribute {
+    color: #9876AA;
+}
+.cm-s-inner span.cm-qualifier {
+    color: #6A8759;
+}
+.cm-s-inner span.cm-bracket {
+    color: #E8BF6A;
+}
+.cm-s-inner span.cm-builtin {
+    color: #FF9E59;
+}
+.cm-s-inner span.cm-special {
+    color: #FF9E59;
+}
+.cm-s-inner span.cm-matchhighlight {
+    color: #FFFFFF;
+    background-color: rgba(50, 89, 48, .7);
+    font-weight: normal;
+}
+.cm-s-inner span.cm-searching {
+    color: #FFFFFF;
+    background-color: rgba(61, 115, 59, .7);
+    font-weight: normal;
+}
+.cm-s-inner .CodeMirror-gutters {
+    border-right: 1px solid rgba(120, 120, 120, 0.3);
+    background: var(--code-block-bg-color);
+}
+.cm-s-inner .CodeMirror-linenumber {
+    color: #585b5d;
+}
+.cm-s-inner .CodeMirror-matchingbracket {
+    background-color: #3B514D;
+    color: #FFEF28 !important;
+}
+.cm-s-inner .CodeMirror-selected {
+    background: #214283 !important;
+}
+.cm-s-inner .CodeMirror-selectedtext {
+    background: #214283 !important;
+}
+.cm-s-typora-default .CodeMirror-selectedtext {
+    background: var(--select-text-bg-color) !important;
+}
+.cm-overlay.CodeMirror-selectedtext {
+    background: var(--select-text-bg-color) !important;
+}
+.cm-s-inner div.CodeMirror-cursor {
+    border-left: 1px solid var(--code-block-color);
+}
+.cm-s-inner .cm-header, .cm-s-inner.cm-header {
+    color: #FFD760;
+    font-weight: normal;
+}
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>马克思传</title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><p>&nbsp;</p><h1 id='给你讲讲马克思'><span>“给你讲讲马克思”</span></h1><style>#write>p{text-indent:2rem;}.md-toc-h1{display:none;}.md-toc-content{zoom:128%;}@media(min-width:576px){.md-toc-inner{margin-left:0 !important;}.md-toc{text-align:center;}}#write h2{font-size:1.5rem;}#write img{max-width:550px;margin-left:2rem;}.audio{margin-left:2rem;}@media(max-width:576px){#write img{width:100%;margin-left:0rem;}#write code{margin-left:-2rem;}.audio{margin-left:0rem;}}</style><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n2239"><a class="md-toc-inner" href="#给你讲讲马克思">“给你讲讲马克思”</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2242"><a class="md-toc-inner" href="#第01讲-最熟悉的陌生人">第01讲 最熟悉的陌生人</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2277"><a class="md-toc-inner" href="#第02讲-自古英雄出少年">第02讲 自古英雄出少年</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2304"><a class="md-toc-inner" href="#第03讲-问题少年到学霸">第03讲 问题少年到学霸</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2328"><a class="md-toc-inner" href="#第04讲-哲学博士炼成记">第04讲 哲学博士炼成记</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2361"><a class="md-toc-inner" href="#第05讲-初入职场的苦恼">第05讲 初入职场的苦恼</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2389"><a class="md-toc-inner" href="#第06讲-幸福终于来敲门">第06讲 幸福终于来敲门</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2423"><a class="md-toc-inner" href="#第07讲-穿越时空的手稿">第07讲 穿越时空的手稿</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2452"><a class="md-toc-inner" href="#第08讲-撸起袖子加油干">第08讲 撸起袖子加油干</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2492"><a class="md-toc-inner" href="#第09讲-旷世宣言惊风雨">第09讲 旷世宣言惊风雨</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2519"><a class="md-toc-inner" href="#第10讲-贫穷不限制思想">第10讲 贫穷不限制思想</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2547"><a class="md-toc-inner" href="#第11讲-指点江山论中国">第11讲 指点江山论中国</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2574"><a class="md-toc-inner" href="#第12讲-忠言逆耳利于行">第12讲 忠言逆耳利于行</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2598"><a class="md-toc-inner" href="#第13讲-唯物史观讲了啥">第13讲 唯物史观讲了啥</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2625"><a class="md-toc-inner" href="#第14讲-导师责任重于山">第14讲 导师责任重于山</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2652"><a class="md-toc-inner" href="#第15讲-谁与我生死与共">第15讲 谁与我生死与共</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2681"><a class="md-toc-inner" href="#第16讲-史上最强判决书">第16讲 史上最强判决书</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2715"><a class="md-toc-inner" href="#第17讲-国际歌由此诞生">第17讲 国际歌由此诞生</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2759"><a class="md-toc-inner" href="#第18讲-活化石也有春天">第18讲 活化石也有春天</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2787"><a class="md-toc-inner" href="#第19讲-他永远地睡着了">第19讲 他永远地睡着了</a></span></p></div><h2 id='第01讲-最熟悉的陌生人'><span>第01讲 最熟悉的陌生人</span></h2><p><code>1818年，伟人诞生</code></p><div class="audio"><audio controls="" src="https://download.12371.cn/jjmksdyj.mp3" type="audio/mpeg" preload="metadata"></audio></div><p><img src="https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524189524.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>有没有这样一个人，总是听人提起他的名字，如雷贯耳，可实际上你却对他知之甚少？</span></p><p><span>有没有这样一个人，你在书本上、电视上无数次见到过他的名字，可实际上这个名字对你来说，只是一个符号？</span></p><p><span>有没有这样一个人，与你生活的世界联系特别紧密，可实际上你又打从心里觉得陌生？</span></p><p><span>的确有这样一个人，他生活在动荡奔腾的十九世纪，他有一把浓密的大胡子，他目光如炬、身形魁梧、意志坚定，他一生劳碌奔波、博学多识、著述无数。有人特别敬他，有人怕他，有人追随他，有人诋毁他，却很少有人说我不知道他。</span></p><p><span>这个人，就是卡尔·马克思。</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524189610.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>早在1999年，英国剑桥大学文理学院和BBC电台先后发起了评选“千年第一思想家”的活动，在汇聚全球投票后的结果显示，爱因斯坦排名第二，位居第一的是马克思。在随后十年左右的时间内，类似的投票活动层出不穷，而榜首却从未易主。</span></p><p><span>有一位奥地利的经济学家，叫熊彼特。他曾这样说，他说“大多数的创作，经过一段时间，短的是饭后一小时，长的达到一个世代，就完全淹没无闻了。但是马克思的学说却不是这样，它遭受了批判，但它又复活了，是穿着自己的服装，带着人们看得见摸得着的自己的瘢痕复活了”。</span></p><p><span>的确，纵观人类整个思想史，还真的没有一个名字，能像马克思那样，在不同时代、不同国家、不同地区都如雷贯耳；没有一种理论和学说，能像马克思主义那样，对人类的思想、文化、行动以及整个社会发展都产生了如此深厚的影响，并且今后还在持续不断地影响着。</span></p><p><span>总之，你可以赞同他，支持他，你也可以反对他，批评他，但你绝对绕不开他。他的学说和思想，经常是以“大道日用而不知”的方式存在于我们的脑海中。</span></p><p><span>从今天起，我们就一起揭开层层迷雾，走进他波澜起伏的灿烂一生，还原一个最真实的他。</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1447341249106730/ELMT1447341249172743_1524121277.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>两百年前，在德国的西南部，有一座历史悠久的小城，依山傍水、景色秀丽，这座小城叫特里尔。清澈的摩泽尔河静静地穿过这座小城。每当春天来临的时候，河谷里的桃树、樱桃树都会竞相开花，山丘上成片的葡萄树都冒出了蕾芽，点缀着美丽的原野。暖风拂过山坡，阳光亲吻河泽，这座静谧的小城也变得波光粼粼了起来。</span></p><p><span>特里尔是一座由罗马人建造的城市，它地处德法交接处，曾经有过非常辉煌的历史，在风起云涌的时代变幻中渐渐衰败，成为当时普鲁士的一个殖民地。然而，浓郁的罗马遗产、严苛的政治环境，以及从近在咫尺的法国飘过来崇尚自由的革命气息，却阴差阳错地汇聚在这座小城，滋养了这里独特的文化氛围。</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524189656.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>1818年5月5日凌晨时分，特里尔城布吕肯巷664号住宅的房间里，一个名叫亨利希的律师神情不安地踱来踱去，时不时趴在里屋房门上探听动静，焦虑万分。直到来自城里的助产大娘喘着气儿跑出来告诉他，你要做爸爸了，你们家多了一个大男孩儿！他这颗悬着的心才落下地来。这个男孩儿，就是马克思。那一刻，可能谁也想不到，在这样一个极其平常的夜晚，一个极其普通的人家，却诞生了一个在世界历史上掀起波澜的伟人。</span></p><p><span>马克思也许从出生的那一天起，就自带“哲学之光”，注定要在这个世界上搞点事情，名垂青史。可能有听众朋友会疑惑，难道马克思一出生就占尽了天时地利人和，是上天的宠儿吗？注定只有他才能成为流芳百世的大师吗？俗话说的好，“三分天注定，七分靠打拼”。没有人生下来就能随随便便成功，也不是每个伟人出生的时候都含着金钥匙，长大后就能呼风唤雨。每一个成功的人背后都可能付出了常人不可想象的努力，也可能经历了常人不可承受的苦难。但他们有一个共同的特质，那就是信仰明确、意志坚定、绝不轻言放弃。</span></p><p><span>事实上，马克思出生的家庭在特里尔当地算得上是条件很好的中产阶级。他的父亲，亨里希·马克思，是特里尔城的一名犹太律师，他学识很渊博，精通多种语言，对古典文学和哲学都很有研究。亨里希是个思想开明的人，在特里尔城他也经常参与一些社交活动，与同样思想开明的人一起激扬文字、碰撞思想火花。就在马克思出生前后，他选择皈依了新教。要知道，在19世纪初的德国，新教一直是理性主义、启蒙思想支持者的一种宗教选择，这个决定无疑对马克思今后的成长也产生了影响。</span></p><p><span>我想问问大家，你们小时候最爱做的事情是什么？对我来说，可能就是睡觉前听爸爸妈妈讲故事了。妈妈会给我讲灰姑娘，爸爸呢给我讲西天取经。那你想知道，马克思睡前干什么呢？他的爸爸也会为他讲故事，只不过马爸爸亨里希为儿子大声朗读的睡前读物是法国知识泰斗伏尔泰的作品。</span></p><p><span>每天晚上，在客厅华丽台灯的明亮光辉下，壁炉上的小小金钟滴答滴答地响，小马克思就趴在父亲的身边，听他声情并茂地朗诵一篇接一篇的启蒙读物，这无形中为马克思带来了潜移默化的良好教育。</span></p><p><img src="https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524189724.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>马克思的母亲罕丽达则出身荷兰裔犹太贵族，她带着非常丰厚的嫁妆来到特里尔，据说光现金就相当于特里尔一个普通手工业工作者三四十年的收入了，加上父亲靠谱的工作、稳定的收入，这些都无疑为马克思和他的兄弟姐妹们创造了很好的生活环境。罕丽达的一生规规矩矩、相夫教子，被人评价为“一个典型的荷兰主妇，为家庭贡献了一生”。马克思的姨妈索菲亚留在了荷兰，嫁给了商人里昂·飞利浦。可能很少有人知道，他就是飞利浦公司的创始人，我们经常用的飞利浦剃须刀，就是马克思姨父的家业生产的。</span></p><p><span>因此，马克思虽不是我们今天经常说的“富二代”，但起码也算得上是生活富足、衣食无忧，有一定的社会地位。马克思是家中第三个孩子，聪明伶俐，充满朝气。他尤其敬重自己的父亲，不但一直随身携带父亲的相片，在往后外出求学的过程中也经常与父亲来往书信，汇报思想动态，交流情感。</span></p><p><span>在马克思不到两岁的时候，他们全家从先前的住宅搬到了西梅翁街1070号，和亨里希的一个老朋友路德维希·冯·威斯特华伦一家成了邻居。这家不搬则已，一搬不得了，为马克思送来了命中注定的那个人。</span></p><p><span>有人可能会问，马克思家庭条件这么好，是不是从小就是当地私立学校的小学霸？不，马克思其实没上过小学，他的启蒙老师就是他的爸爸。亨里希除了教他德文、算术和图画课程之外，还经常带他去参观各种展览，游览名胜古迹，给他讲历史故事，分享世界各地的风俗和最新的要闻。每次爸爸开始讲课的时候，马克思总是瞪圆双眼，认真听讲。隔壁好邻居威斯特华伦公爵也是个博闻广识的民主人士，当马克思来家里做客时，就给他讲讲希腊故事，背诵几段莎士比亚的剧本。</span></p><p><span>日复一日，小马克思虽然没有进过学校，却在心里种下了许多智慧的种子，知识水平比同龄的许多孩子恐怕都要高一些。小马克思特别爱思考，他总是喜欢寻根问底，从小就显露出了对哲学的懵懂兴趣。</span></p><p><img src="https://p5.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524189771.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>有一次，他抓着母亲询问“抽象”和“具体”到底是什么，把罕丽达折腾得够呛。随后，他在自己的日记本里写下了这样一句话：“今天早上起来，看到妈妈在做饭，我打开具体的窗户，吸了一口抽象的空气”。 如果马克思生活在今天，一个孩子写出这样的名言金句应该也能头条一把了吧！</span></p><p><span>马克思的童年可以说过得非常无忧无虑，没有做不完的作业，没有上不完的外文补习班和奥数竞赛班，他大部分时间都与自己的姐妹、邻居一起玩耍，尽享童年的欢乐。他从小就机智过人，鬼点子特别多，成了左邻右舍公认的“孩子王”，小伙伴们都愿意跟他玩，听他调遣。小马克思总有让他们心悦诚服的本领，他的小脑袋瓜子里装满了各种各样的知识，总能在做游戏时玩出新花样，给大家讲各种美妙动听的故事。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524189808.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>当然，和大多数人一样，马克思的父母也望子成龙，希望自己的儿子长大以后能成为一个有名望的大法官、大律师。可小马克思却年纪轻轻就想法特别独特，他从小就在心里种下了与众不同的择业观。</span></p><h2 id='第02讲-自古英雄出少年'><span>第02讲 自古英雄出少年</span></h2><p><code>1835年，人生志向</code></p><div class="audio"><audio controls="" src="https://download.12371.cn/jjmksdej.mp3" type="audio/mpeg" preload="metadata"></audio></div><p><img src="https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE1447341249106730/ELMT1447341249172743_1524204920.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>十七岁，我们都还正在读高中。当时的你，是豪情万丈、慷慨激昂，立志干出一番大事业；还是默默无闻、埋头苦读，安于做一个佛系少年？青年朋友们，当时的你，对自己的未来是否有了清醒的认识和安排？</span></p><p><span>十七岁时的马克思，还没有留出后来大家非常熟悉的那一脸大胡须，他还只是特利尔中学里的一枚小鲜肉。当他们的校长兼德文老师胡果·维滕巴赫让这些中学生写一篇讨论自己未来理想中的职业的时候，许多同学还并不知道自己以后要做什么，因而也只是“随便谈谈自己的想法”。但是马克思不一样，他用一篇《青年在选择职业时的考虑》这样的作文，让校长读后感觉惊为天人、大加赞赏。那么，这篇文章体现出马克思怎样的择业观呢？</span></p><p><span>我们知道，每个人都希望自己有一个理想的职业，特别是即将走上社会的青年。生活在我们前面展示出一幅幅色彩斑斓的理想画卷，吸引着我们认真地思考、判断、争论、选择。青年朋友们，你们想到过么，能够选择自己的职业，能够选择自己的人生目标，是人类独有的一种幸福啊。其他动物是无法选择在什么范围内活动，选择自己未来要做什么的！人类一定要珍视这种幸福，同时也要严肃地对待这种权利。马克思如是说：</span></p><p><span>“这种选择是人比其他创造物远为优越的地方，但同时也是可能毁灭人的一生、破坏他的一切计划并使他陷于不幸的行为。因此，认真地权衡这种选择，无疑是开始走上生活道路而又不愿在最重要的事情上听天由命的青年的首要责任。”</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1447341249106730/ELMT1447341249172743_1524204939.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>面对社会上形形色色的选择，首先批评了那种仅仅依据自私自利的个人打算或完全基于物质利益选择职业的做法。他这样说的:</span>
+<span>“谁要是为名利的恶魔所诱惑，他就不能保持理智，就会依照不可抗拒的力量所指给他的方向扑去。于是，他的社会地位已不由他自己抉择，而取决于机缘和幻想。”</span></p><p><span>同时，马克思又提醒人们不要被虚荣心所欺编，不要“在幻想中把这种职业美化”，而是要从实际出发，冷静的讨论。经过仔细地分析，马克思提出了自己选择的标准。我非常愿意把下面这段话和大家分享，这是这篇文章的结尾，这是马克思最终的结论，这段话曾经鼓舞了无数人为了自己的理想而奋斗：</span></p><p><span>“如果我们选择了最能为人类而工作的职业，那么，重担就不能把我们压倒，因为这是为大家作出的牺牲；那时我们所享受的就不是可怜的、有限的、自私的乐趣，我们的幸福将属于千百万人，我们的事业将悄然无声地存在下去，但是它会永远发挥作用，而面对我们的骨灰，高尚的人们将洒下热泪。”</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1447341249106730/ELMT1447341249172743_1524204954.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>这是非常有名的一段话，从这段话中，我们可以很明显看出，马克思这里的讨论已经远远地超出了世俗的职业范围，他实际上讲的是理想信念和人生志向。</span></p><p><span>我们要说，这仅仅是一篇中学作文，当然还不是马克思的成熟之作，在马克思的思想宝库里，也不占有非常重要的位置。但我们从这篇作文中，可以看到马克思在青年时期就有了宽广的胸怀，就树立了为人类的伟大目标而献身的远大理想。《马克思传》的作者梅林对此称赞说：</span></p><p><span>“马克思这个人在青年时代就已经是一个了不起的人：他把自己的全部身心献给了争取真理的斗争，他表现出如饥似渴的求知欲，无穷无尽的精力，无情的自我批评精神，和那种只要情感迷失方向就压倒情感的战斗精神。”</span></p><p><span>马克思不光是提出选择职业的原则，而且也是按这种原则去选择自己的职业。后面大家还会看到，中学毕业后，他顺利进入大学，根据他的学习成绩和家庭情况，谋个有名有利的职业毫无问题，但他毅然走上了一条艰苦的革命道路，决心为无产阶级和全人类的解放奋斗一生。</span></p><p><span>青年朋友们，当你们了解完马克思整个的生平和贡献之后，希望你们回头再来想一想我们本讲所提到的内容。马克思之所以有非常伟大的功绩，对人类历史的发展做出非常伟大的贡献，其中有一个很重要的原因就是他对职业的选择曾经有过“认真地权衡”，年轻时就树立了为人类谋幸福的远大理想，并把它作为毕生的使命。</span></p><p><img src="https://p5.img.cctvpic.com/photoAlbum/templet/special/PAGE1447341249106730/ELMT1447341249172743_1524206268.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>人活着为什么要有理想？没有理想行不行？我们知道有句电影台词是：“人活着没有理想，那跟咸鱼有什么分别？”人活着有了理想，就有了“精气神”，他所散发出来的“气场”，是与芸芸众生区分开来的标志，这种“天地正气”使他的人生富有质感、不虚此行。职业是和理想联系在一起的，一个人选择职业总是受理想的支配，而从事某种职业则是实现理想的手段。个人“小我”只有在理想的“大我”中才能得以真正的呈现。如果不是这样的话，我们来想一想，如果每个人在人生道路的抉择时只考虑“小我”，那人类的未来，又有谁来考虑呢？</span></p><p><span>人类历史很多伟人都是这样考虑的，他们正是有着远大的理想，所以才能抛弃个人的利益，以全人类的未来为主要的考虑，为天下谋利益。有太多的政治家、革命家、思想家、文学家、科学家等等，都为我们作出了表率。</span></p><p><span>马克思本人自不待言，我们已经讲过了。我们来谈几个大家很熟悉的例子吧。我们先来谈一谈我们的毛泽东同志。毛泽东少年时代在湖南一师读书时，就非常关心国家和世界大事，很少考虑个人的问题，在同学中提倡“三不谈”，大家知道是哪“三不谈”吗？ —— 不谈金钱，不谈家庭琐事，不谈男女问题。毕业后，他为了人民的解放，为了改造中国与世界，走上了艰难的革命的道路，为此付出了巨大的个人牺牲。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1447341249106730/ELMT1447341249172743_1524204989.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>我们再来谈一谈大家都很尊重的周总理。周恩来出生在比较富裕的家庭，但他从小不以物质享受为重，当他说出“为中华崛起而读书”时，大家知道当时他多大吗？仅仅12岁。中学时，周恩来和一些进步青年同学发起组织了“敬业乐群会”这样一个组织，他在会刊《敬业》上发表了许多战斗的诗篇和文章，抒发了他立志改造中国的远大理想，朋友们，那个时候，他也只不过是一个中学生啊！周恩来一生都贯穿着这样的理想信念和人生志向。</span></p><p><span>崇高的理想信念是支撑青年人不断前进的最重要的力量，“奋斗的青年”比“佛系的青年”更可贵。</span></p><p><span>这样的例子举不胜举，这些伟人的历程告诉我们：一个人在青年时期根据什么样的理想选择职业，对他日后的发展和一生为人类为世界贡献的大小，往往具有举足轻重的作用。一个人追求的理想不一样，他对职业的要求也就不一样，日后的发展和贡献也就千差万别。 “如果人只是为了自己而劳动，他也许能成为有名的学者、绝顶聪明人、出色的诗人，但他决不可能成为真正的完人和伟人。” —— 这句话同时是马克思说的。</span></p><p><span>马克思在中学时期就确立了为人类而献身的伟大抱负，也看准了实现这一抱负的途径，奠定了他今后的人生道路。自古英雄出少年，道理莫过于此。青年朋友们，我们扪心自问：我们是否对自己的人生做出了正确的选择？如果是，希望大家坚持下去。如果不是，当十七岁已经远去，我们还有重新选择的可能么？当然！只要我们想明白，任何时候都不晚。</span></p><h2 id='第03讲-问题少年到学霸'><span>第03讲 问题少年到学霸</span></h2><p><code>1836年，大学生活</code></p><div class="audio"><audio controls="" src="https://download.12371.cn/jjmksdsj.mp3" type="audio/mpeg" preload="metadata"></audio></div><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1447341249106730/ELMT1447341249172743_1524216643.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>1836年，柏林的一家不起眼的旧书店里，一个18岁的青年站在书架前，他贪婪地浏览着图书，似乎要买下整个书店，他请老板帮他寻找《法哲学》，目光又贪婪地盯上了《法哲学》旁边的《艺术史》，他不知道自己面前已经堆了一大摞书。这个青年就是马克思，这种逛书店的方式是他的常态，当然，还有另一个常态 —— 结账时的犹豫，没有能力付足现金，只能给家里邮寄账单。这就是18岁的马克思，就读于柏林大学，正在走向一条成为超级学霸的道路。鲜为人知的是，马克思最初就读的并不是柏林大学，他一开始也不是一个“学霸”。</span></p><p><span>一年前，17岁的马克思上了大学，按照家人的意愿，他选择了波恩大学的法律专业。大学生活开始了！新的人生来到了！终于摆脱父母的唠叨了！马克思像出笼的小鸟满心狂喜，他第一年的大学生活充满了年轻人的躁动与轻狂 —— 他参加特里尔同乡会，与贵族学生发生争执，携带被禁止的武器，参与喝酒、决斗，甚至被关过禁闭。他迷恋于创作浪漫主义文学，还经常给父亲寄去自己创作的诗歌作品。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1447341249106730/ELMT1447341249172743_1524216691.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>但在父亲眼里，这不过是一个典型的“问题少年”的表现。他写信给马克思说道：“杂乱无章、漫无头绪地踯躅于知识的各个领域，在昏暗的油灯下胡思乱想，蓬头乱发，虽不在啤酒中消磨放任，却穿着学者的睡衣放荡不羁；离群索居、不拘礼节甚至对父亲也不尊重”。此外，马克思大手大脚地花着父亲的钱，在当时，最富有的人一年的花销也不过五百塔勒，但马克思一年要花掉七百。</span></p><p><span>同时，马克思在猛烈地追求他的青梅竹马 —— 燕妮，追求的方式是用情书不断地“轰炸”。燕妮没有被这些情书冲昏头脑，面对马克思不着边际的浪漫情诗，她忧心忡忡地给马克思写信说：“卡尔，我的悲哀在于，那种会使任何一个别的姑娘狂喜的东西，即你的美丽、感人而炽热的激情、你的娓娓动听的爱情词句、你的富有幻想力的动人心弦的作品 —— 所有这一切，只能使我害怕，而且，往往使我感到绝望……所以，我常常提醒你注意一些其他的事，注意生活和现实，而不要像你所喜欢做的那样整个地沉浸、陶醉在爱的世界里，耗费你的全部精力。”</span></p><p><img src="https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE1447341249106730/ELMT1447341249172743_1524216721.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>父亲的叮咛，爱人的忧愁，马克思开始意识到他的大学生活发生了不小的偏差，如此下去，那个中学时代要为全人类的幸福而工作的马克思就消失不见了，取而代之的可能是一个充满幻想、麻烦缠身的公子哥。在父亲的强烈要求下，马克思决定转学，前往柏林大学求学。</span></p><p><span>1836年10月，马克思踏上了前往柏林的求学道路，他对此仍然心存芥蒂，并不情愿。因为无论是马克思生活过的特里尔还是波恩，都属于欧洲西部，而柏林属于欧洲东部，而对当时的欧洲来说，西部远远比东部繁华。因此，马克思不太愿意去一个相对落后的陌生地独自生活。</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1447341249106730/ELMT1447341249172743_1524216745.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>到了柏林以后，马克思在写给父亲的信中提到：“到柏林去旅行我也是淡漠的，要是在别的时候，那会使我异常高兴，会激发我去观察自然，还会燃起我对生活的渴望。这次旅行甚至使我十分难受，因为我看到的岩石并不比我的感情更倔强、更骄傲，广大的城市并不比我的血液更有生气，旅馆的饭食并不比我所抱的一连串幻想更丰富、更经得起消化，最后，艺术也不如燕妮那样美。”尽管有一百个不情愿，尽管要与燕妮异地恋，但是马克思在清静的柏林大学校园里，彻底变成了一个“学霸”。</span></p><p><img src="https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE1447341249106730/ELMT1447341249172743_1524216766.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>马克思的转变与柏林大学的整个氛围是分不开的，柏林大学的第一任校长是著名的哲学家费希特，他提出大学有双重任务：对科学的探求以及个性与道德修养，这也奠定了柏林大学的办学基调。这所大学出过很多名人，思想巨人黑格尔在这里担任过哲学系主任，后来出任校长，他在这里发表过著名的《柏林大学开讲辞》。中国也有很多思想家、理论家在这里就读过，比如陈寅恪。周恩来和郭沫若也在这里获得过名誉博士证书。</span></p><p><span>哲学家费尔巴哈曾在这里就读并拿到博士学位，他曾给父亲写信这样描述了这所学校：“在这里根本用不着考虑饮宴、决斗、集体娱乐之类的问题。在任何其他大学里都不像这里这样普遍用功，这样对超出一般学生之上的事物感到有兴趣，这样向往学习，这样安静。和这里的环境比起来，其他的大学简直就是乱糟糟的酒馆。”</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1447341249106730/ELMT1447341249172743_1524216787.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>入学第一年，马克思“敞开肚皮读书”，他广泛阅读了法学著作，重点学习了哲学，并且准备写一部法的哲学，天才的头脑一旦开始经历刻苦的学术训练，带来的就是思想的快速升级。马克思的“学霸”体现在通宵达旦、废寝忘食地阅读和思考，由于大脑CPU运转过热，马克思曾经一度“死机”，重病住院。即便是住院休养，马克思仍然认为这是一段难得的学习时间，索性把黑格尔的著作从头到尾读了一遍，这不能不说是一个奇迹，因为黑格尔哲学以艰深晦涩著称，许多学生甚至需要花十年的时间，才能通读黑格尔的全部著作，而我们的马克思只用了短短几个月，就掌握了黑格尔哲学的基本“套路”。当马克思恢复了健康，他立即参加了一个叫“博士俱乐部”的群体，这个俱乐部里“是一些有抱负的青年人，他们大多已经完成了学业。那里充满着理想主义、充满着对知识的渴望和自由的精神。他们最多的精力是致力于黑格尔哲学”。</span></p><p><span>新世界的大门向马克思敞开了，在他从浪漫主义转向黑格尔哲学的过程中，他有几天甚至完全不能思考问题，他像个狂人一样在花园里乱跑，他在新的思想领域里兴奋着，沉醉着，“他自信的步履敲击着地面，震怒的双臂直指苍穹。”</span></p><p><span>可以说，如果没有这段时间，就不会有后来真正的马克思的出场。我们知道，马克思主义哲学正是在批判和继承黑格尔哲学的基础之上完成的，而其中至关重要的决定性的一步，也就是对黑格尔思想的学习，这正是在马克思20岁左右的大学阶段里完成的。时隔20多年以后，马克思回顾起青年往事时说：“我要公开承认我是黑格尔这位大思想家的学生。”</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1447341249106730/ELMT1447341249172743_1524216812.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>不幸的是，两年之后，马克思的父亲去世了，再也无法批评和唠叨马克思了。这对于马克思来说是个终生的遗憾，马克思离家求学的过程中，追求过诗歌、追求过爱情、追求过哲学，却唯独与家庭渐行渐远。子欲养而亲不待，父亲去世以后，马克思一直心怀愧疚，把父亲的照片放在上衣内侧口袋里，永远随身携带。当马克思也去世之后，恩格斯把这张照片放在了马克思的灵柩里。至亲的去世使马克思真正成熟了起来，他开始写作博士论文，开始独自担负起自己的人生。</span></p><p><span>大学是人生中重要的成长时期，回首马克思的大学时光，既有“衣马轻肥”，又有“书香醉人”，无论如何，找到自我成长的目标并为之奋斗，这才是最重要的。青春最为宝贵，也最容易浪费，好在青春允许我们去犯错和改正，有道是浪子回头金不换。趁着青春年华还未消散，静下心来多读书多思考，让自己的头脑更有智慧，这样的人生才不虚此行。</span></p><h2 id='第04讲-哲学博士炼成记'><span>第04讲 哲学博士炼成记</span></h2><p><code>1841年，博士论文</code></p><div class="audio"><audio controls="" src="https://download.12371.cn/jjmksdsij.mp3" type="audio/mpeg" preload="metadata"></audio></div><p><span>德国耶拿大学哲学系有一间研讨室，曾有多位思想家和哲学家在这里讲课。身形魁梧的费希特一遍又一遍地敲着黑板：“康德的物自体是个多余”，谢林吆喝着同学们和他一起走到院子里感受自然的美，“走吧走吧，别让春天等着急了。”黑格尔毫不领会他的大学室友谢林对他的善意，冷冷地说了句“黑夜中的牛都是黑色的。”</span></p><p><span>青年朋友们，从这些哲学家的话语中，想必你们也得出一个结论了：哲学真的是听不懂。因此，更不用说是那些拿到哲学博士学位的学生了，在常人的眼中看来，他们更像一群“异类”。</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1430711918424681/ELMT1430711918518697_1524296346.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>1841年4月15日，这间研讨室里举行博士论文答辩会，但答辩现场出奇的安静，因为答辩的主角没有出场，评委专家看完论文，一致决定：这是一篇出色的博士论文，尽管本人没来，情况特殊，但仍然应当破格授予博士学位。</span></p><p><span>这位没到场参加答辩的“异类”，就是我们的主角 —— 马克思。</span></p><p><span>那么，马克思是如何写作博士论文的？他的博士论文写了什么内容？又为何拿到了耶拿大学的博士学位呢？且不要急，我们一一道来。</span></p><p><img src="https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE1430711918424681/ELMT1430711918518697_1524296368.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>1836年，马克思转学到柏林大学学习哲学，他升级为一个勤奋的“学霸”，每天除了看书，还去听博士和青年教师们辩论聊天，这些青年人都是黑格尔哲学的忠实信徒，并组成了一个学术团体，叫“青年黑格尔派”。在这些人当中，有一位和马克思关系最为亲近，他既帮助马克思的学业，还帮助马克思规划后来的职业，他就是马克思大学期间的导师 —— 布鲁诺·鲍威尔，柏林大学的神学讲师，在接下来的几年时间里，鲍威尔对马克思的人生发展与规划起了重要作用。比如，马克思正是在鲍威尔的鼓励下才决定写作博士论文的，并遵从了鲍威尔的建议，最终把博士论文寄给耶拿，在耶拿大学取得了博士学位。</span></p><p><span>从马克思到柏林大学学习哲学，再到他取得博士学位，只有短短的五年时间。但这一段时期对于他的学术发展、思想发展、人生发展是极其重要的。这种重要性集中体现在以下三件重要事情的选择上。接下来，我就给大家介绍一下他的三件重要事情。</span></p><p><img src="https://p5.img.cctvpic.com/photoAlbum/templet/special/PAGE1430711918424681/ELMT1430711918518697_1524296395.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>第一件事是转专业。</span></p><p><span>各位同学，当初高考的时候，你们是怎么选专业的？你们对自己的专业满意吗？</span></p><p><span>马克思在青少年时期和我们现在的很多同学一样，面临着对自己专业不满意的问题。他最初听从了他父亲的意见选择了热门的法律专业，但很快就找到了自己真正的兴趣，并转到了比较冷门的哲学专业。兴趣是最好的老师，也是摆脱世俗眼光的动力。</span></p><p><span>当马克思在波恩大学按照父亲的意愿读法律时，兴趣并不浓厚，甚至一度和其他年轻人一起抽烟、喝酒、逃学，后来他的父亲写信严厉地批评了他，警告他如果荒废学业的话，就断绝他的经济来源。因此马克思选择了转学、转专业，并以极大的热情投身到学术研究之中。</span></p><p><span>马克思选择哲学，固然和他的兴趣有关，但更为根本的原因在于哲学承担的使命。在希腊哲学中，哲学是爱智慧的学问，哲学关心的是世界的本源。我们这个世界从哪里来，我们人类从哪里来，到了近代，哲学家们对哲学的认识更深一步，黑格尔说过，哲学是被把握在思想中的时代，后来，马克思把这句话说成是“哲学是时代精神的精华。”这两种表达有一个共同的要素，那就是，哲学与时代密切相关，哲学是对时代最深刻的认识。马克思选择哲学，根本上是要深刻认识他所处的时代，认识时代的特征，领会时代的使命，只有哲学才能承担这个使命。</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1430711918424681/ELMT1430711918518697_1524296410.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>第二件事是马克思写论文。</span></p><p><span>写论文对于很多大学生来说都是一个不小的考验。一篇合格的学术论文的基本要求是，就某一个问题表达你的观点，并且对你的观点做出论证，既要保证你的观点不落后不陈旧，还要做到论证有说服力有文献支撑。对于很多文科学生来说，查文献、写观点并不难，难的是“凑字数”。特别是博士论文，一篇比较优秀的文科博士论文的字数一般要在15-20万字左右，而对于不读博士学位的大部分人来说，很可能一辈子也写不到这么多字。更何况一篇哲学博士论文本身就要求用哲学概念规范地推演论证，简直难于上青天。</span></p><p><span>马克思既然选择了自己喜欢的哲学专业，就要在哲学方面展示出自己的超群实力，最直接的办法就是在本来就很难的哲学领域选择一个难度最高的题目，这篇论文最好是所有论文里最难写的，也就是博士论文，一步到位。</span></p><p><span>这个时候，马克思的导师鲍威尔前往波恩大学任教，他希望马克思尽快写完博士论文，拿到博士学位，这样就可以争取在波恩大学里谋得教师职位，一起做同事。于是在1840年下半年，马克思开始动笔写博士论文，他的博士论文题目非常绕口，叫做《论德谟克利特的自然哲学和伊壁鸩鲁的自然哲学之间的差别》。</span></p><p><img src="https://p5.img.cctvpic.com/photoAlbum/templet/special/PAGE1430711918424681/ELMT1430711918518697_1524296432.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>德谟克利特、伊壁鸠鲁和自然哲学。这三个词是啥意思？</span></p><p><span>前两个词是两位古希腊的哲学家的名字，自然哲学是古希腊哲学中的一个研究领域，主要讨论的是世界的起源和构成。有意思的是，这两位古希腊哲学家都讨论过一个共同的问题，那就是物质是由微小的、不可再分的原子构成的，物质有运动和变化是因为原子本身的运动，那么，原子运动究竟是什么样的呢？德谟克利特认为原子的运动是沿着既定轨道进行的直线运动，但伊壁鸠鲁认为原子的运动是包含偶然性的偏斜运动，它会离开既定的轨道，而实现它自己真正的意图 —— 自由。</span></p><p><span>马克思之所以选择这个题目，一是因为它难写，二是与马克思的立场有关。可以说，马克思正是通过这篇博士论文，明确提出了自由的立场。</span></p><p><span>马克思认为，原子偏离轨道的运动，对于原有的既定轨道来说，无异于“革命”。马克思用毕生的精力从事革命的事业，革的是行自由主义之名、反人类自由之实的资本主义制度的命，而他认为真正的自由是人的全面发展，这种自由只有在共产主义社会中才能真正实现。</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1430711918424681/ELMT1430711918518697_1524296448.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>第三件事是换学校答辩。</span></p><p><span>1841年初，马克思的博士论文终于写完了，按照博士学位培养程序，还需要通过论文答辩才能真正拿到哲学博士学位证书。但是，论文写得再好，也得有人欣赏，否则很难通过专家评审和答辩。马克思这时候才意识到，对于日趋保守的柏林大学来说，他论文里关于自由的观点很难征服那些权威专家，只能找一所能够认可他的学术观点的大学去答辩，于是，在鲍威尔的建议下，马克思选中了耶拿大学。</span></p><p><span>耶拿大学是一所什么样的学校呢？它位于德国东部的图林根州，是德国久负盛名的大学，目前，它的哲学、光学、德语教育等专业依然处于世界领先地位。在18、19世纪，耶拿大学是近代欧洲思想运动的中心。这里还是当时法学研究的重镇，哲学家费尔巴哈的父亲老费尔巴哈是耶拿的刑法学家。在马克思选择到耶拿大学答辩之前，德国古典哲学重要代表人物费希特、谢林、黑格尔都先后在耶拿任教，可以说这里是群星璀璨，并且充满了自由开明的学风。</span></p><p><span>因此，马克思选择获取耶拿大学的博士学位。从结果来看，基本如马克思所愿，博士论文于1841年3月底完稿，4月6日马克思把它寄给耶拿大学哲学系，4月15日在马克思本人未到场的情况下，这篇论文全票通过，答辩组专家决定授予马克思耶拿大学哲学博士学位。</span></p><h2 id='第05讲-初入职场的苦恼'><span>第05讲 初入职场的苦恼</span></h2><p><code>1842年，报社工作</code></p><div class="audio"><audio controls="" src="https://download.12371.cn/jjmksdwj.mp3" type="audio/mpeg" preload="metadata"></audio></div><p><span>1842年10月，马克思拿到博士学位整整一年半的时间之后，马克思才终于找到了工作。但是非常遗憾，这份工作可不是马克思想要的大学老师的工作岗位，而是科隆的《莱茵报》编辑。在马克思刚刚从事编辑工作的时候，心情并不愉快，因为在过去一年半的时间里，他遭遇了太多的变故和波折。</span></p><p><span>马克思拿到博士学位时，还没来得及把证书在怀里揣热乎，他就遭到了来自普鲁士政府和波恩大学全体老师的发出的巨大压力 —— 他们解除了鲍威尔的教师职务，而当年正是在鲍威尔的鼓励之下，马克思完成了他的博士论文。这样一来，马克思的博士论文完全没有发表和出版，以至于长期以来人们都不知道马克思的博士论文是长什么样的。</span></p><p><span>心灰意冷的马克思回到了故乡特里尔，在家里面蜗居了一段时间。在此期间他还收到了老师鲍威尔的来信，说希望两个人一起能办一张激进的报纸。但是好景不长，普鲁士新国王颁布了一道书报检查令，这个报纸的愿望就胎死腹中。</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1430711918424681/ELMT1430711918518697_1524300721.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>不过，从事新闻出版业的愿望在马克思的脑海里深深地扎下根来，他把目光投向了另一家言论自由、针砭时弊的报社 —— 《莱茵报》。他文思泉涌，妙笔生花，为《莱茵报》撰写了许多政论文章，而《莱茵报》也注意到了这个才华不凡的小伙子，在发表了马克思文章的同时，就邀请他来报社工作。于是马克思在参加完姐姐的婚礼之后，立刻动身前往科隆。</span></p><p><span>科隆是德国西部一座著名的城市，当地的科隆大教堂闻名于世。马克思在这里谋得了他人生第一份正式的工作 —— 报社记者、编辑。除了作为养家糊口的手段，马克思在工作中也发现了意外之喜 —— 通过关注和研究莱茵地区的经济社会状况，马克思发现可以观察到一个真实的德国社会。马克思心心念念的愿望，就是研究、批判和改造德国的现实社会。</span></p><p><span>马克思从大学的“象牙塔”中走到社会，现实社会的复杂性、丑陋性的一面就暴露出来。马克思当时在工作之初也遇到了这个问题。这个天才的而又有些愤世嫉俗的小伙子大胆地挥舞起了笔杆子，用辛辣讽刺的语调针砭时弊，特别是将在学校里面学到的黑格尔的辩证法运用得出神入化。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1430711918424681/ELMT1430711918518697_1524300742.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>同时，马克思也开始接触到农民、贫困者的生活状况问题。马克思发现，在学校学习到的这种理论知识在现实问题面前都受到了根本的动摇。他先前没遇到过的真正的贫困的问题，也在他的工作中暴露出来。那么，到底是书本的知识是对的呢，还是现实的社会问题是对的呢？马克思苦苦地思索着。</span></p><p><span>后来马克思在回忆这一时期的思想变化时，把它叫做“《莱茵报》时期的苦恼”，而这个“苦恼”至关重要，它决定性地让马克思从政治学、法学思想领域的研究来到了经济学领域的研究。那么，马克思的“苦恼”究竟是什么呢？</span></p><p><span>我们知道19世纪初，德国开始了原始的资本积累，其中一个主要的形式，就是把原先由农民共同使用的森林、草地等公共资源进行大规模的私有化，而这一进程就遭到了农民的强烈反对。马克思对这一问题的关注，就源自于《林木盗窃法案》的出台。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1430711918424681/ELMT1430711918518697_1524300772.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>莱茵省摩塞尔河谷植被非常茂密、风景如画，这里有大面积的原始森林，几百年来许多农民在这里世世代代地生活。这里冬天气温寒冷，因此农民便在森林里要捡拾枯树枝，带回家生火取暖，偶尔也用斧子砍伐树木。这种生活方式延续了几百年，似乎没有什么问题。</span></p><p><span>但是，新兴的资产阶级群体就把森林占为己有，甚至出台了物权保护法，法律就声称：农民一切砍伐林木的行为都是侵害林木所有者的利益，都是“盗窃”行为，都应当加以盗窃罪来论处，甚至捡拾枯树枝的行为也是“盗窃”。农民就不高兴了：因为我们世世代代都是在这里生活，森林属于自然资源，为什么到了今天反而要变成了少部分人的私有财产呢，农民想不清楚。而大部分日常赖以维生的这种行为却变成了“犯法”呢？这太荒唐了！</span></p><p><span>马克思看完了议会的辩论记录之后，立即就决定为农民和贫苦者辩护。马克思说：“林木占有者表面上是在立法维护个人的物权，但是把森林变成个人私有财产本身这就是违法的”。几百年来，农民进山砍柴都是合理地使用自然界的力量，这已经成了他们的习惯权利。而问题不在于摩塞尔河谷的农民和穷人，一切国家的穷人都具有这样一种习惯的权利。因此，马克思给出的结论是：农民进山拣拾枯树枝、生火取暖是对自然资源的合法占有，根本不能算作是盗窃。相反，资本家、地主这些林木所有者为此立法的行为本身才是不可饶恕的，他们是彻头彻尾的侵占大多数人的公共利益，并且把它变成了个人的私人利益，因此为了那些枯死的树枝，而不惜把无辜的群众抛入犯罪、耻辱和贫困的地狱。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1430711918424681/ELMT1430711918518697_1524300794.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>我们知道，马克思大学期间先后学习过法律和哲学的专业。按照黑格尔的观点，国家和法律是“理性”的代表，它理应代表大多数人的利益。但是社会现实却是一小部分权贵把公共财产据为己有，甚至还要用立法来惩罚农民，而法律却恰恰站在了私人利益这一边。马克思的“三观”被颠覆了，到底是哪里出现问题了呢？是法律出了问题，还是立法者出了问题？ 马克思敏锐地意识到，两方面都出了问题，但最为根本的是哲学出了问题，这个问题如果说不从根本上来解决，德国社会就依然不能进步。</span></p><p><span>同时，马克思还关注犹太人所呼吁的“宗教解放”运动。普鲁士政府要求犹太人改信基督教，引起了犹太人的强烈不满，他们要求实现宗教信仰的自由。但是，马克思提出了疑问，宗教信仰自由仅仅在于宗教领域就能实现吗？答案是否定的。因为这不仅是宗教教义的问题，它更是一个政治问题，犹太人要求的解放实质上应当是政治解放。</span></p><p><span>但是马克思又进一步地发问：政治解放如果成功了，就万事大吉了吗？并没有啊，因为实现的是犹太人的“犹太精神”的这种解放，而当时在欧洲社会横行的是“资本主义精神”。只要这种精神存在，人们就是自私自利的人，就会有资本家压迫工人，就会有资产阶级统治无产阶级。因此，政治解放只不过是作为资本家代言的统治者的解放，而真正意义上的解放，是全人类的解放，它远远高于“宗教解放”，也同样高于“政治解放”。</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1430711918424681/ELMT1430711918518697_1524300817.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>那么，如何才能实现全人类的解放呢？马克思有句名言：“人解放的头脑是哲学，心脏是无产阶级。”什么意思呢？唯有让无产阶级掌握哲学武器，才能具有革命和解放的觉悟。马克思就把他的这种想法写成了两篇文章，一篇是《&lt;黑格尔法哲学批判&gt;导言》，一篇是《论犹太人问题》，后来这两篇文章都发表在《德法年鉴》的创刊号上。这两篇文章的落脚点，就是“人类解放”的主题，这也可以看作是马克思的“初心”，也同样是我们共产党人的“初心”。“人类的解放”就像一颗火种，深深地种在了马克思的思想土壤里。马克思一生的事业，都是为了实现人类的解放事业而奋斗。</span></p><p><span>由于马克思的才能被广为认可，因此当时马克思虽然只有仅仅24岁，却已经是《莱茵报》实际的主编了。但是好景不长，由于普鲁士当局的压力，也由于报社内部的意见不合，马克思选择了辞职。</span></p><p><span>《莱茵报》的投资合伙人中有许多是普鲁士政府的要员，其中就有后来的普鲁士的总理鲁道夫·康普豪森，他非常欣赏马克思的才华，听说马克思辞职了，就一直鼓动马克思入阁，希望他能够出任财政部长或者国家银行的行长。这实在是一份令人艳羡的职位，但是马克思志不在此，拒绝了这份“好意”。</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1430711918424681/ELMT1430711918518697_1524300843.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>马克思辞职之后，没有急着找下一份工作，而是完成了人生中的一件大事 —— 结婚。他和燕妮之间长达七年的恋爱长跑，总算抵达胜利的终点了。</span></p><h2 id='第06讲-幸福终于来敲门'><span>第06讲 幸福终于来敲门</span></h2><p><code>1843年，新婚燕尔</code></p><div class="audio"><audio controls="" src="https://download.12371.cn/jjmksdlj.mp3" type="audio/mpeg" preload="metadata"></audio></div><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524637629.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>1843年6月19日，在特里尔东北部有一座小镇，叫克洛茨纳赫。在那里有一个新教教堂里，举行了一场朴素而庄重的婚礼。新郎叫马克思，新娘叫燕妮。他俩结婚的小镇克罗茨纳赫坐落在莱茵河与纳尔河的交汇处，风景宜人、清静自然，温泉尤其出名。新婚燕尔的马克思和燕妮别提有多高兴了。两人在温泉小镇和周边度过了一个难能可贵的短暂蜜月。</span></p><p><span>都说每一个成功男人的背后站着一个伟大的女人，马克思也不例外。尤其是像他这样一生流亡奔波、穷困潦倒，只为心中的革命事业和崇高理想不屈不挠的人，若没有一个懂他、爱他、理解他、支持他的人在身边，我们可能真的无法想象。</span></p><p><span>我们现在至少可以欣慰地说，在爱情上，马克思是幸运的。他与一生挚爱燕妮相识于年少时，青梅竹马、情投意合。他们的爱情或许并不惊天动地、刻骨铭心，也曾为明天的柴米油盐发过愁，但十九世纪的苦难和硝烟都吹不散他们之间的相濡以沫和情比金坚，真的惟有生老病死才真正将他们分开了。</span></p><p><span>都说患难才能见真情，今天，我们生活日渐富足，选择也日渐繁多，却常常走着走着就散了。粗浅的爱情敌不过富贵荣华，跑不赢似水流年。试问，如果有一个人能在你最贫穷、最一无所有的时候不离不弃，那还有什么矫情的理由与他／她分道扬镳呢？今天，我们就来聊聊伟人马克思的爱情与婚姻。</span></p><p><span>如果让现代爱情专家来评评马克思，他可能是个追女孩的高手。在一段感情中，你能想到的障碍，比如说年龄的差距、异地相处、门不当户不对、经济基础不牢靠，全都被马克思撞上了。燕妮比马克思大四岁，所以马克思谈的是个板上钉钉的“姐弟恋”。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524637647.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>燕妮家世显赫、出身名门，随着年龄的增长逐渐出落得亭亭玉立，风姿卓越，是特里尔城舞台上公认的“舞后”。这样一个众星捧月的“白富美”在当时也称得上是“大众情人”，很多名家子弟和帅气青年排着队拜倒在她的石榴裙下。马克思便是那芸芸大众中的一员，萌动的爱情如同燃烧的火焰，点燃了这位热血青年的小心脏。当他忐忑不安地向燕妮表露自己的爱意时，他几乎不敢相信燕妮居然爽然接受了自己的爱慕心迹，这两个合拍的年轻人就这样偷偷地私定终身了。</span></p><p><span>实际上，十九世纪的德国社会并没有我们想象的那么开放、那么通情达理，马克思和燕妮的爱情也并不被人看好，包括双方的家人。一方面，可能因为门第的差距，燕妮的哥哥始终认为她应该嫁一个中尉或是有爵位的贵族；另一方面，家长的看法总归是更加务实一些，当时的马克思只有18岁，尚在求学阶段，一个未立业的男人没有任何经济基础来照料未来的新娘。那时的德国人和我们现在大多数人一样，认为在找到职业支撑家庭之前，根本不应该考虑结婚的事。除此之外，“姐弟恋”在当时也被认为是可耻的，这违背了世人对男性身份标准的固有看法，以及两性关系的规范。因此，两人的爱情被双方家人解读成了一种少见的、强烈的叛逆行为。</span></p><p><span>后来有个有意思的说法，说在所有激进的革命观念和共产主义理论真正形成之前，卡尔·马克思就用求婚首次反对了19世纪的资产阶级社会。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524637664.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>和大部分追求者一样，马克思虽然在对待感情上坚定不移，但他也不笨，还是采取了一些聪明的套路为最后的成功添砖加瓦。比如燕妮的父亲老威斯特法伦就被马克思率先征服了，对未来的女婿所表现出的才华那是赞不绝口，称马克思是“一位出色、高尚且杰出的”年轻人。而燕妮也是一位有颇有追求和想法的女子。在她的眼中，马克思热爱学习，充满智慧，是一个可以终身作为依靠的人。这种视富贵如浮云、视门第为尘土，以才华、价值和理念为首选的择偶观放在现代社会来看，可能也会被人嘲笑很傻很天真，但正是她坚定的选择，成就了这段旷世佳缘。</span></p><p><span>后来，我们都知道，有了马克思的努力和燕妮的通达，这对年轻人最终还是突破社会偏见，牵手成功。但从确立恋爱关系到结婚这一路，他们俩走得并不顺风顺水。</span></p><p><span>马克思不在特里尔读大学，因此他与燕妮经历的是今天爱情宝典里特别不推荐的选项 —— 异地恋。这是一个非常大的考验。马克思读大学期间，很少回家，与燕妮一年都见不上几面。这对年轻情人维系感情的主要工具，你肯定猜不到，那就是写信。</span></p><p><span>在那个没有电脑、没有手机，发不了微信，上不了微博，也没有办法FACETIME的年代，马克思为自己心爱的姑娘写下了无数篇充满爱意、激情洋溢的诗歌，被后人编成两本《爱之书》和一本《歌之书》保留了下来。这些诗歌燕妮终生保存着，他们的女儿劳拉后来记述说，“父亲并不看重那些诗歌；但每当父母谈起它们，总是开怀大笑这些年轻时的荒唐行为”。</span></p><p><span>实际上，当你真的走进马克思的诗歌世界，你会被他磅礴大气的文字所折服，读着读着似乎就能感同身受地体会到他对燕妮那炽热而真挚的感情。比如，他是这样写的：</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524639723.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>我们读着这些华丽而有力量的诗句，是否让你眼前一亮呢？这不是我认识的马克思啊！的确，马克思的文学造诣很高，这与他惊人的阅读量有着密切的关系。更难能可贵的是，他写爱情诗的格局是非常大的，很让人惊叹，他会经常在诗歌中将爱意与理想、意志与事业、审美与认知融为一体。比如他曾经写了这样一首爱情诗：</span></p><p><span>面对着整个奸诈的世界，</span></p><p><span>我会毫不留情地把战挑，</span></p><p><span>让世界这庞然大物塌倒，</span></p><p><span>它自身扑灭不了这火苗。</span></p><p><span>那时我就会像上帝一样，</span></p><p><span>在这宇宙的废墟上漫步；</span></p><p><span>我的每一句话都是行动，</span></p><p><span>我是尘世生活的造物主。</span></p><p><span>这些诗句虽然看起来很稚嫩，但字里行间除了漫溢的对燕妮的爱之外，还有很多闪烁的思想火花，为未来他走向哲学、走向思辨打下了非常坚实的基础。其实，马克思与燕妮的通信习惯一直保留着，直到他们结婚数十年以后，依旧不间断地写信。终于，在沉闷的19世纪四十年代，两个年轻人的爱情像百花园中的牡丹，含苞待放，迎来了姹紫嫣红的明天。</span></p><p><img src="https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524637700.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>燕妮与马克思之间除了深厚的情感，还有非常一致的精神追求，他们对现实的不满、对劳苦大众的同情、对革命坚定不移的信念，都是这段感情延绵不断的价值基础。燕妮是马克思的爱人、妻子、孩子的母亲，同时也是他最忠诚的战友。爱情有没有保鲜期？什么样的爱情才能让人拥有一生？现代人可能会说仪式感，把每天都过成情人节，但对马克思和燕妮来说，答案恐怕并不是如此。最好的爱情不是物质上的门当户对，而是精神上的势均力敌。在现代社会，很多人会把门当户对特别狭隘地理解为财产、社会地位的旗鼓相当，其实最应该当对的是价值观的一致。</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524637721.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>新婚旅行完后，马克思的朋友卢格邀请马克思夫妇前往巴黎，并邀请马克思一起出任《德法年鉴》的主编。马克思对法国有着特别深厚的感情，因为从小他就听父亲朗诵卢梭、伏尔泰等法国思想家的作品，而同时马克思又接受了优秀的德国古典哲学的教育和熏陶，毕竟马克思在德国生活了25年，因此，当卢格邀请马克思编写出版同时容纳法国和德国社会思想动态的刊物时，马克思几乎毫不犹豫地答应了。未曾想到，这一去，就开启了思想的华彩乐章，马克思主义从此诞生。</span></p><h2 id='第07讲-穿越时空的手稿'><span>第07讲 穿越时空的手稿</span></h2><p><code>1844年，哲学革命</code></p><div class="audio"><audio controls="" src="https://download.12371.cn/jjmksdqj.mp3" type="audio/mpeg" preload="metadata"></audio></div><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524641000.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>1844年8月底，在塞纳河边雷让斯的咖啡馆里，两个年轻人在聊天，他们的眼睛里闪烁着兴奋的光彩，夸张地挥舞着手臂来表达自己的观点。很显然，他们的思想惊人地一致，经常一个人刚说到一半，另一个人就接着把下半句话都说完了，这种共鸣让他们彼此都很激动，仿佛寻遍天下，终于找到了自己心灵相通的朋友。</span></p><p><span>这两个年轻人，一个就是马克思，26岁。一个就是恩格斯，24岁。</span></p><p><span>这次呢，并不是两人的第一次见面，但却是第一次的促膝长谈。早在马克思还是《莱茵报》编辑的时候，两个人就有过第一次的见面。当时，是恩格斯前往《莱茵报》编辑部与马克思见面，但是两个人匆匆一面之交后，便各奔前程了。</span></p><p><span>因为不久以后，恩格斯按照他父亲的安排，前往英国一家叫做“欧门－恩格斯”的纺织工厂实习。从这家公司的名字我们大家就可以猜到，恩格斯的父亲是两位合伙创始人之一。由此可见，如果说马克思的家庭还是中产阶级的话，那么恩格斯则出生于一个不折不扣的资产阶级家庭。</span></p><p><span>但是，恩格斯也不是等闲之辈，他不是高高在上的公子哥，而是在纺织工厂里与工人“同吃同住同劳动”，因此对于英国工人阶级的悲惨生活状况，恩格斯有着切身的体会。从这时开始，恩格斯就意识到青年黑格尔派、柏林“自由人”这些学术团体不过是玩弄一些故作高深的词句，而对真正的社会现实状况是一无所知。</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524640617.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>恩格斯就把他在英国的所见所想写成了两篇文章，一篇叫做《政治经济学批判大纲》，另外一篇的名字是《英国工人阶级状况》。在这里面，恩格斯就发现有两条重要的问题：第一个就是英国工人遭受苦难的根源，正是英国上流社会引以为豪的资本主义制度；另外一条，就是要消灭这种制度，就必须依靠无产阶级的力量。</span></p><p><span>往哪里投稿比较好呢？恩格斯对马克思和卢格主编的《德法年鉴》非常的感兴趣，当马克思收到恩格斯的来稿时，他立刻感受到了恩格斯的天才与与众不同，特别是恩格斯的许多观点和自己不谋而合，这简直是“英雄所见略同”，于是当即决定录用恩格斯的这两篇文章，连同马克思自己的两篇文章《&lt;黑格尔法哲学批判&gt;导言》和《论犹太人问题》一起，把这四篇文章作为《德法年鉴》的创刊号一起刊登了出来，同时向恩格斯发出了邀请，请他到巴黎家中坐一坐。</span></p><p><span>这样恩格斯就在取道法国回国的途中，出现了我们刚才开头讲到的那一幕。</span></p><p><span>两个年轻人一见如故，当即就决定为了共同的理想和志向，要合作干一番大事业。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524640637.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>两人合作的第一本书叫做《神圣家族》，从这本书的名字上大家就可以发现它是要批判德国当时知识界的宗教主义倾向，两个人你写一段我接着写一段，写完之后一经出版，便在德国的知识界引发了巨大的震动。恩格斯当时在马克思的家里一住就是十来天，后来他给马克思的信中也谈到了这段难忘的经历，“我还从来没有一次像在你家里度过的十天那样感到心情愉快，感到自己是真正的人。而我当时在英国工人阶级那样一种生存状况之差，简直不像人呐。”</span></p><p><span>与此同时，马克思埋头于不为人知的艰苦地写作之中，写作的内容除了马克思本人之外，几乎没有第二个人知道，连恩格斯都毫不知情。马克思这一时期写下的这些厚厚的手稿，在80多年后与其他手稿一起被运到了苏联，而这么多年来人们一直都不知道这些手稿的存在！因为这些手稿没有题目，编排也非常的随意和杂乱，后来苏联人找来了当时最出色的情报解密专家来进行翻译，并且推测出这些手稿就是马克思1844年在巴黎时候所写的。由于这个内容涉及到经济学和哲学，因此就以《1844年经济学哲学手稿》来为它命名。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524640655.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>手稿的翻译过程是极其困难，原因有三：首先，马克思字迹潦草凌乱，并且纸上经常伴有打翻的咖啡或者烟头烧焦的痕迹；其次，是手稿本身残破不全，缺失严重，尤其是第二个笔记本，所剩无几，上下文之间也不连贯；第三，就是文稿中间带有大量的黑格尔、费尔巴哈式哲学术语，使得整个的文章的文风极其拗口。在克服种种困难之后，这部手稿终于是在1932年穿越时空，重见天日。</span></p><p><span>手稿一经发表，就震惊了东、西方世界。许多思想家声称看过马克思这部手稿之后，从根本上转变了对马克思的研究态度和方向。时至今日，它仍是马克思文献中被引用最多、同时也是最难懂的文本之一。这部手稿标志着马克思思想发展过程中一次巨大的综合的艰难的创造，它的完成可以说是马克思新世界观萌芽前的最后一个具有决定意义的步骤。</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524640674.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>尽管手稿的内容比较杂乱，但马克思的思路还是异常清晰：现实社会中存在的普遍问题就是异化劳动问题，它的解决方案就是实践，它的根本出路就是人类的解放和共产主义。众所周知，马克思主义有三大组成部分，分别是政治经济学、哲学和科学社会主义，在这部手稿中，三个部分第一次全部出现，并且作为一个有机的整体结合在一起。这部手稿被后人称之为“马克思学说真正的诞生地和秘密”，而且，可以这么说，如果没有这部手稿，马克思的两大发现 —— 唯物史观和剩余价值学说 —— 都不可能完成。我们在这里讲一个相对最容易理解的知识点 —— “异化”的概念。</span></p><p><span>简单来讲，“异化”就是我创造出来的东西，反过来又敌视我、压榨我、奴役我的过程。马克思用“异化”概念研究的是劳动问题。他说，古典政治经济学家认为人的本质就是劳动，看上去这个逻辑似乎没有什么问题。但是马克思说，在现实社会中我们就会发现不同，如果说劳动是人的本质的话，人应该热爱劳动才对，但是社会现实状况呢？恰恰相反：人在劳动中感到不幸福不舒畅，不劳动时他才感到幸福舒畅。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524640692.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>大家可以想想看，电影《摩登时代》里，卓别林在皮带旁工作的场景吧，他吃尽了苦头，出尽了洋相，观众们会觉得如果他不是一个人，而是一个机器，那该多好！又不会累，又不会饿，最多吃一点油，就可以工作了。因此，在这样的劳动条件下是根本无法体现人的本质，劳动就变成了“异化的劳动”。</span></p><p><span>马克思认为，古典政治经济学家犯了一个原则性的错误，那就是把“异化劳动”当成了劳动本身，真正的自由自觉的劳动只有在共产主义社会才能实现，而要想实现共产主义社会，唯一的道路就是打破现有的不合理的状态，也就是“革命”。</span></p><p><img src="https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524640709.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>因此，马克思认为，对于资本家而言，是不是要把工人阶级当“人”看，无关紧要，但问题的关键在于，在资本主义生产方式下，工人阶级的生存条件就下降到了“物”的层面，甚至他们还不如那些摆在街头精致的橱窗里的奢侈品，比如说LV包包、爱马仕，这些商品的“居住环境”远比工人阶级干净、漂亮、有品味。</span></p><p><span>而人类社会能不能彻底摆脱这样一种异化呢？是可以的。这就是要通过共产主义社会来实现人的解放，异化劳动的克服，从而实现人的自由而全面的发展。这对于一个只有26岁年龄的青年人而言，无疑天才般的对人类历史的洞见。于是万事俱备，它距离马克思主义新世界观的横空出世，只有一步之遥了。</span></p><h2 id='第08讲-撸起袖子加油干'><span>第08讲 撸起袖子加油干</span></h2><p><code>1845年，新世界观</code></p><div class="audio"><audio controls="" src="https://download.12371.cn/jjmksdbj.mp3" type="audio/mpeg" preload="metadata"></audio></div><p><img src="https://p5.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524642149.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>1845年，马克思全家离开巴黎，迁居到比利时布鲁塞尔，并在这里住了三年。这段时光里，马克思享受到了爱人在身边，最好的朋友就住在隔壁的日子 —— 没错，当时恩格斯也在布鲁塞尔，住处紧挨着马克思一家，并且由于积累了不少来自书商和报社的稿费，生活条件不至于太坏。这段时光里，马克思和燕妮生了一男一女两个可爱的娃娃，给家里带来了许多快乐的气氛。</span></p><p><span>27岁的马克思，处在哲学思考、思想创造最为旺盛的年龄，大量阅读、思考和写作。同时，他与恩格斯几乎天天晚上在一起交谈。这一年，他们合作了第二本书 —— 《德意志意识形态》。这部著作标志着马克思主义的真正诞生，天才的新世界观 —— 历史唯物主义的真正问世。</span></p><p><span>马克思的新世界观“新”在哪里呢？让我们从他的一句名言谈起：</span></p><p><span>“哲学家们只是用不同的方式解释世界，问题在于改变世界。”</span></p><p><span>我们知道，所谓世界观，无非是某种理解世界的哲学思想，而经典意义上的哲学 —— PHILOSOPHY，是发源于西方的。自古深情留不住，从来套路得人心。那么，西方哲学的基本套路是什么呢？这一切还要从古希腊文明谈起。</span></p><p><img src="https://p5.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524642171.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>我们知道，古希腊文明发源于爱琴海沿岸和星罗棋布的岛屿上。自然条件并不理想。生活在这里的人们，需要乘船往返西亚和北非地区，通过贸易往来，换取日常生活的必需品。当船队开往大海的时候，生命就像海面上的叶子，随时会感受到大海波涛汹涌和去来无定，暴风雨到来时，随时会感受到死亡的威胁；而风平浪静的夜里，又可以看到满天的星斗。因此，希腊人遇到的第一个问题是：既然生命周围都是剧烈无常的变化，那么，什么东西才是永恒不变的？</span></p><p><span>不要小看这个问题，它并不容易回答。因为严格说来，世界上的所有东西在时间的考验中都会起到一定的变化，而只有一种东西可以不变，那就是思想。那么，什么样的思想才是永恒不变的呢？古希腊人有一种特别的提问技巧。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524642189.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>比如我手边有一个茶杯盖，我说这个茶杯盖是圆的。古希腊人会问我：它圆吗？</span></p><p><span>我一看没问题啊，挺圆的。</span></p><p><span>古希腊人会继续问我：你再仔细看看，它到底圆不圆呢？</span></p><p><span>我把茶杯盖拿在手里反复看，确实不算是一个完美的圆，它在这里或那里，还有小小的瑕疵。</span></p><p><span>于是我拿出了圆规，在纸上画了一个圆，问古希腊人：这总算圆了吧？</span></p><p><span>古希腊人盯着我，好像能看穿我的灵魂。他还是那个老问题：它圆吗？</span></p><p><span>我翻来覆去的看，也不是严格意义的圆：纸上消耗了铅笔的一些石墨粉，它像一个救生圈一样，是一个圈型“体”，而不是二维世界里的圆。</span></p><p><span>最后我泄气地说：我放弃。三维世界里没有你要的完美的圆。</span></p><p><span>古希腊人说：没错。所以真正的完美的圆，只在我们的脑海里，现实世界里没有这样的圆。</span></p><p><span>我反问道：可你如何证明我脑中的圆和你脑中的圆是同一种圆呢？</span></p><p><span>古希腊人说：人是无法证明的。之所以咱们对圆的理解是一样的，那是因为我们都有关于圆的“理念”，而“理念”是神的造物。我们生活世界中所有的圆形物体，都是这种圆的理念的“摹仿”。既然是“摹仿”，就总归是不完美的、有缺陷的。只有圆的理念是没有缺陷的。</span></p><p><span>这样一来，古希腊人就形成了他们的世界观：他们把世界一分为二：一半是事物，一半是思想，而事物是思想的摹仿，因而思想是第一性的。西方哲学从古希腊到马克思，中间经历了两千多年。甚至这种刨根问底的提问方法本身，都是古希腊人创造的，确切来说起源于苏格拉底，他把这种提问方法叫“精神助产术”。</span></p><p><img src="https://p5.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524642208.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>按照中国人的说法：“形而上者谓之道，形而下者谓之器。”既然西方哲学是讨论“器”之上的“道”，因此西方哲学又叫“形而上学”。</span></p><p><span>在两千多年的时间里，西方哲学也经过了不同阶段的发展。在中世纪神学，僧侣们讨论的是“一个针尖上到底能站几个天使”，到了近代，哲学家们讨论的是“人的理性究竟怎样认识世界”，如此等等。不管思想的主体是神还是人，重要的是思想始终是第一位的。</span></p><p><span>到了18世纪的时候，西方哲学进入了它的鼎盛时代，也就是“德国古典哲学”时期，代表人物是康德、费希特、谢林和黑格尔。特别是黑格尔的哲学成为了西方哲学的集大成，他把过去几千年哲学思考的所有方向和所有可能性，都用辩证法包含在内了。但是，仍然有一个最重要的问题没有解决：我们能不能用思想去证明事物的存在？我看到一个茶杯盖，并在放在手里感觉到了它，它就真实存在吗？怎样保证我不是在做梦呢？这个茶杯盖不是我幻想出来的东西吗？这个问题难倒了无数哲学家，康德甚至把这种难题叫作“人类理性的耻辱”。</span></p><p><span>这个时候，马克思平地一声惊雷：“哲学家先生们，你们全都错了！问题根本不是解释世界，问题在于改变世界！” —— 就算我真的解决了用思维证明存在的难题，世界就能和平吗？人类就能解放吗？显然不能。</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524642226.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>在当时，德国人简直把苦思冥想伸到了极致，换来的结果是连隔壁法国的社会发展都超过了自己。在当时的欧洲，法国和德国之间存在着比较大的差别：德国在思想和哲学上高于法国，而法国在社会发展、文明程度高于德国。两国人对待同一件事的习惯也很不同，举例来说，如果让一个法国人和一个德国人去实现“自由”，这个法国人会拿起武器，走上街头，甚至会攻占巴士底狱来实现自由；而德国人却戴着睡帽在书房里安静地沉思，仅仅是在脑海中翻涌着颠覆世界的自由思想。</span></p><p><span>马克思认为，对于德国来说，不是想得太少，而是想得太多：有太多从事批判工作的思想派别，彼此之间互相写文吵架，但只是流于词语和表达形式上的争辩；真正要紧的是关注社会实际的发展变化，并展开切实有效的行动方案。</span></p><p><span>所以，马克思用实践的原则代替了思辨的原则，而“实践”就是历史唯物主义的真正基石与活的灵魂。马克思关注人，但不是像以往哲学家那样关注人的理性，而是关注人的现实生活，关注人的劳动生产。</span></p><p><img src="https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524642255.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>因此，马克思不屑于与“哲学家”为伍，他强调“历史唯物主义的第一个前提是现实的人”，而人的活动首先是吃穿住行和生产活动，所以讨论人的问题，只有讨论人的活动的历史和人类社会的生产历史，才是真正有效的。这就是我们常说的历史唯物主义的新世界观。</span></p><p><span>你可能会问：这有什么稀奇？道理中国人都懂啊！它“新”在何处？</span></p><p><span>中国人能够顺利接受马克思的历史唯物主义思想，很大程度上因为中国传统文化本身就不同于西方哲学和西方文化，并且天然与马克思主义相连结。</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524642279.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>我们刚才讲到，西方文明和哲学思想发展出了“形而上”与“形而下”之间的对立，对于中国人来说，也知道有这种区分，但并不会把这两者严格对立起来，因为中国讲究“道器不分，体用不二”，大道不离人伦日用。按照德国思想家莱布尼兹的看法，中华文明是世界上最讲实践和实用理性的文明，因此小到家庭教育，大到治理国家，没有哪个文明比中华文明更擅长了。正是由于中国人讲实干，重现实，因此与马克思主义的精髓是内在一致的，马克思主义中国化的历史进程，总体来说也是非常顺畅的。</span></p><h2 id='第09讲-旷世宣言惊风雨'><span>第09讲 旷世宣言惊风雨</span></h2><p><code>1848年，不朽宣言</code></p><div class="audio"><audio controls="" src="https://download.12371.cn/jjmksdjj.mp3" type="audio/mpeg" preload="metadata"></audio></div><p><span>1848年2月，整个欧洲被一本只有区区一万多字的小册子震动了，从南欧的西西里岛到西欧的法国，加上中欧的德意志、瑞士，东欧的奥地利、匈牙利，北欧的丹麦，全部卷入到革命斗争的火焰之中了。</span></p><p><img src="https://p5.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524714805.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>这本小册子的问世，无异于一颗惊雷，使革命的火焰烧得更旺了。170年来，这本小册子被翻译成了200多种文字、数千个版本，在世界各地传颂。它的名字，就是《共产党宣言》。它的发表，具有划时代的意义。</span></p><p><span>《共产党宣言》是时代声音的呼唤。19世纪的大幕拉开，当拿破仑战败于滑铁卢时，欧洲持续了一百多年的内战宣告结束，开启了全面的对外殖民 —— 看起来，那是一个资本主义社会快速发展的时期，人们在他们创造出来的成果面前目瞪口呆。但是，表面上的欣欣向荣，掩盖不住资本主义内部的暗流，阻挡不了工人阶级的反抗运动。</span></p><p><span>1831年，里昂工人走上街头，疾呼：“工作不能生活，毋宁战斗到死！”1836年，英国无产阶级走上历史舞台，开启了轰轰烈烈的宪章运动。德国手工业者在流亡巴黎的苦难中建立了正义者同盟……一场场运动，一次次诉求，无产阶级不断发出自己的声音，他们迫切需要新的理论，新的同盟，新的纲领。</span></p><p><img src="https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524714829.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>1847年1月，马克思的家里来了一位特殊的客人，他叫约瑟夫·莫尔，是正义者同盟的领导人，他来到布鲁塞尔，请求马克思和恩格斯加入同盟，并帮助同盟进行改组。马克思提出：即将召开的同盟大会应该接受他的理论观点作为同盟的纲领，并以宣言的形式发表。随后，“正义者同盟”改名为“共产主义者同盟”，用“全世界无产者，联合起来！”代替原来的“人人皆兄弟”作为口号。</span></p><p><span>1848年1月，《共产党宣言》宣告完工。它的结构大气恢弘，思想极为深刻。</span></p><p><span>从结构上看，《共产党宣言》开篇史无前例地用双重大坐标系，定位了人类历史发展规律。它的纵向是时间的坐标系，揭示了前资本主义社会到资本主义社会，再到共产主义社会的历史过程；横向是空间的坐标系，勾勒了西欧资本主义开创世界历史的伟大进程。两条坐标交汇之点，就是当时的资本主义时代。这两重坐标系所遵循的基本规律，被马克思概括为：“至今一切社会的历史都是阶级斗争的历史。”</span></p><p><img src="https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524714854.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>从思想上看，《共产党宣言》揭示了“资产阶级的灭亡与无产阶级的胜利是同样不可避免的”的原理，也就是“两个必然”理论，同时还阐明了“单个人的自由发展是一切人自由发展的前提”，即共产主义社会理论。马克思恩格斯还不厌其烦地逐一回应了资产阶级向无产阶级的污蔑和攻击，确立了共产党人的原则和信仰。此外，《共产党宣言》还批判了各种各样反动的、有害的、不彻底的和形形色色的社会主义思潮，从而澄清了科学社会主义的应有内容。</span></p><p><span>从语言上看，我们只需要读一下第一句便可明白：“一个幽灵，共产主义的幽灵，在欧洲游荡。为了对这个幽灵进行神圣的围剿，旧欧洲的一切势力，教皇和沙皇、梅特涅和基佐、法国的激进派和德国的警察，都联合起来了。”马克思天才般地化用了莎士比亚的名著《哈姆雷特》中的幽灵形象，当迷茫的人们彷徨无助之时，幽灵便会现身，为人们指引正确的方向。</span></p><p><span>因此，这部伟大的宣言一经问世，就带来了“笔落惊风雨，诗成泣鬼神”般的轰动影响。反动派惧怕它，革命者拥护它，学者研究它，就连普通的市民都知道“全世界无产者，联合起来”的说法。</span></p><p><span>它汇聚了马克思主义的理论精髓，“以天才的透彻而鲜明的语言描述了新的世界观”，对马克思的学说“作了完整的、系统的、至今仍然是最好的阐述”。</span></p><p><img src="https://p5.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524714932.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>资本家们惊呆了：他们从来没有想过他们开创的伟大的时代竟然隐藏着如此多的病症。自近代文艺复兴运动以来，有两大方面欧洲人最引以为豪：一是工业革命，二是理性精神。但是随着现代化发展的不断深入，这两个方面都走向了矛盾和冲突的“悖论”之中：工业革命滑入“现代化陷阱”，突出地表现为财富不断增长的同时导致贫富两极分化的社会生活矛盾。一方面是生产的社会化，一方面是生产资料的私人占有，这种矛盾对抗越来越突出。理性精神陷入“人道主义困境”，突出地表现为理性呼唤人道主义，在现实中却表现为人的“异化”。</span></p><p><span>马克思认为，只有在共产主义社会中，才能消除两极分化问题，从而在物质财富极大丰富的前提下实现人的平等；才能消解人的异化问题，从而让人性得到自由充分的发展。因此，在《共产党宣言》里，马克思恩格斯提出，资本主义社会在创造出巨大生产力和改变全部旧有的生产关系的时候，同时也在不断制造经济危机和压榨无产阶级。实现共产主义，必须通过无产阶级的革命性，消灭私有制，实现“自由人的联合体”。</span></p><p><span>《共产党宣言》的问世，感染了无数后来的人们。许多有志青年是通过这篇《宣言》走上了追求共产主义理想的道路。可是谁又能想到，这篇《共产党宣言》是在马克思极度嘈杂的生活环境下写出来的 —— 当时马克思和燕妮有一儿两女，马克思伏案写作的时候，三个孩子爬在马克思的肩头“骑大马”，或是在身后拽着马克思“赶马车”。</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524714967.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>由于马克思在写作过程中，殚精竭虑，字斟句酌，因此交稿的时间不断地拖延 —— 这篇不朽的文章，是在共产主义者同盟会的敦促和警告声中，在恩格斯的不断帮忙和鼓励声中，匆匆写完的。</span></p><p><span>1872年，时隔接近25年后，马克思为《共产党宣言》的德文版再版写了一篇序言，马克思认为，“不管最近 25 年来的情况发生了多大的变化，这个《宣言》中所阐述的一般原理整个说来直到现在还是完全正确的。”但是，“这些原理的实际运用，正如《宣言》中所说的，随时随地都要以当时的历史条件为转移”。马克思的这些话大有深意：他的理论不是教条主义，而要时时刻刻与时代发展条件相结合。如果马克思主义能够紧跟时代甚至引领时代，那么，它就是与时俱进的、永不过时的。</span></p><p><span>因此，马克思主义时代化的一项重要成果，就是马克思主义中国化。中共老一辈无产阶级共产党人接触到的最早的马克思主义的著作之一，就是《共产党宣言》。在陈望道翻译的第一个《共产党宣言》中文本出版发行时，它就震惊了中国。毛泽东对《共产党宣言》爱不释手，他曾说：“共产党宣言，我看了不下一百遍，遇到问题，我就翻阅马克思的《共产党宣言》，有时只阅读一两段，有时全篇阅读，每阅读一次，我都有新的启发”。于是，《共产党宣言》成为了他每一年的必读书目，从第一页到最后一页都是密密麻麻的蝇头小字写的注。</span></p><p><img src="https://p5.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524715035.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>今天，我们依然在读《共产党宣言》，读来思绪万千，似乎能透过纸张看到马克思在书桌前的兴奋与忧愁，似乎能穿过文字听到马克思深夜里的笑声与哀叹，似乎能越过时间与那时的马克思面对面，看到他再一次被驱逐的命运，看到他和燕妮被警察逮捕，释放后来不及告别就又开始了新的流亡之路。从布鲁塞尔到科隆，从科隆到伦敦，马克思又经历了些什么？岁月在他身上又增添了怎样的印记？</span></p><h2 id='第10讲-贫穷不限制思想'><span>第10讲 贫穷不限制思想</span></h2><p><code>1849年，流亡伦敦</code></p><div class="audio"><audio controls="" src="https://download.12371.cn/jjmksdshij.mp3" type="audio/mpeg" preload="metadata"></audio></div><p><span>1849年8月下旬的一天，天气有点闷，一辆从法国布伦港开来的客轮停靠在了伦敦港。在闸门打开的一瞬间，有大批难民涌向了这座世界之城。马克思也是其中的一员。当马克思踏上这片土地的时候，他并不知道自己接下去的生活会跌至冰点，最初不打算要在这里流亡余生。</span></p><p><img src="https://p5.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524798358.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>事实上，虽然他一直心系祖国的革命事业，却再也没能有机会重返故土。人这一生也许就是这样，有很多意想不到，有很多无可奈何，也有很多绝地逢生。今天想要跟大家讲的是马克思人生中最低谷的一段时光，流亡伦敦的前因后果。</span></p><p><span>听众朋友们肯定很纳闷，马克思不是刚写了旷世宣言吗？怎么会突然流亡伦敦了呢？暴风雨来临前必是风起云涌、鸟兽奔逃，人人都被低气压搅得心神不宁。1848年革命前后，欧洲不太平，各方主要势力的行事都不太顺利，奥地利帝国面临土崩瓦解的危险，意大利南部发生暴动，法国的君主制被推翻、暴乱不断，并逐渐扩散到德意志各邦国，乃至整个欧洲大陆。马克思除了起草《共产党宣言》之外，作为共产主义者同盟的领导人，他也真正投身到了革命的行列中，与其他同志们并肩作战。</span></p><p><img src="https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524798380.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>1848年3月3日，马克思突然被比利时政府驱逐出境，还没等到最后时限，一群警察就在那个下午冲进了马克思的公寓，将其投入了监狱。燕妮得知消息后心急如焚，她在布鲁塞尔民主协会的帮助下，得到了探视丈夫的机会，结果她也被拷了起来，扔进了满是妓女的小黑屋。第二天，两人都被释放了，但条件是他们必须放弃所有的家计，立刻带上孩子们离开比利时。此时，革命的火焰已经燃起，马克思选择回到祖国继续展开政治斗争。</span></p><p><span>回到科隆以后，马克思开始着手创办《新莱茵报》，作为他年轻时以相当热忱编辑的报纸的续刊。再一次，马克思成为了他渴望成为的角色，重拾了对新闻工作的热情。可是，筹办《新莱茵报》并不顺利，最大的问题在于办刊资金不足。几个创始人四处奔走借钱，最后是马克思将自己从母亲那里继承到的遗产全部贡献了出来。考虑到他当时微薄的个人资产，这笔钱真的来之不易，几乎是马克思的全部家当。然而，他没有一丝迟疑地将财产奉献给了革命事业。报纸如火如荼地办起来了，可财务困境却依然没能解决。马克思作为主编，连续好几个月领不到一点工资薪水，完全是靠热情和信仰在坚持工作。</span></p><p><span>更糟糕的是，由于《新莱茵报》鲜明的反政府风格和不可小觑的群众影响力，很快就被当局拉进了黑名单，警察几乎一锅端了总部，下令停刊。不少报刊的主创都逃离了普鲁士，马克思还坚持在德国继续领导反政府的运动，与恶势力作斗争，用当时一个运动首领的话说，马克思就是想让工人们脱离中世纪的地狱，但绝不能让他们掉进另一个资本迂腐统治的炼狱中。就这样，没过多久，马克思被自己的祖国永远地驱逐了出去，《新莱茵报》也走到了尽头。</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524798399.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>被驱逐后的马克思先是到了巴黎，但情况并不乐观。当时霍乱疫情正在法国首都肆虐，马克思一家的财务状况也越发艰难。燕妮当掉了最后一块珠宝，勉强维持一家人的日常生活。马克思想要重操旧业，继续革命，但法国政府也不笨，他们表示，马克思想要继续留在法国，可以，但必须举家搬到莫尔比昂去。莫尔比昂是什么地方？那是一个非常偏远保守、卫生条件极差、流行热病的地方。正是在这样各方走投无路的境遇下，马克思和燕妮最终选择了伦敦，一个与家乡相隔千里的城市。那时的马克思，刚好32岁。</span></p><p><span>为什么是伦敦呢？1849年的伦敦，和巴黎不同，甚至也不像柏林，正快速变成1848年革命流亡分子的首都，一个对政治难民采取自由化和宽容政策的离岸天堂。因此，当时有很多惨遭欧洲大陆国家驱逐出境的激进人士都选择伦敦作为最后的避难所。但实际上，这座城市对这些大量涌入的难民并没有一丝同情和包容，这里的生活成本更高，整体环境也更加艰难。</span></p><p><span>在伦敦中部SOHO的贫民窟居住着大量移民、叛逆的文化人和穷人。马克思和燕妮就住在这里，境遇非常糟糕。被各国驱逐之后，马克思的财务状况已经陷入了绝境。为了偿还《新莱茵报》的债务，他已经花光了所有能用的资金。但燕妮在这一点上非常支持自己的丈夫，她曾经告诉友人：“为了挽救这份报纸的政治声誉以及科隆熟人的名声，卡尔独自承担了所有重担，放弃了他的机器（指报社新买的打印设备），放弃了所有收入，临走还借了300泰勒交付了新租赁办公室的房租，支付了编辑们的薪水，最终还是被强行赶了出来。”因此，在伦敦的马克思一家是真正穷困潦倒到了极点，四处举债。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524798417.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>与此同时，马克思的家庭人员也在不断增加，他们的儿子吉多、女儿法兰西斯卡相继出生。燕妮曾在信中说，“这里与德国完全不同。我们6个人挤在一间屋子里，旁边有个小书房，每周的房租比德国最大的房子的（月）租金还要高。”这可能就是大城市的生活代价吧，令人难以启齿的居住环境、高额的房租、整天催钱的房东、没有工作收入……在当时的伦敦，如果是具备实用技能的流亡者，比如医生和工程师，还能找到工作；如果能忍受低工资和繁重的体力活，也可以苟且谋生；但作家、律师或是其他人文背景的难民，几乎都找不到工作。</span></p><p><span>所有的这一切如果换作别人，可能真的承受不来。可马克思要承受的，还远远还不止这些 —— 马克思的儿子吉多和女儿法兰西斯卡，都只活了一岁多一点就去世了，和当时揭不开锅的家庭状况有直接的关系，这对马克思的打击非常大。</span></p><p><span>贫穷、孤独、加上个人的悲剧，只会让流亡者的境遇更加悲惨，但真正强大的人不会因此就消沉下去，不会轻言放弃，只会越挫越勇，置之死地而后生。马克思，就是这样的人。</span></p><p><span>即便生活异常艰辛，他的身体条件在恶劣的环境下每况愈下，在这拥挤狭小的家里却把大房间留出来做了马克思的工作室。马克思在这里写作、开会、研讨、辩论，甚至演讲，经常有一些工人群众或是仰慕马克思的人到他家来，围坐在工作台附近，听他讲说。</span></p><p><img src="https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524798434.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>当时，伦敦的政治环境也不容乐观，来自德国的流亡者中也有很多政见不一的人，在各处传播自己的观点。马克思早在《共产党宣言》中就很不留情面地批判过德国“小资产阶级”民主派，并没有代表工人阶级的利益，也没有真正站在广大贫苦群众这边。因此，马克思与同伴恩格斯一起，一直坚持与各种怠慢革命、逃避革命的思想作斗争。除了来自异见者的阻挠，马克思当时的政治活动也面临着相当大的挑战和风险。</span></p><p><span>当时，这些革命运动者都会选择伦敦的各大酒吧作为接头交流的地方，但不管是在公开宴会还是私下会议中，都会出现普鲁士和奥地利政府的间谍和秘密警察，他们常常渗透进流亡组织，从中挑拨离间搞破坏。在这种左右夹击的艰难处境下，马克思依旧坚持参与到为工人阶级四处奔走的政治运动中，从来没有过放弃的念头，也从未停下脚步歇一歇。</span></p><p><span>有意思的是，马克思刚搬到伦敦住所的时候，他们隔壁有个面包店，这个面包店的面包师特别瞧不上马克思，因为他穷嘛，没钱嘛！而且马克思经常没钱买面包，只能向面包师不断地赊账，没多久，面包店老板见到马克思就狠狠摔门，拒绝再见他。但过了一段时间，当他了解到马克思正在做的伟大事业后，慢慢改变了对他的看法。有一次，一场小规模的工人运动胜利后，面包师非常兴奋，在家门口踱来踱去，看上去就像是在等待着什么人。果然，他远远地看到了马克思，热情地上前拥抱了他，并主动从怀里掏出两个面包，赠送给了马克思，表达对他的感谢。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524798451.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>在流亡伦敦的这段时间里，马克思的人生可以说跌到了谷底，饥寒交迫、困苦难耐、疾病缠身，但令人震惊的是他完全没有被生活击垮，仍然以极大的热情坚持研究和学习。</span></p><p><span>伦敦的大英博物馆，可能很多人都听过，那里的藏书室是无与伦比的知识储藏地。它有一个圆形大厅，那几乎成了马克思第二个家。一百多年过去，大英博物馆也曾改建过，但在中央阅览室第H排3号座位上，一直放置着一张纪念马克思的小卡片，据说这是马克思当年最喜欢的位置。</span></p><p><span>马克思的后三十年，有大把的光阴都是在这个阅览室度过的。他在这里如饥似渴地阅读、摘录、写作，几十年如一日。如果将来有一天，你也有机会去英国，去伦敦，别忘了去大英博物馆，中央阅览室H3座位看一看，也许就能感受到马克思当年奋笔疾书的努力呢！</span></p><h2 id='第11讲-指点江山论中国'><span>第11讲 指点江山论中国</span></h2><p><code>1853年，关注中国</code></p><div class="audio"><audio controls="" src="https://download.12371.cn/jjmksdsyj.mp3" type="audio/mpeg" preload="metadata"></audio></div><p><span>青年朋友们，无论在高中，还是在大学，都学过“马克思主义中国化”这个命题吧，也知道“马克思主义与中国实际相结合”这个说法吧？可是马克思是德国人啊，他研究的基础和对象都是在欧洲这块土地上形成的啊，拿他的理论来研究和解决中国问题，可行么？</span></p><p><span>当然可行！二十世纪以来的历史、当代中国的伟大成就，不都已经证明了么？好吧，我们换一个说法，是谁，最早拿马克思的理论应用于中国？是苏联的创建者列宁么，还是我们的毛主席？告诉大家，都不是，答案就在这里，是马克思本人！</span></p><p><span>流亡伦敦的生活让马克思焦头烂额，一段时间里，为了生计，他当上了美国《纽约每日论坛报》的通讯员，为那份报纸撰写了大量的新闻和评论文章。尽管他后来说，这些文章水平有限，但这是他的谦虚，他的天分是抑制不住的，可靠的资料、严肃的研究和雄辩的推论叠加在一起，使得马克思凭借这些文章成为该报老板口中“最宝贵的撰稿人”。</span></p><p><img src="https://p5.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524808992.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>对我们中国人而言，这些报纸文章还有更重要的一番意义。在马克思为《纽约每日论坛报》撰写的三百多篇文章中，从1853年开始，有十余篇是直接讨论中国问题的。数量虽然不是很多，意义却都很重大。</span></p><p><span>为什么要讨论中国？有外在的原因，19世纪40年代，西方资本主义国家的殖民扩张进入一个新阶段，中国作为最后一块巨大的世界市场的组成部分，成为西方列强争夺的重点。作为一个出色的记者，马克思怎么可能放过这么热门的选题？这是外在的原因。更有内在的原因，马克思恩格斯要为无产阶级制定革命理论，不仅需要了解欧洲社会的历史和现状，也需要了解东方社会的情况，不仅要研究资本主义国内的矛盾和危机，也需要研究其国际矛盾和危机。</span></p><p><span>在这些文章中，马克思对中国这个老大帝国的过去、现在和未来，对中国与世界的关系，对人类共同的命运，都作出了令人信服的评述。我们可以具体来看看，可以称为“马克思主义与中国实际相结合”第一人的马克思本人，到底是怎么把自己的思想，运用到对中国问题的分析上的。</span></p><p><img src="https://p5.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524809039.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>关于古代中国，马克思认为，中国人口一直占据世界之首，经济长期处于领先地位。直到19世纪初期，中国还是世界上最强大的国家之一。中国古代文明曾经极大地推动了世界文明的进程，甚至改变了西方人的生活方式。他高度赞扬中国古代技术发明对世界的影响：“火药、指南针、印刷术 —— 这是预告资产阶级社会到来的三大发明。火药把骑士阶层炸得粉碎，指南针打开了世界市场并建立了殖民地，而印刷术则变成新教的工具，总的来说变成科学复兴的手段，变成对精神发展创造必要前提的最强大的杠杆。”</span></p><p><span>关于近代中国为什么落伍，这是另外一个问题。马克思认为，直接原因是英国等西方列强的入侵，然而，从根本上说，是因为中国没有跟上时代潮流。</span></p><p><span>时代潮流是什么？16世纪以后，西方已经从农业经济转变为工业经济，中国社会则由于闭关自守而停滞不前，就像马克思所说的：“一个人口几乎占人类三分之一的大帝国，不顾时势，安于现状，人为地隔绝于世并因此竭力以天朝尽善尽美的幻想自欺。这样一个帝国注定最后要在一场殊死的角斗中被打垮。”</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524809056.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>而经济上，中国一直是自然经济，依靠小农业与家庭工业相结合而存在。到19世纪初，虽然还是贸易大国，但中国的经济结构是很落后的，最终必然被先进的工业经济所打垮。按照马克思的理解，这种自然经济抵触新的工业经济的：“这种自然经济抵触新的工业经济，始终是东方专制制度的牢固基础，它们使人的头脑局限在极小的范围内，成为迷信的驯服工具，成为传统规则的奴隶，表现不出任何伟大的作为和历史首创精神。”</span></p><p><span>多么严肃的批评啊！而在政治上，中国长期实行封建专制制度，皇帝是所有人的父亲，而地方官们是他们所管理的地区的人们的父亲”，维系“这个庞大的国家机器的各部分间的唯一的精神联系”就是“家长制权威”。</span></p><p><span>与这样的经济和政治相一致，在精神文化方面，中国的皇帝及其周围的大臣们常常墨守成规、安于现状；而中国百姓常常保守落后、性情柔弱、过于节俭，宁愿大量储存金子银子，也不愿购买国外新产品。因此，中国这个东方古国已经成为腐朽的、半文明的国家，统治者必然丧失统治权，而其人民也似乎必然要被西方的鸦片所麻醉，然后才能“从世代相传的愚昧状态中被唤醒”。</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524809074.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>马克思撰写这些报纸文章时，正是太平天国运动席卷中国的时代。马克思对太平天国运动给予很高评价，认为这是“一场惊心动魄的革命”，它不仅会动摇中国的封建专制制度，甚至会引发欧洲大陆的政治革命。马克思说：“中国革命将把火星抛到现今工业体系这个火药装得足而又足的地雷上，把酝酿已久的普遍危机引爆，这个普遍危机一扩展到国外，紧接而来的将是欧洲大陆的政治革命。”</span></p><p><span>当然，马克思也看到了太平天国运动的局限性。例如，太平军具有宗教色彩，不知道自己的真正使命，而只想改朝换代；但他认为，中国人民的觉悟会随着革命斗争的发展而不断提高。1840年-1842年第一次鸦片战争时，中国民众还“保持着莫名其妙平静”，对战争漠不关心，但到了第二次鸦片战争时，反抗外敌的情绪就空前高涨，马克思是这样描述的：“民众积极地而且是狂热地参加反对外国人的斗争”，“表明他们已觉悟到旧中国遇到极大的危险”。</span></p><p><span>中国的未来呢？中国社会的前途怎样？在马克思看来，中国随着引进西方的先进生产力，旧的文明即以农业和手工业相结合为基础的文明将被消灭，新的工业文明将建立起来。马克思预见到，随着中国的发展，贫富两极分化现象将出现，人们将要求重新分配财产，甚至要求消灭私有制。因此，“中国社会主义”将出现，而且不同于“欧洲社会主义”。马克思甚至给出了新的中国的名字，叫做“中华共和国”。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524809092.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>多么天才的设想！要知道，那可是距今一百五六十年前啊。马克思还预见到，中国将对世界文明进程将产生新的重大影响。他最好的朋友恩格斯，把马克思的这一思想作了一个极其精彩的表述，他说，“随着中国革命的深入，过不了多少年，我们就会亲眼看到世界上最古老的帝国的垂死挣扎，看到整个亚洲新世纪的曙光。”</span></p><p><span>青年朋友们，你们是否已经折服于马克思对世界历史的深入观察和惊人的预见能力？让我们再来一个小小的震撼吧。不仅仅是宏观大势的把握，在相对具体的层面，马克思也是令人惊叹的。比如，他甚至预见到了太平洋经济中心时代的到来，马克思是一位严谨科学的理论家，他反对狭隘的西方中心主义，认为随着世界经济交往的增加，世界经济中心会转移。正像古代和中世纪地中海是中心，到18、19世纪大西洋是中心一样，随着美洲和亚洲航线的增多，太平洋两岸将会成为世界经济的中心，包括美国的旧金山、中国的广州、新加坡、澳大利亚的悉尼，都会变成人口稠密、贸易方便、工业发达的地区。“那时，太平洋就会像大西洋在现代，地中海在古代和中世纪一样，起着伟大的世界水路交通线的作用；而大西洋的地位将要下降，就像现在的地中海那样只起一个内海的作用”。</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1524809110.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>感觉怎么样？让我们一起为马克思鼓鼓掌吧。</span></p><h2 id='第12讲-忠言逆耳利于行'><span>第12讲 忠言逆耳利于行</span></h2><p><code>1857年，批判事业</code></p><div class="audio"><audio controls="" src="https://download.12371.cn/jjmksdsej.mp3" type="audio/mpeg" preload="metadata"></audio></div><p><span>1857年的某个深夜，一间斗室，纸片散落一地。陷入沉思的马克思一刻不停地抽着烟，时不时喝些柠檬水。由于思考过度和精神高度紧张，他后来不得不长时间服药治疗。</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525153013.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>马克思曾不止一次地预言过资本主义经济危机的爆发，但很多时候这些预言都落空了。1857年，危机终于爆发了。这令马克思兴奋异常，他近乎疯狂地投入到经济学研究之中，希望通过他的“纯粹的科学工作”把这个世界的真相揭示出来。</span></p><p><span>用马克思的话说，这是为了“在洪水到来之前至少把一些基本问题搞清楚”，以便让工人阶级认识到资本主义其实并不神秘。恩格斯在同一时期也表达了对危机的高度关注，他甚至说，“危机像海水浴一样对我的身体有好处”。</span></p><p><span>马克思和恩格斯为什么对这次危机这么关注呢？这和马克思一直从事的政治经济学批判的研究工作有关。《资本论》其实就是在1857年10月到1858年3月这段时间马克思所写的经济学手稿的基础上形成的。马克思后来在一封信中谈到《经济学手稿》时，说这是他从1843年到1858年这十五年中他“一生的黄金时代的研究成果”。他要让那些处于底层社会的人透过自己的文字搞清楚这个社会到底怎么了，为什么会发生经济危机这样的怪现象。他还要广大劳动者认识到，正是劳动阶级自己捏住了资本主义社会的“七寸”，要在关键的历史时刻予以狠狠地打击。所以他的这项工作犹如闪电一样，照亮了资本主义古典经济学的整个夜空，让它的缺陷暴露无遗。马克思正是用了他独创的批判大法，成功预言到了1857年的这场危机。</span></p><p><img src="https://p5.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525153044.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>那么，到底马克思的批判是什么意思呢？其实批判是从怀疑开始，从对一切既定的成见发出自己的疑问开始。马克思的座右铭就是“怀疑一切”。但这个“怀疑一切”并不是说，认为所有事物都是假象，都是人们不能认识到的。这其实就是怀疑主义的怀疑，马克思的不是这样的，马克思的怀疑其实是以揭示那些掩盖真相的“假相”作为起点的，从一些人司空见惯甚至不言而喻的现象中看出不一样的东西来，也就是说，从来不接受其前提没有经过认真审查的任何思想。</span></p><p><img src="https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525153064.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>这种批判不是熬制心灵鸡汤，也不是在做智力游戏，更不是愤青的情感宣泄。正如马克思所说，“批判不是头脑的激情，它是激情的头脑，它不是解剖刀，它是武器。它的对象是自己的敌人，它不是要驳倒这个敌人，而是要消灭这个敌人。”可见，批判也可以拥有改变世界的力量。</span></p><p><span>狄更斯的《双城记》首次出版于1859年，他在书的一开头就表达了对那个时代的看法，他说：“这是希望之春，这是失望之冬； 人们面前应有尽有，人们面前一无所有； 人们正踏上天堂之路，人们正走向地狱之门。”</span></p><p><span>马克思也有非常类似的说法，在那个资本主义时代“每一种事物好像都包含有自己的反面。我们看到，机器具有减少人类劳动和使劳动更有成效的神奇力量，然而却引起了饥饿和过度的疲劳。财富的新源泉，由于某种奇怪的、不可思议的魔力而变成贫困的源泉。技术的胜利，似乎是以道德的败坏为代价换来的。随着人类愈益控制自然，个人却似乎愈益成为别人的奴隶或自身的卑劣行为的奴隶。甚至科学的纯洁光辉仿佛也只能在愚昧无知的黑暗背景上闪耀。我们的一切发现和进步，似乎结果是使物质力量成为有智慧的生命，而人的生命则化为愚钝的物质力量。”</span></p><p><span>劳动人民的普遍贫困，相比于狄更斯文学化的语言，马克思的说法更加直接。他要戳破资本家的谎言，指出这个世界的另一半真相。所以他直接道出了资本家赚钱的秘密。他不再相信资产阶级所谓天赋人权的论调，这种论调不过是一个虚幻的伊甸园。在这个伊甸园里，也就是劳动力买卖的流通领域或商品的交换领域是发现不了自由、平等这些价值有什么不对的地方。</span></p><p><img src="https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525153082.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>马克思要去生产领域中考察雇佣劳动创造剩余劳动价值的秘密，从这里也就发现了资本家赚钱的秘密。资本主义社会的运行法则就这样被毫无保留地揭露出来了。受到资本的控制，没有生产资料的工人们必须通过出卖自己的劳动力才能换取生活资料。也就是说，他必须先有工作，为资本家创造剩余价值，才能领到属于自己的那份工资。有了工资，他才有钱买生活物品，他才能活下去。一天工作超过十五六个小时的工人，有时要整夜劳动。甚至当时的一位牧师都看不下去了，“这是杀人的制度，工厂主就是害虫，他们是社会的耻辱，人法和神法都无法制止他们。”</span></p><p><span>马克思正是看到了资本主义社会的这种最大的不公平，才要为工人走出这种悲惨境遇而鼓与呼。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525153101.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>我们借用马克思的批判思想去审视我们的现实生活，同样也可以发现在一些看似司空见惯、不言而喻的社会现象背后的真相，认识到那些流行的观点其实从一开始我们坚持它的理由和前提就是有问题的。例如，我们可以对这样一些观点展开讨论，学好数理化，真的走遍天下都不怕了吗？爱笑的人运气真的不会太差吗？细想下来，问题可能根本没那么简单。还有一些事情正发生在我们这个时代，例如“宁愿坐在宝马车里哭，也不愿坐在自行车后面笑”，“宁愿卖掉自己的一颗肾，也要去买一个苹果手机”。没有马克思从整个时代出发所给出的批判思想，我们是瞧不出其中的荒诞逻辑的。</span></p><p><span>与马克思所在的那个资本还处于原始积累阶段、人民普遍贫困的时代不同，我们生活在物质富裕的时代。但是市场竞争的法则一样，资本为榨取剩余价值无限扩张的本性也一样。我们应该反躬自问的是，在消费主义日益横行的时代，为什么很多人还是会抱怨自己活得其实并不幸福呢？</span></p><p><span>举一个简单的例子，大龄单身青年有时会被迫参加一些“相亲”活动。在很多场合，这样的“相亲”其实就是把幸福感、安全感量化的产物。人们将一个人的能力外在化为物质性的房子、车子和稳定的收入。在他们看来，没有这些作为保证，根本就不配谈爱情。请大家认真想想，如果人人都信奉金钱万能，这将会带来什么样后果呢？当人的生命中一切美好的事物，例如爱情、自由和公平，都可以贴上价格标签出售的时候，它们会不会跟着变质了呢？马克思的批判方法正是启发人用自己的头脑思考这个世界，去主动地建构属于自己的生活方式和心灵世界。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525153120.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>亲爱的朋友们，美好生活永远都是从奋斗中得来的。这样的生活不应该为金钱所掌控，而是人的自由创造的过程。那么，我们适时地与拜金主义、消费主义进行隔离，就是不要让人的生命“化为愚钝的物质力量”，在专注于利益法则时，弄丢了自己的灵魂。</span></p><h2 id='第13讲-唯物史观讲了啥'><span>第13讲 唯物史观讲了啥</span></h2><p><code>1859年，唯物史观</code></p><div class="audio"><audio controls="" src="https://download.12371.cn/jjmksdssj.mp3" type="audio/mpeg" preload="metadata"></audio></div><p><span>1859年1月，伦敦还处于严寒之中，在大英博物馆圆形穹顶图书室，一位满脸病容的“老人”正匍匐在桌上专心写作，因为柏林出版商敦克尔一直在催促他交稿。</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525157742.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>最近几年来，他几乎天天来这里查资料、写文章。肝病缠身，使得刚过40岁的他看上去苍老了很多。贫困交加，让他不得不撰写各类文字来换取稿费养家。毕竟，他的朋友给他寄来的生活费又花完了。他的那位朋友叫恩格斯，而他，就是我们的主角 —— 卡尔·马克思。</span></p><p><span>1月底，马克思终于把他的书稿寄给了他的书商，这本书就是《政治经济学批判&lt;序言&gt;》，《序言》全书虽然只有3000字，但它的地位非常重要。在这本书里面，马克思首先回顾了他自己的生平，更为重要的是，在这本书的第四段，马克思以1000多字的篇幅，精炼地说明了，生产力和生产关系、经济基础和上层建筑、人们的社会存在和社会意识等历史唯物主义的基本原理，揭示了人类社会发展的一般规律。所以，这本书一经发表就奠定了它在整个马克思的著作中的历史地位，它成了表达马克思历史唯物主义观点的最经典文本。</span></p><p><span>总的说来，马克思主义的唯物史观，虽然已经发表100多年了，但它从来没有远离我们的社会生活。下面，我就结合当前的社会生活和大家聊一聊，我们应该怎么理解马克思的唯物史观，唯物史观对我们当代还有什么历史意义。</span></p><p><span>首先，我们来聊一聊经济基础和上层建筑的关系。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525157774.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>马克思在《序言》中指出，人们的社会存在决定人们的意识。这什么意思呢？其实他的主张是，我们所有的社会观念都是在一定经济基础上产生的。在历史上，人们经常会提出很多不同的政治主张，并且还习惯于把这些政治主张说成是普遍的、全人类通用的。其实，这些主张只不过是一些特定经济利益的表达，“焦大是不会爱上林妹妹的”。不同社会经济地位的人，不同立场的人，他们的观点是不会一致的，也不存在代表一切人利益的普遍真理，这是马克思唯物主义史观教给我们的基本前提。</span></p><p><span>当前，社会观念越是纷繁复杂，马克思的这一主张就越为重要。马克思认为，我们一切社会观念都不是独立的、都不是凭空产生的，它背后反映的是我们的社会经济关系。因此，每当有人提出一些特定观念的时候，我们不能把他的观念、意识、动机信以为真，把它当作普遍的真理；而应该考察这些观点背后的经济利益、阶级立场。</span></p><p><span>当然，我们也应该认识到，当今社会之所以会出现各种纷繁复杂的价值观念，背后的根源在于改革开放以来，我们社会出现了不同的阶层，形成了不同的利益群体，他们往往对自己的利益形成了不同的话语表达，社会观念冲突背后所反映的是人民的经济利益的冲突，要化解不同价值观念的冲突，我们更应该回应不同阶层的利益诉求，更好的做到让改革开放的成果惠及更多的民众，增强人民群众的获得感，这才是我们化解观念冲突的根本解决之道。</span></p><p><span>接下来，我和大家聊一聊生产力和生产关系的理论。</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525157801.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>马克思在《序言》中曾经说过，社会生产力发展到一定阶段，便会与原来的生产关系发生矛盾。这个时候，如果不调整生产关系，就有可能阻碍生产力的发展，甚至有可能引发革命。这是历史唯物主义在揭示社会历史发展变化与制度变化方面的经典论断，这一个观点对于我们更好地理解改革开放很有启发。</span></p><p><span>今年是改革开放40周年，从生产力和生产关系这两者关系来看，改革开放就是变革生产关系推动生产力发展的鲜活案例。我们知道，40年前的十一届三中全会上，我们党确立了改革开放的基本国策，把党和国家的工作重心转移到以经济建设为中心上来，我们国家的局面才发生了根本好转，才有了今天来之不易的良好局面和世界第二的经济社会发展水平。今天，其实我们更应该珍惜改革开放以来形成的良好局面，不折腾，坚决不走回头路。</span></p><p><span>接下来，我们再来聊一聊马克思在《序言》里面所提出的社会发展阶段理论。</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525157825.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>马克思在《序言》里面按照“经济的社会形态”为标准，对人类社会的历史发展过程进行了科学的分期，提出了后来为我们熟知的原始社会、奴隶社会、封建社会、资本主义社会和共产主义社会这五个阶段，马克思主义用这个社会发展阶段理论来解释人类社会发展的变化，用它说明社会历史发展的下一个阶段，这一理论具有非常重要的意义 。</span></p><p><span>正确认识社会发展阶段理论，我们才可以更好地判定我们当前的历史趋势，更好地认识我们自己所处的历史阶段。就像小平同志指出的，“社会主义本身是共产主义的初级阶段，而我们中国又处在社会主义的初级阶段，这就是一个不发达的阶段。一切都要从这个实际出发，根据这个实际来制定规划。”正因为我们正确地认识到我们所处的历史阶段，我们才提出了社会主义初级阶段的基本路线，这也就是大家所熟知的“一个中心、两个基本点”。正是因为我们对社会主义初级阶段的基本国情有了一个科学认识和正确把握，我们才能够成功地走出了一条建设中国特色社会主义的新道路。</span></p><p><span>最后呢，我想跟大家聊一聊《序言》里面提出的“两个决不会”和历史发展规律。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525157849.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>马克思在《序言》中提出：“无论哪一个社会形态，在它所能容纳的全部生产力发挥出来以前，是决不会灭亡的；而新的更高的生产关系，在它的物质存在条件在旧社会的胎胞里成熟以前，是决不会出现的。”什么意思呢？这就是说，旧制度只要它还能够促进社会生产力的发展，它就不会灭亡；新的制度，在它把生产力大力地发展出来之前，它不会特别的成熟。我们把这个说法简称为“两个决不会”，“两个决不会”对于我们正确理解、认识当前社会主义建设的困难与发达资本主义国家的现状具有重要的意义。</span></p><p><img src="https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525157874.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>旧事物旧制度灭亡的过程是长期的、复杂的，充满艰辛的，我们以当代资本主义为例，二次世界大战以来，西方主要发达国家及时地调整了国家的政策，一方面依靠科学技术的进步，大力解放和发展生产力，另一方面，他们通过一系列的社会福利措施缓和了社会矛盾，资本主义实现了自我的调整与完善，我们在短期内可能还看不到资本主义的灭亡。这对我们的工作就提出了要求，在对外交往过程当中，我们必须坚持和平发展的道路，我们不能强求西方国家改变他们的发展道路，相反，我们应该主动适应世界的经济发展规则，在和平与发展的主题中实现自身的发展。</span></p><p><span>另一方面，在世界范围内，社会主义总体上还是一个新的事物。我们应该尊重新生事物的发展规律，社会主义总体上都是在一穷二白的基础上建立起来的，当前指望我们的社会主义全面超越资本主义这是不切实际的。我们应该尊重新事物、新制度成长和发展的过程，而不能拔苗助长，急于求成。</span></p><h2 id='第14讲-导师责任重于山'><span>第14讲 导师责任重于山</span></h2><p><code>1862年，革命导师</code></p><div class="audio"><audio controls="" src="https://download.12371.cn/jjmksdssij.mp3" type="audio/mpeg" preload="metadata"></audio></div><p><span>1862年的时候，这一年马克思44岁，这一年的他，个人生活再度跌入低谷。</span></p><p><span>就在不久以前，德国有个人叫福格特，在一些报纸上公开大肆污蔑诽谤马克思，马克思本不想还以颜色，奈何这些攻击在社会上造成了恶劣影响，于是马克思打算诉诸法院讨个公道。但是，法院却以“罪证不足”剥夺了马克思的起诉权，马克思不得不暂时搁下手头的工作，用文字作为武器来保卫自己。</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525158876.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>燕妮看到自己的爱人遭受到“卑鄙的攻击”感到极度痛苦，彻夜失眠，很不幸的是，她又感染上了天花，马克思不得不把子女们送到朋友李卜克内西家里躲避一下。燕妮天花刚刚痊愈，马克思又病倒了，由于精神极度焦虑导致急性肝病发作，病重期间雪上加霜的是，《纽约每日论坛报》把稿费降低了一半，马克思的经济状况更加拮据了。已经长大成人的大女儿心里想，为了分担父母的生活压力，甚至打算背着他们去演戏以补贴家用。</span></p><p><span>就在这年七月，就在马克思最困顿的时候，他的朋友，叫拉萨尔，来伦敦马克思的家中做客，一住就是好几个星期。当时房东因为马克思欠下了很多房租，勒令其迁居并扣押了家具和杂物。贵族出身的燕妮为了不让拉萨尔看出家中的窘境，把所有能当掉的东西通通送进了当铺，布置了一些“表面上的排场”招待拉萨尔。拉萨尔对此毫不知情，在马克思家里大吃大喝，以至于琳蘅被这位客人的好胃口惊呆了，场面一度非常尴尬。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525158904.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>拉萨尔比马克思小了七岁，出生于德国的一个犹太富商家庭，小时候是远近闻名的“神童”。他也在柏林大学学习哲学，是马克思的小学弟。这位小学弟比马克思更加学霸，19岁就获得了哲学博士学位，毕业后当了律师。1848年欧洲大革命期间，他投身于革命运动，曾经为马克思领导的《新莱茵报》工作过，还一度曾经被捕入狱，在此期间结识了马克思，并尊称马克思为老师。</span></p><p><span>但是，马克思对这个学生的态度很复杂：一方面认可他的革命精神，另一方面又不满于他喜好卖弄、张狂轻浮的个人性格。马克思曾评价他道：“他是个专会说漂亮话的人，一个狂妄自大的人。”虽然拉萨尔当面十分尊敬马克思，却时常背后以理论家自居，喜欢听别人奉承阿谀自己。尽管他在博士期间攻读黑格尔哲学，但又对黑格尔哲学的认识极为肤浅，经常写一些哲学文章在贵族阶级的美酒佳肴中获得赞赏、得意忘形，而在马克思看来，这不过是“小学生的作文”，充满了“夸夸其谈的文体和争强好胜的轻率”。</span></p><p><img src="https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525158920.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>后来，当拉萨尔异想天开地计划在柏林办报纸，并提议他与马克思同时出任总编辑时，马克思深知拉萨尔这个人粗鲁和轻率，面对他的强词夺理和咄咄逼人的态度，建议只有在严格的纪律监督下拉萨尔才能担任其中一位总编辑，否则只能是出丑。最后，办报的事情也就不了了之。</span></p><p><span>所以1862年之前，马克思与拉萨尔之间处于一种微妙的关系之中，马克思作为一位受人尊敬的师长，只是从性格和一些事实出发，批评拉萨尔的浅薄和虚荣心。这些批评的言辞有时比较尖锐直率，有时比较婉转温和，拉萨尔虽然心中不满，但表面上还能接受。但就在1862年，两人的关系彻底破裂了，具体原因有很多，比如马克思要求拉萨尔帮助出版《政治经济学批判》一书引起的个人纠纷等等，而根本原因在于两人在指导工人运动理论上的重大分歧。</span></p><p><span>拉萨尔在马克思家里吃完饭，用餐巾抹着油腻的嘴巴，随随便便，洋洋自得地谈到他关于提高工人阶级地位的方案：例如，让工人向国家借钱，依靠国家的帮助去建立合作社与企业等等。拉萨尔认为，自己在德国工人群体中享有很高的地位，是“德国工人运动的代表”，又与德国资产阶级政要往来甚密，这样的“天才计划”一定能够实现。马克思劝他不要陷入幻想和胡闹，资产阶级国家不可能帮助工人实现这一目标，这不过是“一个开明的波拿巴主义者”的想法，建议他好好读读《共产党宣言》。于是谈话气氛陡然紧张了起来，拉萨尔气得暴跳如雷，高声叫嚷，邻居被马克思家中闹出的动静惊动了，跑来敲门，问燕妮到底发生了什么事情。后来燕妮在给恩格斯的信中说：“他像风一样扫过我们的每个房间，我们的邻居都被这恐怖的声音吓坏了。”</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525158939.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>最后，拉萨尔气呼呼地离开了马克思的家，动身返回了德国。马克思认为拉萨尔已经无可救药，与他断绝了书信来往。后来马克思写信给恩格斯回忆起拉萨尔住在伦敦的这些日子时，笑称可惜恩格斯没能在场见证这些场景，马克思说：“你只要来这里住上几天，就会有一整年的笑料。这就是我曾非常希望你来这里的原因。这样的机会不是每天都有的。”</span></p><p><span>恩格斯说过，马克思一生有过很多敌人，“但未必有一个私敌”，他从来不会出于私心与某人为敌，他的敌人不是哪一个人，而是各种各样不彻底的、有害的思潮与流派。对19世纪六七十年代的德国工人阶级来说，毒害最大的就是拉萨尔主义。</span></p><p><span>拉萨尔关于工人运动的主张，简单说，就是希望资产阶级国家政府和工人阶级互相理解，互相帮助，工人帮助国家实现帝国的利益，国家帮助工人提高社会地位，看上去甜甜蜜蜜、“充满了快活的空气”。而拉萨尔在德国工人阶级中之所以享有较高的地位，实际上是因为19世纪工人阶级普遍文化水平不高，无法分辨不同理论之间的高低优劣，只能被一些通俗易懂、充满美好幻想的思潮所吸引，这样一来，拉萨尔的观点就无形中得到了不正当的吹捧。</span></p><p><span>而在马克思看来，资本家不可能无条件地对工人“发善心”与让步，资产阶级与无产阶级之间的矛盾是不可调和的，无产阶级只有通过革命的方式取得政权，才能实现自己的利益。喜羊羊想与灰太狼交朋友，劝说灰太狼不要进羊村抓羊，这只能是一种天真的幻想。因此马克思认为，如果德国工人阶级信奉拉萨尔主义，并且如果选择拉萨尔作为自己的领袖，情况就比较危险了。</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525158956.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>事情果然被马克思言中了。一年之后，1863年5月23日，德国第一个工人阶级政党“全德工人联合会”在德国东部第二大城市莱比锡成立，第一任主席正是这位拉萨尔先生。在成立前夕，拉萨尔宣称他与一位国家政要之间通过亲切会谈，达成了共识，工人阶级即将在资产阶级的帮助下迎来春天。他甚至洋洋得意地说，这位大人物根本不知道其实我占了便宜而他自己吃了亏，因为“我吃的是樱桃，而他吃的是石头”。</span></p><p><span>拉萨尔口中的这位大人物，就是赫赫有名的“铁血宰相”俾斯麦，我们都知道。只不过，俾斯麦的政治手腕远比拉萨尔高出许多，他利用与拉萨尔的“表面合作”，既控制了工人运动，又同时约束了自由资产阶级，可以说“一石二鸟”。</span></p><p><span>拉萨尔的背叛行径和他在全德工人联合会中的个人独裁作风，日益激起有觉悟的工人的不满，他的个人声威也在逐渐下降。他对这种状况感到厌恶和消极，第二年七月干脆扔下了政党，独自跑到瑞士休养去了。在瑞士期间，拉萨尔遇到了一位美女，可惜这位美女已有婚约在身，但拉萨尔仍然坚信自己遇到了爱情，对她展开狂热的追求，甚至与她的未婚夫进行决斗，最终腹部中弹，三天后因抢救无效死于日内瓦，年仅39岁。拉萨尔这个人最终为自己的轻狂、好胜与自负付出了生命的代价。</span></p><p><span>革命运动无儿戏，导师责任重于山。马克思作为无产阶级革命导师，深知革命任务的复杂与艰巨。他没有像拉萨尔一样，一味地哗众取宠、卖弄学问，以获得虚张声势的个人满足，而是坚持革命原则的彻底性，这种彻底性一定程度上是以不太讨人喜欢的方式呈现出来的。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525158976.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>良药苦口利于病，忠言逆耳利于行，导师的谆谆教诲可能会言辞犀利、直指要害，但对于学生来说，没有什么比这种教诲更有利于个人成长了。一旦从校园进入社会，你会发现，恰恰是那些批评的意见，是对你有帮助的，对于那些无聊的捧杀之词，千万不要放在心上。“道我恶者为我师，阿谀我者是吾贼”，对于革命事业是这样，对于个人的成长同样如此。</span></p><h2 id='第15讲-谁与我生死与共'><span>第15讲 谁与我生死与共</span></h2><p><code>1866年，伟大友谊</code></p><div class="audio"><audio controls="" src="https://download.12371.cn/jjmksdswj.mp3" type="audio/mpeg" preload="metadata"></audio></div><p><span>从60年代中期开始，马克思的病情就持续恶化，但他还是通宵达旦地工作。恩格斯曾反复催促马克思抓紧出版《资本论》，但也对老朋友的身体状况万分关切。在1866年2月份的一封信中他这样说到，“万一你出了什么事情，整个运动会怎样呢？如果你这样一意孤行，事情必然要弄到这个地步。说真的，在我使你不陷入这种境遇以前，我日夜不会平静；每天，只要得不到你的消息，我就忐忑不安，以为你的病又恶化了。”</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525249749.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>马克思与恩格斯可谓是人类历史上的超强组合。为什么这样说呢？在他们面前，俞伯牙和钟子期，管仲和鲍叔牙、刘玄德和诸葛亮，福尔摩斯和华生，也都会黯然失色。他们作为“黄金搭档”，是典范中的典范。马、恩这艘友谊的小船乘风破浪，两人保持了长达20年的不间断的通信，开创了历史奇迹。他们一路都是追随者无数，膜拜者无穷，但两人从未彼此猜忌或怀疑过彼此的坦诚与真心。中国文化里形容朋友之间的友谊，例如莫逆之交、刎颈之交、生死之交、君子之交等等这样的词汇，用在马恩的伟大友谊上面，一点都不为过。</span></p><p><span>这里，我们不禁要问，他们的友谊为何会成为千古佳话？是什么原因让他们能够保持如此长时间的彼此信任与毫无羁绊的交流呢？通过下面两个事例，我们或许就可以回答这些问题。</span></p><p><span>首先，为了支持马克思专心写作，也为了替无产阶级保全自己的领袖，恩格斯做出了最大的牺牲，从事了他最不喜欢的商业活动近二十年。</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525249770.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>马克思为了搞清楚资本家赚钱的秘密，以让工人看清整个资本主义的发展趋势，专心伏案写作，但经常为家庭的琐碎生活所打乱。恩格斯则自动担负起了马克思的生计问题，可以说，对于马克思一家而言，恩格斯的资助是至关重要的。没有恩格斯数十年如一日的无私援助，马克思终究会被生活的困苦所压倒，他也就不会将他的伟大才能发挥得淋漓尽致。</span></p><p><span>我们必须看到，马克思并不是不能赚钱养家，只是他把所有的时间都奉献给了撰写诸如《共产党宣言》、《资本论》这样的伟大著作了。他又是一个花钱大手大脚、没有理财观念的人，家里的孩子也多。这时，恩格斯就起了非常关键的作用。用恩格斯自己的话说，就是回到“该死的生意经”里去。</span></p><p><span>1850年11月，恩格斯决定重新回到营业所工作，他前往曼彻斯特，在他的家族企业“欧门—恩格斯”公司里做起了办事员。为此，他还遭到卢格、维利希等人的挖苦讽刺、粗暴攻击。但是恩格斯毫不在意这些，他深知，马克思之于无产阶级的意义是任谁也替代不了的。</span></p><p><span>凭着恩格斯的兢兢业业，他从一名办事员做起，1860年之后成为了公司的代理人，1864年就成为了公司股东。刚开始做办事员的时候，恩格斯的工资还很低，也没能拿出多少钱来支援马克思。但常常是每个月甚至是每个星期，恩格斯寄来的一英镑、两英镑、五英镑或更多的汇票对马克思一家来说都非常重要的。20年来，恩格斯寄给马克思的钱，总共达到了三千英镑，这在当时几乎是一个天文数字。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525250047.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>恩格斯其实打心里就非常反感他作为资本家的身份，为了能够有更多的收入支持马克思的工作，恩格斯不能长久地和他的志同道合的朋友们在一起，而是常常不得不同一些他看不惯的人周旋，遵守表面的礼节，过着两重生活。这对他来说，无疑是非常痛苦的。</span></p><p><span>面对慷慨解囊的恩格斯，马克思也经常陷入一种深深的内疚和负罪感中。因为他知道，恩格斯同样具有从事研究的天才能力，只是为了马克思的生活，不得已去做那些他自己不愿意做的经商工作。</span></p><p><span>说到恩格斯的才华，马克思曾这样夸赞恩格斯，“他真是一部百科全书。白天也好，夜里也好，吃饱了也好，空着肚子也好，随便什么时候他都能工作，文章写得飞快，机灵得出奇。”恩格斯擅长的领域是语言、军事和自然科学，他写的文章也极富逻辑和条理，晓畅明白，并具有令马克思赞赏的善于抓住复杂问题之本质的能力。</span></p><p><span>马克思在给恩格斯的一封信中这样写道：“坦白向你说，我的良心经常像被梦魔压着一样感到沉重，因为你的卓越才能主要是为了我才浪费在经商上，才让它们荒废，而且还要分担我的一切琐碎的忧患。”</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525250070.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>恩格斯并没有抱怨过什么。对此，马克思始终深怀感激：“我真不知道怎样感激你对我的友谊，感谢你为我进行的工作，感谢你对这孩子的关心。”在马克思埋葬了自己最亲爱的儿子之后，他还对恩格斯说，“在这些日子里，我之所以能忍受这一切可怕的痛苦，是因为时刻想念着你，想念着你的友谊，时刻希望我们两人还要在世间共同做一些有意义的事情。”</span></p><p><span>我们再来看另一个事例。马克思去世后，留给世人的除了已经出版和再版的《资本论》第一卷，还有关于《资本论》第二卷、第三卷的大量的手稿。正是在这些手稿的基础上，恩格斯替马克思出版了《资本论》的后两卷。为此，他搁浅了自己的著作《自然辩证法》的撰写工作。</span></p><p><span>此时的恩格斯也已经有63岁了，他自己对这项工作也有许多担忧。因为马克思潦草的笔记常常连恩格斯也很难辨认清楚，更何况要把它汇总成系统的书籍出版。但这项工作也只有恩格斯一个人能做到。不久他就因为整理《资本论》病倒了，这令他非常担心，他在一封写给拉甫罗夫的信中就说道：“因为现在活着的人只有我才能辨认这种笔迹和个别字以及整个句子的缩写”。由于支撑不住，恩格斯的旧病复发，医生已经禁止他再这样拼命工作了。但是，他还是特意请了一名助手帮他记录他口述的手稿内容，而且还是从早上10点一直工作到下午5点。</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525250163.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>手稿中最难的部分其实不是辨认马克思的字迹。马克思的原稿中有些部分非常重要，但只有一个大纲，还有一些片断也会反复出现在好几个地方。这就需要恩格斯比较、推敲，甚至补充、修订，以便让马克思的思想连贯一致。这项工作无疑是颇费功夫的，没有对马克思原稿的高超的把握和理解，是完全做不到的。</span></p><p><span>但恩格斯做到了，而且他非常乐意做这项工作。他在写给贝克尔的信中说：“要整理马克思这样每一个字都贵似黄金的人所留下的手稿是需要花费不少劳动的。但是，我喜欢这种劳动，因为我重新又和我的老朋友在一起了。”</span></p><p><span>列宁曾评价说，《资本论》第二、第三卷应该说是马克思和恩格斯两人共同的著作。但恩格斯绝不贪功，他自己就谦虚地说，“我一生所做的都是我预定要做的事情 —— 就是我演的只是配角 —— 而且我想我还做得不错。”</span></p><p><img src="https://p5.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525250182.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>朋友们，请不要带着人类的浅薄去认识这对生死之交。世上有多少明争暗斗、貌合神离的组合，充斥着各自的利益、私欲和算计，友谊的小船说翻就翻。他们支撑不了多久就各奔东西，甚至反目成仇。惟有马克思和恩格斯，褪去世间的一切浮华，为着共同的事业和理想，播撒万点光和热。人生得一二知己，已是万幸。远离推杯换盏、声色犬马的名利场，与知己相伴，同喜同悲，足以抵达幸福的彼岸。这就是马克思和恩格斯的伟大友谊带给我们的最大启迪。</span></p><p><span>1866年，正是在恩格斯的无私帮助之下，马克思努力了近十五年之久的巨著即将出版了。这部著作就是《资本论》。那么，它为什么被称为工人阶级的“圣经”呢？它到底说出了什么惊天秘密才会让资本家口诛笔伐，一致反对呢？</span></p><h2 id='第16讲-史上最强判决书'><span>第16讲 史上最强判决书</span></h2><p><code>1867年，鸿篇巨著</code></p><div class="audio"><audio controls="" src="https://download.12371.cn/jjmksdslj.mp3" type="audio/mpeg" preload="metadata"></audio></div><p><span>1867年4月中旬的一天，伦敦通往汉堡的航线上，狂风肆作，呼啸的海风卷起汹涌的海浪拍击着轮船，船上的桌椅噔噔作响。马克思紧紧靠着船舷上的栏杆站着。他晕船，但是他还是和几个旅客聚在一起饮酒作乐、相谈甚欢，他感到船上的生活是相当的有趣、相当的愉快。</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525252305.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>这也难怪，毕竟，在伦敦“离群独居”、闭关写作《资本论》（第一卷）接近20年后，他终于可以满意地将它交付出版。这一刻，如他自己形容的那样，他“痛快得无以复加”，虽然他曾预言，这部著作甚至不会给他带来写作时所吸香烟的钱。</span></p><p><span>如果他能穿越到2008年10月17日的法兰克福的一家书店 —— 这家书店叫“卡尔·马克思书店”，他不得不承认，被自己的这个预言打脸了。因为这天，《资本论》（第一卷）在这家书店宣告暂时脱销。2008年9月14日，美国第四大投资银行雷曼兄弟申请破产，前后仅半年时间，华尔街排名前五名的投资银行竟然垮掉了三家，新一轮世界经济危机由此拉开序幕。《资本论》再次成为人们寻找危机根源的指引。联合国教科文组织将《资本论》（第一卷）列入《世界记忆名录》，这部著作属于“人类的记忆”。</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525252332.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>《资本论》包含三卷，约230万字，这是什么概念呢？这大约相当于一个人完成了20本今天中国的社会科学类的博士学位论文。这部巨著从开始研究到完成撰写，马克思用了他近半生的时间！</span></p><p><span>马克思说：“我为了为工人争得每日8小时的工作时间，我自己就得工作16小时”，由于长期营养不良、夜间紧张工作，一种叫做“痈”的病痛复发严重，差一点送了马克思的命。在1866年2月，他写信告诉恩格斯说：“‘坐’自然谈不上，这在目前对我说来自然很困难，白天哪怕只有短暂的时间，我也还是躺着继续苦干”。</span></p><p><img src="https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525252350.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>马克思为什么如此死磕于《资本论》的写作？据1834年的统计，利物浦工人的平均寿命只有15岁。19世纪40年代，法国工人的平均寿命不超过30岁，并且工厂中大量存在雇佣童工的情况，许多工人每天需要劳动达18小时，工人厌恶劳动、捣毁机器、遭受惩罚的状况屡见不鲜。为什么大多数人付出了艰辛的劳动，生活处境还是这么的艰难？这个疑问，盘亘于中学时就立志为人类幸福而工作的马克思心中。古典政治经济学说依靠“看不见的手”，人们就可以过上美好生活；启蒙运动说要实现“自由、民主、平等”；现在看来，都是别人家的美好生活。现实和理论出现了强烈的悖反！</span></p><p><span>而在《资本论》（第一卷）出版的约1个半世纪后，占领华尔街运动的人们又抗议道：“我们代表99%的人口，反对那些掌握40%财富的1%的人！” HISTORY REPEATS！无怪乎《资本论》在2008年金融危机爆发后再度热销！</span></p><p><span>那让我们来听听马克思在《资本论》中诊断的资本主义经济的毛病吧！</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525252437.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>在资本主义经济中，广大工人没有生产资料，可是每个人不都得吃饭、穿衣、养活家庭以及向往过上美好生活嘛？于是，工人就只有出卖自己的劳动力。而作为少数人的资产阶级，运用他们手中的资本，购买生产资料、雇佣工人，从而进行生产。对于资本家来说，一个工人没有了、还有千千万万个工人，更何况还可以通过使用机器来替代工人；而对于工人来说，他们除了出卖自己的劳动力之外，别无选择。</span></p><p><span>马克思问，工人朋友们，你们有没有想过在你每天辛苦“搬砖”的那么多个小时中，有多少小时是为维持自己和家人的生活而工作，又有多少个小时是为资本家在战斗呢？假设，维持你和家人一天的生活只需要付出6个小时的工作，但是你每天必须得工作10小时甚至更多，这是为什么呢？因为多出来的4小时是在为资本家生产价值，这就是剩余价值。于是资本家犯了狂想病，假设工人工作6个小时工资是24元，工作10小时工资也是24元，如果可能的话，资本家希望工人一天可以工作25小时、一年工作366天！这样，资本家获得的剩余价值就更多了！</span></p><p><img src="https://p1.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525252487.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>没错，经过工人的长期斗争，好不容易争取来了8小时工作制，但是，工作强度的提高，使得工人变成了流水线上的卓别林。后来，资本家还给工人配上了电脑，好让工人回家也可以继续干活儿。造成这种地位不平等的原因在于生产资料掌握在资本家手中，这就是所谓的生产资料私有制；而工人除了劳动力之外，一无所有。</span></p><p><span>恩格斯说：“自地球上有资本家和工人以来，没有一本书像我们面前这本书那样，对于工人具有如此重要的意义。资本和劳动的关系，是我们现代社会体系所依以旋转的轴心，这种关系在这里第一次作了科学的说明。”</span></p><p><span>马克思说，工人朋友们，资本家赚取了剩余价值，使得他们越来越富有、你们却越来越贫困，后果是很严重的！为什么呢？只需追问一个问题：工人越来越贫困，那么生产出来的产品谁来买呢？资本家吗？可是资本家每天也只能喝的下两杯牛奶，他们生产牛奶的初衷就不是为自己饮用而生产的，而是为了追逐利润！多出来的牛奶就只能倒掉了，这就是为什么1929-1933年世界经济大萧条中发生资本家将过剩的牛奶倒向密西西比河的原因。</span></p><p><img src="https://p5.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525252689.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>为什么不把牛奶分给工人们呢？这时，资本家却对工人说：天下没有免费的午餐。马克思认为，商品生产出来还不能成为到手的利润，要成为真金白银，还需要商品卖得出去，按照这种工人越来越贫困的趋势推算，商品总是会出现相对过剩的，因此，马克思把商品出售环节称为“惊险的跳跃”。</span></p><p><span>有一个有趣的故事。小女孩问她爹：“家里为啥这么冷啊？”她爹说“咱家没有煤了。”小女孩又问：“为啥没有煤？”她爹答道：“我失业了。”小女孩继续追问“那为什么你失业了？”她爹回答道“因为煤太多了”。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525252924.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>后来，资本家为了使这一跳跃不那么惊险，发明了消费信贷，资本通过在消费领域的扩张，将原本已经分配给劳动者的、由劳动者自己争取而来的剩余价值又吸收了回去，劳动者好不容易分享到劳动果实，瞬间在高昂的物价和贷款利息面前消失殆尽。</span></p><p><span>有一句非常著名的话，大家一定都听过。“如果有20%的利润，资本就会蠢蠢欲动；如果有50%的利润，资本就会冒险；如果有100%的利润，资本就敢于冒绞首的危险；如果有300%的利润，资本就敢于践踏人间一切的法律”。</span></p><p><span>资本为了追逐利润，总是有能力提高生产力，马克思说过：“资产阶级在它的不到一百年的阶级统治中所创造的生产力，比过去一切世代创造的全部生产力还要多，还要大……过去哪一个世纪料想到在社会劳动里蕴藏有这样的生产力呢?”</span></p><p><span>资本有它天使的一面，也有它魔鬼的一面。资本的天使，使人类社会能冲破落后的封建社会枷锁，资本的魔鬼则使他成为自己的枷锁。所以，资本主义社会不是从来就有的，也不会永远持续下去，这就是马克思给资本主义社会下的判决书。</span></p><p><span>经过一个半世纪以后，资本主义依然存在，于是，一些人对《资本论》的科学性产生了疑问。可是，马克思是个预言家，他预言的是资本主义的历史趋势和未来走向，他不是算命先生，不可能为资本主义的终日确定一个时间表。</span></p><p><span>实际上，资本主义一个半世纪以来发生了很多变化，比如说引入“看得见的手”、股权分享、实行高福利。可以说《资本论》中描述的那种资本主义的丧钟其实早已敲响，通过各种修正手段，资本主义试图自我修复，但是，每一次修正都更加说明了资本主义社会距离《资本论》中所描述的资本主义1.0版本更加遥远。</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525253002.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>《资本论》的出版是人类科学史上的重大事件。1871年4月25日，李卜克内西写信告诉马克思：“在全德国人们都在读着根据你的《资本论》所作的关于剩余价值和标准工作日的报告”。在马克思诞辰100周年之时，李大钊曾经撰文说：“从前的经济学，是以资本为本位，以资本家为本位。以后的经济学，要以劳动为本位，以劳动者为本位了。”</span></p><p><span>《资本论》从无产者的立场解释世界，振聋发聩！四年后，法国人民想要改变世界，1871年春天的巴黎，一场革命就要来临。</span></p><h2 id='第17讲-国际歌由此诞生'><span>第17讲 国际歌由此诞生</span></h2><p><code>1871年，巴黎公社</code></p><div class="audio"><audio controls="" src="https://download.12371.cn/jjmksdsqj.mp3" type="audio/mpeg" preload="metadata"></audio></div><p><span>“起来，饥寒交迫的奴隶！</span></p><p><span>起来，全世界受苦的人！</span></p><p><span>满腔的热血已经沸腾，</span></p><p><span>要为真理而斗争！</span></p><p><span>旧世界打个落花流水，</span></p><p><span>奴隶们起来，起来！</span></p><p><span>不要说我们一无所有，</span></p><p><span>我们要做天下的主人！</span></p><p><span>……</span></p><p><span>这是最后的斗争，</span></p><p><span>团结起来到明天，</span></p><p><span>英特纳雄耐尔就一定要实现！</span></p><p><span>这是最后的斗争，</span></p><p><span>团结起来到明天，</span></p><p><span>英特纳雄耐尔就一定要实现！”</span></p><p><span>这就是传唱世界的《国际歌》。说起它的由来，就必须提到1871年的巴黎公社。</span></p><p><span>《国际歌》的词作者欧仁•鲍狄埃就是巴黎公社的一名幸存战士，他热情讴歌了巴黎公社战士的崇高理想和英勇不屈的革命精神。马克思曾写过一部经典著作《法兰西内战》，就是总结巴黎公社的经验教训。</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525573733.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>首先让我们将视线拉回1870年秋天的某个晚上，暴风雨席卷着整个英格兰岛。马克思在他的书房里来回踱步。恩格斯坐在一旁，沉默不语。他们所牵挂的正是远在伦敦四百多公里之外的巴黎。</span></p><p><span>此时，普法战争已见分晓。悍然发动战争的法国皇帝拿破仑三世已经成了德国人的阶下囚。愤怒的巴黎市民奔走呼号，高呼要打倒帝制。但以梯也尔为首的反动政府却要和俾斯麦签订割地赔款的和约。</span></p><p><span>马克思其实已经预料到，这个反动政府必然会背叛巴黎市民，到时整个法国都会没有还手之力。他通过成立于1864年的国际工人联合会即“第一国际”发出号召，要法国工人行动起来保卫他们的祖国，保卫巴黎。事件果然朝着马克思所预想的方向发展。</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525573753.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>1871年3月18日，对于巴黎来说注定是一个不眠之夜。清晨，梯也尔把临时政府的军队调到巴黎北部的蒙马特尔高地和梭蒙高地，企图去夺取国民自卫军的417门大炮。搬运大炮的动静惊醒了附近的居民，他们的行踪暴露，人们到处敲响警钟。</span></p><p><span>当晚，国民自卫军控制了巴黎政府机关以及塞纳河上的桥梁，梯也尔政府仓皇出逃凡尔赛。工人们取得了胜利，整个巴黎回荡着“公社万岁”的高呼声，响彻云霄，自由的旗帜在市政厅的上空高高飘扬。自此，无产阶级第一次夺取了政权。</span></p><p><span>此时的马克思已是知天命之年。巴黎，这个马克思在他的流亡生涯中曾三次居住过的地方，这个他成长为共产主义者的地方，现在令他焦急万分。</span></p><p><span>胜利的消息传来。马克思的担心终于稍有缓解。虽然公社未能充分把握时机彻底消灭反革命势力，但公社的革命力量使他备受鼓舞，让他的疑虑一扫而空。他激动地在一封信中这样说道：“这些巴黎人，具有何等的灵活性，何等的历史主动性，何等的自我牺牲精神！在忍受了六个月与其说是外部敌人不如说是内部叛变所造成的饥饿和破坏之后，他们在普军的刺刀下起义了，好像法国和德国之间不曾发生战争似的，好像敌人并没有站在巴黎的大门前似的！历史上还没有过这种英勇奋斗的范例！”</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525573772.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>那么，让马克思推崇备至的巴黎公社到底是一个怎样的存在呢？由工人阶级管理的巴黎，又与资产阶级统治的巴黎又有什么不同呢？</span></p><p><span>马克思曾这样盛赞到，巴黎公社奇迹般地改变了整个巴黎的面貌。资产阶级的第二帝国所统治的那个荒淫无度的巴黎已经消失地无影无踪了。“法国的京城不再是不列颠的大地主、爱尔兰的在外地主、美利坚的前奴隶主和暴发户、俄罗斯的前农奴主和瓦拉几亚的封建贵族麕集的场所。在陈尸场内一具尸首也没有了，夜间抢劫事件不发生了，偷窃现象也几乎绝迹了。自从1848年2月以来，巴黎街道第一次变得平安无事，虽然街道上连一个警察也没有。”</span></p><p><span>公社第一个措施就是建立人民武装以取代资产阶级的常备军和警察，就此人民做了公社的真正主人。多年积存的遍布巴黎各个角落的垃圾，几乎一夜之间就被清理完毕了。在巴黎公社管理巴黎的短短几天，巴黎第一次干净整洁、夜不闭户，面包的供应从来没有发生短缺。整个公社的存在期间，也没有发生一起刑事案件。贫民窟里的穷人搬进了富人的住宅，公社实行了义务教育和免费教育，还为劳动妇女的孩子建了托儿所、幼儿园，妇女劳动也同工同酬。</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525573790.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>那么，为什么无产阶级接管的巴黎会发生如此巨大变化呢？马克思在他的经典著作《法兰西内战》中详细分析了这一人类有史以来新的政治形式。巴黎公社令曾经处于社会底层、受压迫和剥削最为严重的工人第一次用实际行动证明了，无产阶级完全可以靠着自我管理建造一个完全不同的国家。这个国家形式打碎了旧的国家统治机器。</span></p><p><span>巴黎公社的斗争经验表明：人类完全有能力为了共同利益，自觉自愿地组织起来。马克思激动地说：“想知道什么是无产阶级专政吗？这就是！”。巴黎公社的伟大成就已经向我们展示了这个词语所蕴含的巨大创造力。</span></p><p><span>但是，很遗憾，巴黎公社仅仅存在了72天就被反动阶级围剿了。大军将巴黎团团包围，公社的战士们不得不与敌人展开异常激烈的街垒战，最终于拉雪兹公墓决一死战。公社战士高呼“公社万岁”，纷纷倒在了敌人的枪林弹雨中。随后，梯也尔下令在一周之内枪杀了巴黎城内两万名手无寸铁的男人、妇女和儿童。</span></p><p><span>对反动派的卑劣行径，马克思怒不可遏。他说：“在现代最惊心动魄的这场战争结束后胜败两军联合起来共同杀戮无产阶级这样一个史无前例的事件，并不是像俾斯麦所想的那样，证明正在崛起的新社会被彻底毁灭了，而是证明资产阶级旧社会已经完全腐朽了。”</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525573808.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>对巴黎市民的英勇抵抗，马克思给予最高颂扬。他说：“巴黎全人民 —— 男人、妇女和儿童 —— 在凡尔赛军队开进城内以后还战斗了一个星期的那种自我牺牲的英雄气概，反映出他们事业的伟大。”</span></p><p><span>伟大的巴黎公社虽然失败了，但它的功绩不可磨灭。公社成员高扬起国际主义精神，把工人运动的事业推向了高潮。欧仁•鲍迪埃的这首《国际歌》就充分展现了那些深受剥削、压迫折磨的劳苦大众一样可以联合起来，形成巨大的威力，开创人类社会的全新历史。马克思曾宣称，“工人的巴黎及其公社将永远作为新社会的光辉先驱受人敬仰。它的英烈们已永远铭记在工人阶级的伟大心坎里。”</span></p><p><img src="https://p5.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525573826.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>巴黎公社意义非凡。1911年的“十月革命”正是吸取了巴黎公社失败的惨痛教训才没有在关键时刻掉链子，坚决防止了外部资本主义帝国的集体侵略和内部反动政权的阴谋颠覆，才取得了伟大胜利。</span></p><p><span>正是那些生活在资本主义社会最底层的人们纷纷涌向历史舞台最前沿，展示了自己改造社会、创造历史的巨大力量。马克思也是在巴黎公社的感召下，一再表明他所坚持的共产主义不是什么乌托邦，而是现实的运动，它正是起源于我们对人类的野蛮、未开化以及不合理的当下的一点一滴的改进，起源于人们在绝望中依然心存信仰和希望。</span></p><h2 id='第18讲-活化石也有春天'><span>第18讲 活化石也有春天</span></h2><p><code>1877年，转向东方</code></p><div class="audio"><audio controls="" src="https://download.12371.cn/jjmksdsbj.mp3" type="audio/mpeg" preload="metadata"></audio></div><p><span>1877年10月的伦敦，金黄色的树叶开始飘落，欧洲即将进入漫长灰色的冬季。一天，马克思像往常一样喝着咖啡看报纸，当他看到一份俄国报纸时，勃然大怒道：“真是荒唐！他这样做，与其说是给我过多的荣誉，不如说给了我过多的侮辱”！</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525575220.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>这篇文章的作者是俄国民粹派分子米海洛夫斯基。这篇文章对《资本论》做了曲解，认为根据马克思的有关论述，俄国必然会摧毁农村公社，走资本主义道路。马克思对俄国人的这种引经据典、照搬教条地解读《资本论》的方式非常不满意。</span></p><p><span>这年，他停止了《资本论》的研究和写作，所以《资本论》没能按照他的计划写完，终成残篇。究其原因，直到今天，学术界仍然感到有许多困惑和不解。但是不能忽视的一条原因是，医生给他下了一个严格的医嘱，绝对禁止他每天工作超过4个小时，但是，“身体和灵魂总有一个要在路上”，马克思从来没有停止思考人类社会发展的规律。</span></p><p><img src="https://p5.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525575241.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>马克思中止了《资本论》的写作后，转而撰写和整理了篇幅巨大的“人类学笔记”和《历史学笔记》，汉译本共200多万字，这些笔记探讨了从亚细亚生产方式到古代社会，再到封建社会的历史发展过程。至此，他把“人类学笔记”、《历史学笔记》和《资本论》及其手稿串联起来，从而描绘出了“亚细亚生产方式-古代社会-封建社会-资本主义社会-共产主义社会”的宏大的人类历史发展画卷。</span></p><p><span>作为一个已近暮年的垂垂老者，马克思讲了一个长长的、关于人类社会历史全貌的故事。本来已经算是“吃鸡”成功了。但是，在俄国往哪儿走的问题上有点儿糟心。</span></p><p><span>《资本论》的第一个外文译本是俄文版，1872年3月在俄罗斯出版，在俄国引起强烈反响。进步青年如果没读过《资本论》的，都不好意思跟人交谈！有趣的是，起初，有些人担心沙皇独裁的审查可能会禁止这本书，但是审查机构判断这本书“艰涩，而且几乎不能理解”，以至于他们得出结论说“很少有人愿意读它，理解它的人就更少了”。审查机构犯了个“大错”！俄文版比任何版本都卖得好，有时候甚至包着《新约》的书皮在读者间相互传阅。</span></p><p><span>但是，《资本论》在俄国引起了知识分子间的互怼。1861年农奴制改革后，资本主义在俄国迅速发展，以公有制为基础的农村公社日益遭到破坏。站在十字路口，俄国围绕着农村公社的命运早就掀起了一场“俄国向哪里去”的大论争。</span></p><p><img src="https://p3.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525575258.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>各方都把《资本论》当作批判对方的理论武器。这些争论大概分为“直接进入社会主义”和“必然走上资本主义发展道路”两派。前一派说：“根据《资本论》，农村公社不一定要灭亡，俄国完全可以通过改造、发展农村公社这一原始公有制形式，直接进入社会主义社会。”后一派表示不服：“马克思在《资本论》中明明说的是农村公社必然灭亡，俄国将不得不踏上西欧的后尘，走上资本主义发展道路。”而宣扬后一论点的人，都自称是马克思的门徒，是“马克思主义者”，当有人问到《资本论》究竟在哪个地方这么说了？！他们会回答说，“马克思就是这样说的”！</span></p><p><span>惹恼马克思的那篇俄文文章显然属于后一派，马克思看到这篇文章后立刻给《祖国纪事》杂志编辑部写了一封信，批驳米海洛夫斯基的观点：“他一定要把我关于西欧资本主义起源的历史概述彻底变成……一切民族，不管他们所处的历史环境如何，都注定要走这条道路，这是错误的！” “极为相似的事情发生在不同的历史环境中，会引起完全不同的结果”。例如，古代罗马耕种自己小块土地的自由农民的土地也曾经被剥夺，与自己的生产资料相分离，但在当时的历史环境下，罗马失去土地的农民并没有变成雇佣工人，却成为无所事事的游民，他们同时发展起来的也不是西欧那样的资本主义生产方式，而是奴隶占有制。</span></p><p><span>马克思拒绝别人将他基于西欧社会分析的理论机械地、僵化地套用在分析别国的国情上，要做到具体条件具体分析，这是“马克思主义活的灵魂”。正如《共产党宣言》1872年序言所说的那样，“这些原理的实际运用，随时随地都要以当时的历史条件为转移”。</span></p><p><span>你可能要问：诶？马克思怎么看得懂俄文啊？没错，为了能够研究俄国自农奴解放以来的农业经济著作的第一手资料，马克思专门学习了俄语。那时他已经是50多岁了，尽管俄文十分难学，但经过六个月后他便取得了很大的进步，就已经能够津津有味地阅读俄国诗人和散文家的著作了。他特别敬爱普希金、果戈里和谢德林。在马克思去世之后，恩格斯吃惊地发现马克思的稿纸中有超过两立方米的材料全是俄国的统计数字，还有3000页纸的阅读笔记。</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525575281.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>1881年2月18日前后，一封信漂洋过海地来到了马克思的书桌上。写信的人叫查苏利奇，是俄国一位女革命家。几年过去了，俄国国内关于俄国去哪儿的问题还争论不休，她想听听本尊能不能给一个确定的答案，俄国社会发展道路究竟会怎样？信中，查苏利奇的言辞流露出对马克思“小迷妹”般的无限崇敬：“请您理解，……，要是您肯对我国农村公社可能遭到的各种命运发表自己的观点，要是您肯对那种认为由于历史的必然性，世界上所有国家都必须经过资本主义生产的一切阶段这种理论阐明自己的看法，那么您会给我们多大的帮助啊”。</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525575298.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>对于查苏利奇的来信，马克思非常重视，那时，距离他逝世只有大约3年时间。马克思打了四份草稿，1881年3月8日，才正式给查苏利奇写了复信，这在马克思一生的通信史上是极少见的。复信草稿的第一稿结构是最完整的、而且论述也是最为翔实的，篇幅长达15页。但是，正式回信只有两页。这就耐人寻味了，草稿打那么长、还写了四次，但正式回复只写了两页，这是为什么呢？</span></p><p><span>既然资本主义生产起源的必然性仅限于西欧，那么，俄国的道路该走向何方？在复信草稿的第一稿中，马克思曾写到：“使俄国可以不通过资本主义制度的卡夫丁峡谷，而把资本主义制度所创造的一切积极的成果用到公社中来”。</span></p><p><span>“卡夫丁峡谷”是什么？“卡夫丁峡谷”典故出自古罗马史。话说公元前321年，萨姆尼特人在古罗马的卡夫丁峡谷大败罗马军队，为了羞辱罗马人，萨姆尼特人用长矛架起了形似城门的“牛轭”，迫使罗马战俘从“牛轭”下通过。马克思用“卡夫丁峡谷”来比喻资本主义使广大人们经历的灾难性的历史经历。马克思是多么希望古老的东方国家能走出一条让大多数人不经历资本主义经济灾难的坦途，并且，他认为东方国家是有可能做到的。</span></p><p><span>但是，这只是有可能。因为，当时俄国农村公社有特殊性。在俄国农村公社内部，房屋及其附属的园地是农民的私有财产，但是，耕地仍然是公有财产。因此，马克思认为，俄国农村公社的发展有两种可能性：“或者是它所包含的私有制因素战胜集体因素，或者是后者战胜前者”。两种结局都是可能的，究竟会是哪一种结局，正如马克思所说：“一切都取决于它所处的历史环境！”</span></p><p><span>所以，在给查苏利奇的正式复信中，马克思并没有下结论说俄国确定可以跨过“卡夫丁峡谷”。东方国家公有制的存在，使马克思看到了撼动资本主义道路就是真理的根基的可能性。但是，他却非常谨慎。</span></p><p><span>可见，马克思是一个革命家，但更多的是一个理论家，他强调理论的严谨性和开放性。对俄国的发展道路问题，他大胆假设，小心求证！对过去基于西欧国家的实际状况而得出的革命结论是否具有普适性，特别是对于东方社会而言，是否必然重复西欧的历史、走资本主义道路，马克思并不持肯定的论见。但是，他具体分析东方的各种不同国情导致的多种可能，也没有给出东方社会可以跨越“卡夫丁峡谷”的断言。</span></p><p><img src="https://p5.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525575323.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>怀揣中学时立志为人类幸福而工作的梦想，暮年的马克思依然渴望人类社会可以找寻到不用历经严冬就可通向彼岸春天的航道。为此，他曾寄望古老的东方，他对恩格斯说：“要是老天爷不特别苛待我们，我们该能活到这个胜利的日子吧！”</span></p><h2 id='第19讲-他永远地睡着了'><span>第19讲 他永远地睡着了</span></h2><p><code>1883年，与世长辞</code></p><div class="audio"><audio controls="" src="https://download.12371.cn/jjmksdsjj.mp3" type="audio/mpeg" preload="metadata"></audio></div><p><span>1883年3月14日，星期三。午后，伦敦的上空布满了初春的浓雾，浓雾夹杂着雾霾一起透进室内。马克思坐在他的安乐椅上，从来都不闲着的琳蘅坐在一个角落里用钩针织什么。电铃突然响了。来访的人正是恩格斯。十多天来，恩格斯每天下午准时来看望病重的马克思。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525580948.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>琳蘅说，“您赶快请进，他快睡着了。”</span></p><p><span>当恩格斯同琳蘅走进房间的时候，伟大的思想家卡尔·马克思已经安静地长眠了。恩格斯站在旁边，肃立默哀。</span></p><p><span>恩格斯虽然对这个无可补偿的损失深感悲痛，却也为这来得突然的死亡感到安慰。在他看来，“医术也许可以使他再拖上几年，使他毫无希望地消磨残生而不是立刻死去，以此为医学技术增光。但这绝不是我们的马克思所能忍受的。面对着许多未完成的工作，渴望去完成它们而又无能为力，这样活着对他来说会比安然死去痛苦千倍。我们不能眼睁睁地看着这位伟大的天才憔悴衰老，消磨残生，去给医学增光，去受他在年富力强时痛骂过的人的嘲笑， —— 不能！他的逝世要比这强过千倍，我们后天把他送到他夫人安息的墓地去，要比这强过千倍。”</span></p><p><span>我们知道，长期高强度的工作和艰苦的生活条件，极大地摧残了马克思与他的家人的身体健康。在马克思生命的最后五年里，他饱受失眠、肋膜炎、肺炎、肺脓肿、脑神经炎和坐骨神经痛。燕妮的健康状况更加糟糕，她患了肝癌，全身的疼痛放到最大，卧床不起。</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525581044.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>有一天早晨，马克思感觉自己的身体好了一些，可以下床走动了，于是他慢慢地走进了燕妮的房间，坐在她的床前，抚摸着她的额头。这一幕被马克思的小女儿艾琳娜·马克思看到了，她后来回忆道：“我永远也忘不了那天早晨的情景。他们在一起又都成了年轻人，好似一对正在开始共同生活的热恋着的青年男女，而不像一个病魔缠身的老翁和一个弥留的老妇，不像是即将永别的人。”</span></p><p><span>1881年12月2日，天气非常寒冷，白天下雨，夜里是暴风骤雨。在燕妮生命的最后几小时里，她依然保持清醒，马克思陪在她的身边，燕妮的最后一句话是：“卡尔，我不行了！”然后慢慢地闭上双眼。</span></p><p><span>马克思的精神一蹶不振，他白发苍苍，双眼无神。一旁的恩格斯看见马克思的样子，低低地说：“摩尔也死了。”</span></p><p><span>恩格斯在燕妮的墓前发表了简短的演说，他在最后说道：“如果有一位女性把使别人的幸福视为自己的幸福，那就是燕妮。”</span></p><p><span>仅仅一年之后，1883年1月11日，当马克思的长女燕妮·马克思在巴黎逝世的消息传到伦敦时，已是风烛残年的马克思瘫在安乐椅中，老泪纵横。这时的马克思由于长期不断服药，以致药物对他的身体已经不再起任何作用，而只是使他食欲减退，消化不良。两个月后，他安祥而毫无痛苦地长眠了。</span></p><p><span>1883年3月17日，星期六，马克思被安葬在伦敦海格特公墓，安葬在他夫人的身旁。按照马克思夫妇生前的遗愿，他们希望免除一切仪式，因此，葬礼包括恩格斯在内只有八人参加，他们都是马克思一生忠实的老朋友。</span></p><p><span>恩格斯用英语作了题为《在马克思墓前的讲话》这篇著名的悼词。在2018年，马克思诞辰两百周年之际，如果我们停留在马克思的墓前，风中或许还能隐约可以听见恩格斯那浑厚的声音：</span></p><p><span>“3月14日下午两点三刻，当代最伟大的思想家停止思想了。让他一个人留在房里还不到两分钟，当我们进去的时候，便发现他在安乐椅上安静地睡着了 —— 但已经永远地睡着了。</span></p><p><span>这个人的逝世，对于欧美战斗的无产阶级，对于历史科学，都是不可估量的损失。这位巨人逝世以后所形成的空白，不久就会使人感觉到。</span></p><p><img src="https://p2.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525581070.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>正像达尔文发现有机界的发展规律一样，马克思发现了人类历史的发展规律，即历来为繁芜丛杂的意识形态所掩盖着的一个简单事实：人们首先必须吃、喝、住、穿，然后才能从事政治、科学、艺术、宗教等等；所以，直接的物质的生活资料的生产，便构成一个民族或一个时代的一定的经济发展阶段，人们的国家设施、法的观点、艺术以至宗教观念，就是从这个基础上发展起来的，因而，也必须由这个基础来解释，而不是像过去那样做得相反。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525581090.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>不仅如此。马克思还发现了现代资本主义生产方式和它所产生的资产阶级社会的特殊的运动规律。由于剩余价值的发现，这里就豁然开朗了，而先前无论资产阶级经济学家或者社会主义批评家所做的一切研究都只是在黑暗中摸索。</span></p><p><span>一生中能有这样两个发现，该是很够了。即使只能作出一个这样的发现，也已经是幸福的了。但是马克思在他所研究的每一个领域，甚至在数学领域，都有独到的发现，这样的领域是很多的，而且其中任何一个领域他都不是浅尝辄止。</span></p><p><span>他作为科学家就是这样。但是这在他身上远不是主要的。因为马克思首先是一个革命家。他毕生的真正使命，就是以这种或那种方式参加推翻资本主义社会及其所建立的国家设施的事业，参加现代无产阶级的解放事业，正是他第一次使现代无产阶级意识到自身的地位和需要，意识到自身解放的条件。</span></p><p><img src="https://p4.img.cctvpic.com/photoAlbum/templet/special/PAGE1524052357618172/ELMT1524052358134176_1525581382.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>正因为这样，所以马克思是当代最遭忌恨和最受诬蔑的人。各国政府 —— 无论专制政府或共和政府，都驱逐他；资产者 —— 无论保守派或极端民主派，都竞相诽谤他，诅咒他。他对这一切毫不在意，把它们当作蛛丝一样轻轻拂去，只是在万不得已时才给以回敬。现在他逝世了，在整个欧洲和美洲，从西伯利亚矿井到加利福尼亚，千百万革命战友无不对他表示尊敬、爱戴和悼念，而我敢大胆地说：他可能有过许多敌人，但未必有一个私敌。他的英名和事业将永垂不朽！”</span></p><p><span>2018年的5月，也就是马克思诞辰两个世纪以后，在距离马克思出生地--德国小镇特里尔8000公里之外的遥远东方，社会主义中国的首都北京，中共中央总书记、国家主席、中央军委主席习近平就马克思主义在中国的实践发表讲话指出：</span></p><p><span>马克思给我们留下的最有价值、最具影响力的精神财富，就是以他名字命名的科学理论 —— 马克思主义。这一理论犹如壮丽的日出，照亮了人类探索历史规律和寻求自身解放的道路。</span></p><p><span>可以告慰马克思的是，马克思主义指引中国成功走上了全面建设社会主义现代化强国的康庄大道，中国共产党人作为马克思主义的忠诚信奉者、坚定实践者，正在为坚持和发展马克思主义而执着努力！</span></p><p><span>前进道路上，我们要继续高扬马克思主义伟大旗帜，让马克思、恩格斯设想的人类社会美好前景不断在中国大地上生动地展现出来！</span></p><p>&nbsp;</p></div></div>
+</body>
+</html>

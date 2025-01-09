@@ -1,0 +1,1609 @@
+<!doctype html>
+<html style='font-size:18px !important'>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.428571; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-size-adjust: inherit; font-kerning: inherit; font-variant-alternates: inherit; font-variant-ligatures: inherit; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-position: inherit; font-variant-emoji: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-variation-settings: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; border-right-style: none; border-right-color: currentcolor; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: medium; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: medium !important; border-style: none !important; border-color: currentcolor !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; border-bottom-style: none; border-bottom-color: currentcolor; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: medium; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left-width: 0.25em; border-left-style: solid; border-left-color: rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+
+
+/*快速自定义配置*/
+:root {
+    --monospace: "Iosevka Curly", "JetBrains Mono", "Fira Code", "Cascadia Code", Menlo, "Ubuntu Mono", Consolas, HYZhengYuan; /*代码字体*/
+    --text-font: var(--monospace); /*正文字体*/
+    --title-font: var(--monospace); /*标题字体*/
+    --latex-font: var(--monospace); /*LaTeX字体(不含英语)*/
+    --text-line-height: 1.6; /*正文行间距*/
+    --code-line-height: 1.6; /*代码块行间距*/
+    --p-spacing: 0.8rem; /*段间距*/
+    --file-tree-text-size: 1.1rem; /*文件树大小*/
+    --toc-text-size: 1rem; /*大纲大小*/
+    --text-size: 14px; /*字体大小 推荐配置: 应用设置-外观-字体大小*/
+}/*
+ * MIT License
+ *
+ * Copyright (c) 2023 劉強東 https://github.com/liangjingkanji
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+@import url();
+@include-when-export url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --text-color: #333333;
+    --bg-color: #ffffff;
+    --control-text-color: var(--text-color);
+    --meta-content-color: var(--text-color);
+    --active-file-border-color: var(--drake-accent);
+    --rawblock-edit-panel-bd: var(--code-block-bg-color);
+    --item-hover-bg-color: #E5E5E596;
+    --active-file-bg-color: var(--item-hover-bg-color);
+
+    --blur-text-color: rgba(51, 51, 51, 0.5);
+    --drake-accent: #e95f59;
+    --drake-highlight: #d63200;
+    --a-color: #036aca;
+    --variable-color: var(--drake-highlight);
+    --outline-active-color: var(--a-color);
+    --code-block-bg-color: #2b2b2b;
+    --code-block-color: #A9B7C6;
+    --title-color: #135ce0;
+    --blockquote-border-color: #b2aec5;
+    --blockquote-color: #595959;
+    --blockquote-bg-color: #fff9f9;
+    --strong-color: var(--title-color);
+    --h2-underline-color: var(--title-color);
+    --horizontal-divider-color: var(--title-color);
+    --height-light-color: var(--drake-highlight);
+    --height-light-border-color: var(--drake-highlight);
+    --yaml-color: #777777;
+    --yaml-bg-color: #f7f7f7;
+    --footnotes-bg-color: #3c3d3e;
+    --footnotes-highlight: #FFD760;
+    --table-border-color: #dfe2e5;
+    --table-header-bg-color: #f6f8fa;
+    --table-bg-color: var(--bg-color);
+    --table-n2-bg-color: #f6f8fa;
+    --input-bg-color: var(--item-hover-bg-color);
+    --btn-hover-bg-color: var(--item-hover-bg-color);
+    --checkbox-checked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M425.984 726.016l384-384-59.99-61.995-324.01 324.011-152.021-152.021L213.973 512zm384-598.016q36.01 0 61.013 25.984T896 213.974v596.01q0 34.005-25.003 59.99t-61.013 25.983h-596.01q-36.011 0-61.014-25.984t-25.003-59.989v-596.01q0-34.006 25.003-59.99T213.973 128h596.011z' fill='%2365b73b'/%3E%3C/svg%3E");
+    --checkbox-unchecked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M810.667 213.333v597.334H213.333V213.333h597.334m0-85.333H213.333C166.4 128 128 166.4 128 213.333v597.334C128 857.6 166.4 896 213.333 896h597.334C857.6 896 896 857.6 896 810.667V213.333C896 166.4 857.6 128 810.667 128z' fill='%23333333'/%3E%3C/svg%3E");
+}
+
+html {
+    font-size: var(--text-size);
+}
+
+body {
+    font-family: var(--text-font) !important;
+    color: var(--text-color);
+    -webkit-font-feature-settings: "liga" on, "calt" on;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+p {
+    line-height: var(--text-line-height);
+}
+
+#write {
+    background-image: linear-gradient(90deg, rgba(60, 10, 30, .04) 3%, transparent 0), linear-gradient(1turn, rgba(60, 10, 30, .04) 3%, transparent 0);
+    background-size: 20px 20px;
+    background-position: 50%;
+}
+
+/*code block*/
+.md-fences {
+    font-size: 1rem;
+    padding: 0.5rem !important;
+    border-radius: 2px;
+    word-wrap: normal;
+    background-color: var(--code-block-bg-color);
+    color: var(--code-block-color);
+    border: none;
+    line-height: var(--code-line-height);
+}
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) *,
+.on-focus-mode .md-fences.md-focus .CodeMirror-code > :not(.CodeMirror-activeline) *,
+.on-focus-mode .md-htmlblock.md-focus .CodeMirror-code > :not(.CodeMirror-activeline) * {
+    color: #909090 !important
+}
+
+/*inline latex*/
+.MathJax {
+    font-size: 120% !important;
+}
+.MathJax text, .MathJax use {
+    font-family: var(--latex-font);
+}
+/*math-block latex*/
+.md-math-block .MathJax {
+    font-size: 130% !important;
+}
+
+/*mermaid*/
+[id^=mermaidChart] .cluster rect {
+    fill: var(--table-n2-bg-color) !important;
+    stroke: var(--table-border-color) !important;
+}
+[id^=mermaidChart] .grid .tick text,
+[id^=mermaidChart] .titleText {
+    fill: var(--text-color) !important;
+}
+[id^=mermaidChart] .clusters span.nodeLabel {
+    color: var(--text-color) !important;
+    line-height: 1.8rem;
+}
+[mermaid-type="journey"] line {
+    stroke: #7a7a7a !important;
+}
+[mermaid-type="journey"] .label {
+    color: #333 !important;
+}
+[id^=mermaidChart] .relationshipLabelBox {
+    fill: var(--bg-color) !important;
+    opacity: 1 !important;
+    background-color: var(--bg-color) !important;
+}
+[id^=mermaidChart] .legend {
+    fill: var(--text-color) !important;
+}
+[id^=mermaidChart] g.label {
+    font-size: 1rem !important;
+}
+[id^=mermaidChart] line.divider {
+    stroke: var(--table-border-color) !important;
+}
+[id^=mermaidChart] span.nodeLabel {
+    color: var(--code-block-color) !important;
+    line-height: 1.8rem;
+}
+tspan {
+    color: var(--text-color)
+}
+[id^=mermaidChart] .entityLabel {
+    fill: var(--code-block-color) !important;
+}
+[id^=mermaidChart] {
+    fill: var(--text-color) !important;
+}
+[id^=mermaidChart] rect.rect {
+    fill: rgba(175, 255, 212, 0.3) !important;
+}
+.md-diagram-panel-preview text.actor > tspan { /*方块文字*/
+    fill: var(--code-block-color) !important;
+    stroke: none !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+}
+.md-diagram-panel-preview .actor, .md-diagram-panel-preview .entityBox { /*方块*/
+    stroke: var(--table-border-color) !important;
+    fill: var(--code-block-bg-color) !important;
+}
+.md-diagram-panel-preview .actor-line { /*竖线*/
+    stroke: var(--text-color) !important;
+    stroke-width: 1px;
+}
+.md-diagram-panel-preview .messageLine0 { /*横线*/
+    stroke-width: 1.5;
+    stroke-dasharray: none;
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .messageLine1 { /*虚线*/
+    stroke-width: 1.5 !important;
+    stroke-dasharray: 2, 2 !important;
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .messageText { /*描述文字*/
+    fill: var(--text-color) !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+}
+.md-diagram-panel-preview .activation0 { /*长方形*/
+    fill: #e6e6e6 !important;
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .labelText, .md-diagram-panel-preview .labelText > tspan { /*循环标记*/
+    fill: var(--code-block-color) !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+    dominant-baseline: unset;
+    alignment-baseline: unset;
+}
+.md-diagram-panel-preview .labelBox { /*循环标记背景*/
+    stroke: var(--table-border-color) !important;
+    fill: var(--code-block-bg-color) !important;
+}
+.md-diagram-panel-preview .loopLine { /*循环标记虚线*/
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .loopText, .md-diagram-panel-preview .loopText > tspan { /*循环名称*/
+    fill: var(--text-color) !important;
+    font-size: 1rem !important;
+}
+.md-diagram-panel-preview .sequenceNumber { /*序号*/
+    fill: var(--bg-color) !important;
+}
+pre.md-fences-advanced.md-focus .md-fences-adv-panel {
+    border: none;
+}
+.md-diagram-panel-preview .edgePath .path { /*箭头*/
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .edgeLabel rect { /*条件文字背景*/
+    fill: var(--bg-color) !important;
+}
+.md-diagram-panel-preview .edgeLabel span { /*条件文字*/
+    color: var(--text-color) !important;
+    background: var(--bg-color) !important;
+}
+.md-diagram-panel-preview .node rect,
+.md-diagram-panel-preview .node circle,
+.md-diagram-panel-preview .node ellipse,
+.md-diagram-panel-preview .node polygon,
+.md-diagram-panel-preview .node path { /*形状*/
+    stroke: var(--table-border-color) !important;
+    fill: var(--code-block-bg-color) !important;
+}
+#write .md-diagram-panel .md-diagram-panel-preview div { /*形状内文字*/
+    color: var(--code-block-color);
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+}
+
+/*code snippet*/
+#write code, tt {
+    margin: 0 2px;
+    border-radius: 2px;
+    color: var(--drake-highlight);
+    background-color: #fff5f5;
+    padding: .065em .4em;
+}
+
+/*variable*/
+var {
+    color: var(--variable-color);
+    font-weight: bold;
+}
+
+/*raw block*/
+.md-rawblock-control:not(.md-rawblock-tooltip) {
+    border-radius: 2px 0 2px 2px;
+    padding: 0.2rem !important;
+}
+.md-rawblock:hover > .md-rawblock-container {
+    background: none;
+}
+.md-rawblock-input {
+    font-size: 1rem;
+}
+.md-rawblock-tooltip-btn:hover {
+    background: none;
+}
+.md-rawblock:hover > .md-rawblock-tooltip {
+    border-radius: 2px 2px 0 0;
+    margin-bottom: 2px !important;
+}
+.md-rawblock-tooltip.md-rawblock-control {
+    border-radius: 2px 2px 0 0;
+    color: var(--code-block-color);
+}
+.md-rawblock-tooltip-name {
+    color: var(--code-block-color);
+    opacity: 1;
+}
+
+/*quote block*/
+blockquote:before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 4px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--blockquote-border-color);
+    border-radius: 2px;
+}
+
+blockquote {
+    color: var(--blockquote-color);
+    border-radius: 2px;
+    padding: 10px 16px;
+    background-color: var(--blockquote-bg-color);
+    position: relative;
+    border-left: none;
+}
+
+strong {
+    color: var(--strong-color);
+    font-weight: bold;
+}
+#write blockquote strong {
+    color: var(--blockquote-color);
+}
+
+/*link*/
+#write a {
+    color: var(--a-color);
+    text-decoration: none;
+}
+#write h2 a .md-plain {
+    border-bottom: .2rem solid var(--a-color);
+}
+.on-focus-mode #write a .md-plain, .on-focus-mode .md-htmlblock-container a:hover {
+    border-bottom: .1rem solid var(--blur-text-color);
+}
+#write a .md-plain, .md-htmlblock-container a:hover,
+.on-focus-mode #write .md-focus a .md-plain, .md-focus .md-htmlblock-container a:hover {
+    border-bottom: .1rem solid var(--a-color);
+}
+[md-inline=link] a {
+    margin: 0 .2rem;
+}
+a:any-link {
+    color: var(--a-color);
+}
+
+img {
+    border-left: none;
+    border-right: none;
+    vertical-align: baseline;
+    border-radius: 2px;
+}
+
+#write {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px 100px;
+}
+#typora-source .CodeMirror-lines {
+    max-width: 1200px;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--title-font);
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+    color: var(--title-color);
+}
+
+h3.md-focus:before, h4.md-focus:before, h5.md-focus:before, h6.md-focus:before {
+    visibility: hidden;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.on-focus-mode h2.md-end-block.md-heading:not(.md-focus):not(.md-focus-container):after {
+    background-color: var(--blur-text-color) !important;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit !important;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit !important;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit !important;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit !important;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit !important;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit !important;
+}
+
+p, blockquote, ul, ol, dl, table {
+    margin: var(--p-spacing) 0;
+}
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+li {
+    margin: 0.5em 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: var(--horizontal-divider-color);
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul, ol {
+    padding-inline-start: 2em;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+.ty-table-edit {
+    margin-top: -1rem !important;
+}
+#write table {
+    margin-top: 1rem;
+    word-break: initial;
+    background-color: var(--table-bg-color);
+}
+table tr {
+    border-top: .1em solid var(--table-border-color);
+    margin: 0;
+    padding: 0;
+}
+table th {
+    font-weight: bold;
+    border: .1em solid var(--table-border-color);
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: .1em solid var(--table-border-color);
+    margin: 0;
+    padding: 6px 13px;
+}
+table thead {
+    background-color: var(--table-header-bg-color);
+}
+table tr:nth-child(2n) {
+    background-color: var(--table-n2-bg-color);
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+#write em {
+    padding: 0 5px 0 2px;
+}
+
+/* height light */
+#write mark {
+    border: .1em solid var(--height-light-border-color);
+    color: var(--height-light-color);
+    background-color: transparent;
+    padding: .1rem .5rem;
+    border-radius: 2rem;
+    margin: 0 .2rem;
+    font-size: .95rem;
+}
+
+/*shortcut*/
+kbd {
+    border: .1em solid #5b5b5e;
+    background: transparent;
+    color: var(--text-color);
+    margin: 0 .4rem;
+    font-family: var(--text-font) !important;
+    font-size: .95rem;
+    padding: .3em .4em;
+    border-radius: .4em;
+    box-shadow: .1em .1em .2em rgba(0, 0, 0, 0.3);
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 12px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+/*YAML*/
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.45;
+    background-color: var(--yaml-bg-color);
+    border: 0;
+    border-radius: 2px;
+    color: var(--yaml-color);
+    margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+    bottom: .375rem;
+}
+
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+.md-image > .md-meta {
+    border-radius: 2px;
+    font-family: initial;
+    padding: 2px 0 0 4px;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.typora-quick-open-item {
+    font-size: 1rem !important;
+    height: 50px;
+    padding-left: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#typora-quick-open {
+    box-shadow: 0 0 8px #00000045;
+    padding: 0;
+}
+
+.ty-quick-open-category.ty-has-prev .ty-quick-open-category-title {
+    border-top: none;
+}
+
+#typora-quick-open-input {
+    margin: 8px;
+    box-shadow: none;
+    border-radius: 2px;
+}
+
+#typora-quick-open-input input {
+    font-size: 1rem;
+    box-shadow: none;
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 32px;
+    max-height: 32px;
+    border: none;
+}
+
+.modal-dialog#typora-quick-open {
+    border-radius: 8px;
+}
+
+.ty-quick-open-category-title {
+    padding-left: 8px;
+    color: #BEBEBE;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+
+.typora-quick-open-item-path {
+    font-size: 0.8rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 1px;
+}
+
+/*search input*/
+.form-control {
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+}
+
+#md-searchpanel .btn {
+    border-radius: 2px;
+}
+
+#search-panel-replaceall-btn {
+    padding-right: 5px !important;
+    text-align: center !important;
+}
+
+#search-panel-replace-btn {
+    text-align: center !important;
+}
+
+#md-searchpanel input {
+    background: var(--input-bg-color);
+    border-radius: 2px;
+}
+
+.searchpanel-search-option-btn {
+    border-radius: 2px;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+}
+
+.searchpanel-search-option-btn.active {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: initial;
+}
+
+/*sidebar*/
+.file-library-node.file-tree-node.file-node-root {
+    font-size: var(--file-tree-text-size);
+}
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+.file-node-content {
+    display: flex;
+    align-items: center;
+}
+.file-node-open-state {
+    margin-right: .5rem;
+}
+.file-node-icon {
+    margin-right: .5rem;
+}
+
+#typora-sidebar {
+    font-size: inherit;
+    font-family: var(--title-font);
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+.file-list-item-summary, .file-list-item-parent-loc, .file-list-item-time, .file-list-item-summary {
+    font-size: 0.9rem !important;
+    font-family: var(--text-font);
+}
+
+.file-list-item-file-ext-part {
+    display: none;
+}
+
+.outline-item {
+    font-size: var(--toc-text-size);
+}
+
+/*footnotes mark*/
+#write .md-footnote {
+    background-color: inherit;
+    color: var(--drake-highlight);
+    font-size: 0.9rem;
+    border-radius: 0.9rem;
+    padding-left: 0;
+}
+
+#write .md-footnote:before {
+    content: "[";
+}
+
+#write .md-footnote:after {
+    content: "]";
+}
+
+/*footnotes content*/
+.md-hover-tip .code-tooltip-content {
+    border-radius: 2px;
+}
+
+/*footnotes title*/
+span.md-def-name {
+    padding-right: 3ch;
+    padding-left: 0;
+    position: relative;
+    font-weight: normal;
+}
+
+/*footnotes desc*/
+.footnotes {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--text-color);
+    position: relative;
+}
+
+/*footnotes tooltip text*/
+.code-tooltip-content .md-plain {
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+
+.code-tooltip-content code {
+    padding: 0 2px;
+    font-family: inherit;
+    color: var(--footnotes-highlight);
+    background-color: inherit;
+}
+
+.code-tooltip-content a {
+    color: var(--footnotes-highlight);
+}
+
+div.code-tooltip-content {
+    box-shadow: 0 0 8px #00000045;
+    background: var(--footnotes-bg-color);
+}
+
+.footnotes {
+    opacity: 1;
+}
+
+.md-def-name:after {
+    content: ". ^";
+    color: var(--text-color);
+}
+
+.md-def-footnote .md-def-name:before {
+    content: "";
+    color: var(--text-color);
+    position: absolute;
+}
+
+.md-def-name:before {
+    content: "";
+    color: var(--text-color);
+    position: absolute;
+}
+
+.md-content.md-url, .md-def-content.md-def-url.md-auto-disp {
+    text-decoration: none;
+    border-bottom: .1rem solid var(--text-color);
+}
+
+.CodeMirror-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.file-list-item-summary {
+    font-size: 1em;
+}
+
+.pin-outline #outline-content .outline-active strong, .pin-outline .outline-active {
+    font-weight: 500;
+    color: var(--outline-active-color);
+}
+
+.file-list-item.active {
+    border-left: 4px solid var(--drake-accent);
+}
+
+#md-searchpanel .btn:not(.close-btn):hover {
+    box-shadow: none;
+    background: var(--btn-hover-bg-color);
+}
+
+/*checkbox*/
+#write input[type=checkbox] {
+    opacity: 0;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+    margin-top: 0;
+    top: 0;
+}
+
+#write .ul-list li.md-task-list-item.task-list-done::before {
+    content: "";
+    background: var(--checkbox-checked) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+}
+#write .ul-list li.md-task-list-item.task-list-not-done::before {
+    content: "";
+    background: var(--checkbox-unchecked) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+}
+.task-list-item p {
+    line-height: 1.6rem;
+}
+
+/*insert table*/
+.btn {
+    border-radius: 2px;
+}
+
+.modal-content {
+    border-radius: 8px;
+}
+
+.btn-primary:hover, .btn-primary:active {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--drake-highlight);
+}
+
+.btn-primary {
+    background-color: transparent;
+    color: var(--drake-highlight);
+}
+
+.btn-default {
+    background-color: transparent;
+}
+
+.btn:active {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+#table-insert-col, #table-insert-row {
+    background: var(--input-bg-color);
+    border-radius: 2px;
+}
+
+/*preference panel*/
+#megamenu-content {
+    background-image: none !important;
+    background-color: var(--bg-color);
+}
+#top-titlebar {
+    height: inherit;
+    background-color: var(--bg-color);
+}
+#megamenu-menu-sidebar {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.long-btn {
+    width: inherit;
+    min-width: 300px;
+    border: 1px solid var(--text-color);
+    border-radius: 6px;
+}
+.megamenu-menu-panel h1 {
+    margin-bottom: 3rem;
+    text-align: left;
+}
+.megamenu-menu-panel h1, .megamenu-menu-panel h2 {
+    font-weight: normal;
+}
+#recent-file-panel-search-input {
+    height: 45px;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    padding-left: 8px;
+}
+#recent-file-panel-search-input::placeholder {
+    color: var(--text-color);
+    opacity: .5;
+}
+.megamenu-menu-header {
+    border-bottom: none;
+}
+#recent-file-panel-action-btn {
+    background: none;
+    border: none;
+}
+#recent-file-panel-action-btn-container {
+    float: none;
+    display: inline-block;
+}
+#top-titlebar .toolbar-icon.btn.hover, #top-titlebar .toolbar-icon.btn:hover {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--text-color);
+}
+.megamenu-menu-panel .btn:hover {
+    background-color: var(--btn-hover-bg-color) !important;
+    color: var(--text-color);
+}
+#recent-file-panel tbody tr:nth-child(2n-1),
+.megamenu-menu-panel table thead,
+.megamenu-menu-panel table tr {
+    background-color: transparent;
+}
+.megamenu-menu-panel table {
+    font-weight: normal;
+}
+#megamenu-back-btn {
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+.megamenu-menu-header #megamenu-menu-header-title {
+    color: var(--text-color);
+}
+header, .context-menu, .megamenu-content, footer {
+    font-family: var(--text-font);
+}
+.ty-preferences select {
+    padding-left: 2px;
+}
+.preference-item-hint {
+    font-size: 14px;
+}
+a.ty-link {
+    color: var(--a-color);
+    margin: 0 .2rem;
+}
+
+/**
+    code render
+    Name: IntelliJ IDEA darcula theme
+    From IntelliJ IDEA by JetBrains
+ */
+.cm-s-inner.CodeMirror {
+    background: none;
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-meta {
+    color: #BBB529;
+}
+.cm-s-inner span.cm-number {
+    color: #6897BB;
+}
+.cm-s-inner span.cm-keyword {
+    color: #CC7832;
+}
+.cm-s-inner span.cm-def {
+    color: #FFD760;
+}
+.cm-s-inner span.cm-variable {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-variable-2 {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-variable-3 {
+    color: #9876AA;
+}
+.cm-s-inner span.cm-type {
+    color: #AABBCC;
+}
+.cm-s-inner span.cm-property {
+    color: #FFC66D;
+}
+.cm-s-inner span.cm-operator {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-string {
+    color: #6A8759;
+}
+.cm-s-inner span.cm-string-2 {
+    color: #6A8759;
+}
+.cm-s-inner span.cm-comment {
+    color: #787878;
+}
+.cm-s-inner span.cm-link {
+    color: #CC7832;
+}
+.cm-s-inner span.cm-atom {
+    color: #CC7832;
+}
+.cm-s-inner span.cm-error {
+    color: #BC3F3C;
+}
+.cm-s-inner span.cm-tag {
+    color: #E8BF6A;
+}
+.cm-s-inner span.cm-quote {
+    color: #a6e22e;
+}
+.cm-s-inner span.cm-attribute {
+    color: #9876AA;
+}
+.cm-s-inner span.cm-qualifier {
+    color: #6A8759;
+}
+.cm-s-inner span.cm-bracket {
+    color: #E8BF6A;
+}
+.cm-s-inner span.cm-builtin {
+    color: #FF9E59;
+}
+.cm-s-inner span.cm-special {
+    color: #FF9E59;
+}
+.cm-s-inner span.cm-matchhighlight {
+    color: #FFFFFF;
+    background-color: rgba(50, 89, 48, .7);
+    font-weight: normal;
+}
+.cm-s-inner span.cm-searching {
+    color: #FFFFFF;
+    background-color: rgba(61, 115, 59, .7);
+    font-weight: normal;
+}
+.cm-s-inner .CodeMirror-gutters {
+    border-right: 1px solid rgba(120, 120, 120, 0.3);
+    background: var(--code-block-bg-color);
+}
+.cm-s-inner .CodeMirror-linenumber {
+    color: #585b5d;
+}
+.cm-s-inner .CodeMirror-matchingbracket {
+    background-color: #3B514D;
+    color: #FFEF28 !important;
+}
+.cm-s-inner .CodeMirror-selected {
+    background: #214283 !important;
+}
+.cm-s-inner .CodeMirror-selectedtext {
+    background: #214283 !important;
+}
+.cm-s-typora-default .CodeMirror-selectedtext {
+    background: var(--select-text-bg-color) !important;
+}
+.cm-overlay.CodeMirror-selectedtext {
+    background: var(--select-text-bg-color) !important;
+}
+.cm-s-inner div.CodeMirror-cursor {
+    border-left: 1px solid var(--code-block-color);
+}
+.cm-s-inner .cm-header, .cm-s-inner.cm-header {
+    color: #FFD760;
+    font-weight: normal;
+}
+
+
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG2"] path[data-c], mjx-container[jax="SVG2"] use[data-c] {
+  stroke-width: 3;
+}
+
+g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+
+.MathJax g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+							stroke-width: 0;
+						} @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>实践创造人生意义，人生意义就是经历本身</title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><style>#subtitle{font-size:smaller;}@media(max-width:576px){#write h1{font-size:1.7rem;}#subtitle{font-size:12px;}}.md-toc{zoom: 90%;margin-left:-1rem;}</style><p>&nbsp;</p><h1>实践创造人生意义<br>人生意义就是经历本身</h1><p>&nbsp;</p><div id="subtitle" style="text-align:center;color:gray;">3句话、3个方法，从0到1！—— 我的马克思主义实践论</div><p>&nbsp;</p><div style="text-align:center;color:gray;font-size:smaller;">作者：李毅</div><div style="text-align:center;color:gray;font-size:smaller;">2024年4月20日</div><p>&nbsp;</p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n4846"><a class="md-toc-inner" href="#一三句话">一、三句话</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4847"><a class="md-toc-inner" href="#1-实践是真理现实力量的表达">1. 实践是真理现实力量的表达</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4862"><a class="md-toc-inner" href="#2-认识是对实践的观察和总结">2. 认识是对实践的观察和总结</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4872"><a class="md-toc-inner" href="#3-真理可以用正确的认识描述">3. 真理可以用正确的认识描述</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n4921"><a class="md-toc-inner" href="#二三个方法">二、三个方法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4923"><a class="md-toc-inner" href="#1-立即行动的奥秘1秒钟决策">1. 立即行动的奥秘：“1秒钟决策”</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4928"><a class="md-toc-inner" href="#2-进入状态的奥秘先做5分钟">2. 进入状态的奥秘：“先做5分钟”</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4933"><a class="md-toc-inner" href="#3-持续实践的奥秘最小可行性方案">3. 持续实践的奥秘：“最小可行性方案”</a></span></p></div><h2 id='一三句话'><span>一、三句话</span></h2><h3 id='1-实践是真理现实力量的表达'><span>1. 实践是真理现实力量的表达</span></h3><p><span>　　实践是“身”的运动。以身入局，以身证道，以身作则，身体力行。</span></p><p><span>　　</span><strong><span>以身入局</span></strong><span>：</span><strong><span>以身体的运动倒逼认知的改变</span></strong></p><p><span>　　“局”就是现状、外部环境、既有认识等的藩篱，所谓“局面”、“局限”。以身入局，就是将自己的身体投入局面之中，代入局限之内，运动破局。特别地，将自己的身体投入既有认识的局</span><small style="color:gray;"><span>（你的认识，给你带来了一个局）</span></small><span>，通过身体的运动与局面的交互，打破既有认识的局限。以身入局，强调必须要有身的参与。仅有认识的参与，是不足以打破认识自身的局限的，要以身体的运动倒过来逼迫认识的改变。</span></p><p><span>　　</span><strong><span>以身证道</span></strong><span>：</span><strong><span>以身体的运动催发真理的表达</span></strong></p><p><span>　　“道”就是真理、真相、真实的规律，但这个“道”</span><small style="color:gray;"><span>（真理）</span></small><span>并不是独立地、客观地存在着的，而是必须要在身体的运动中才能展现和发挥作用。所谓“证道”，并非要“证明有一个道的存在”，而是要“使道的作用展现出来”，展现出来，借以观察和总结，形成认识</span><small style="color:gray;"><span>（以新的认识突破、覆盖、纠正旧的、错误的认识）</span></small><span>。这个过程必须要有身体的参与，仅有认识的参与，并不能使真理的作用发挥和展现出来，所以叫做“以身证道”。</span></p><p><span>　　</span><strong><span>以身作则</span></strong><span>：</span><strong><span>以身体的运动制定运动的法则</span></strong></p><p><span>　　“则”就是法则、规则、遵循的方便，是一种认识</span><small style="color:gray;"><span>（自身局限被突破）</span></small><span>后的调整改进。以身作则，强调必须要有身的参与，要由身体的运动去制定规则，仅有认识的参与，是不足以制定规则的。只有以身作的则，这样的规则才能靠得住、站得出</span><small style="color:gray;"><span>（关键时刻能站出来）</span></small><span>、顶得上。</span></p><p><span>　　</span><strong><span>身体力行</span></strong><span>：</span><strong><span>身体的运动其标志是力的输出</span></strong></p><p><span>　　身体力行，强调除了要有身的参与，还要有力的输出，身的参与的实质就是力的输出，力的输出就是运动。实践是身的运动，没有力的输出，身的参与便苍白无力，这样的实践不足以使真理的作用发挥和展现出来。</span></p><p><span>　　实践和真理是一组对象性关系，而不是主客二分关系。主客二分关系意味着主客体在未发生互动之前便可独立存在和已独立存在了，对象性关系则意味着互为对象性关系的主体之间必须在彼此需要和互动关系中才能存在自身。实践和真理是对象性关系，真理如果脱离了实践便不复存在</span><small style="color:gray;"><span>（失去真理之所以为真理的基础，失去真理自身的判据）</span></small><span>，实践如果脱离了真理也不复存在</span><small style="color:gray;"><span>（实践过程中没有伴随真理的表达，则实践必为非实践）</span></small><span>。</span></p><p><span>　　即是说：——</span></p><p><span>　 （1）要确认所谓“实践”是否为实践，必须要确认所谓“实践”过程中是否有真理的表达发生。</span></p><p><span>　 （2）要确认所谓“真理”是否为真理，必须要确认所谓“真理”表达时是否伴随有实践的过程。</span></p><p><span>　　举一个浪漫点的例子，《棋魂》中的佐为在魂魄消散以后，进藤光怎么也找不到他，最终只有在不断地对弈落子过程中，才能看到佐为的表达。实践是真理现实力量的表达，没有实践，所谓“真理”就是虚幻的、无力量的、不存在的，没有脱离实践的真理！</span></p><h3 id='2-认识是对实践的观察和总结'><span>2. 认识是对实践的观察和总结</span></h3><p><span>　　认识是“思”的运动</span><small style="color:gray;"><span>（田指用头脑考虑，心指用心灵感受）</span></small><span>，“思”的对象是实践的过程和结果。</span></p><p><span>　　</span><strong><span>区别认识与知识</span></strong><span>：</span><strong><span>未经实践只有知识，经过实践才有认识</span></strong></p><p><span>　　“思”的运动即对实践的观察、扬弃、总结，最终形成认识。</span></p><p><span>　　即是说：——</span></p><p><span>　　（1）认识是对实践的观察和总结，认识必须通过实践获得，所有未经实践的，都不能称为认识。</span></p><p><span>　　（2）通过书本获得、道听途说、未经实践的只能称为“知识”；无论何种途径获得的，经过实践的才能称为“认识”。</span></p><p><span>　　“认知”不等于“认识”，“认知”是“认识”和“知识”的总和。</span></p><p><span>　　知识的作用在于拓展想象力，认识的作用在于提炼和把握真理，因为认识是基于实践的，而实践一定是真理的表达。</span></p><p><span>　　知识处于认识之外，未必是、未必不是真理的表达，因为知识是未经实践的，所以必须经过实践确认才能成为认识。</span></p><h3 id='3-真理可以用正确的认识描述'><span>3. 真理可以用正确的认识描述</span></h3><p><span>　　真理是一个实践的对象性概念，所以真理也会因为社会实践水平的发展而发展，对应的认识也会有以前的和现在的之分。</span></p><p><span>　　认识是基于实践的，但认识因为是人的认识，也是具备特殊性和历史局限性的。所以，认识也会有正确的和错误的之分。</span></p><p><span>　　因为真理只在实践中表达，为了运用真理指导和发展实践，使我们在实践之前就能有选择地规避掉已知的确定的失败可能性，我们必须把握真理。然而，实践是无穷的所以真理也是无穷的，实践是变化的所以真理也是变化的，我们并不能把握全部的、变化无穷的真理，我们只能在一段时间内把握部分的真理，这部分真理通过用正确的认识进行描述，可以在一定程度上指导和发展我们的实践，因此我们将真理纳入了我们的认识之中。至此，我们可以说，并不存在一个独立于实践之外、认识之外的客观真理，是实践成就了真理的出现，而且真理一定可以被认识，因为认识之外无真理，认识之外的叫做未知，未知就是未知，未知是混沌，不能认为混沌是存在于认识之外的真理。所以知识并不能描述真理，因为知识连认识都不算，更谈不上正确的认识。</span></p><p><span>　　但我们仍然</span><strong><span>不能说真理就是正确的认识，真理只是可以通过正确的认识进行描述</span></strong><span>，因为认识是对实践的观察和总结，认识形成时，实践已经结束了，所以即便正确的认识也只是真理的镜像，而不能成为真理。检验认识的正确与否，可以通过实践再现真理的表达。“实践是检验真理的唯一标准”不能理解为“先有了一个真理，实践只是去检验这个真理是否真是真理的唯一标准”，不是这样的，实践是真理的源泉，离开了实践便无所谓真理存在。所以，“实践是检验真理的唯一标准”应当理解为“实践是检验认识是否正确的唯一标准”，然后，用这种经过实践检验的正确的认识描述真理，依据这种用正确的认识所描述的真理去指导实践使真理的现实力量再次进行表达，并发展出更高水平的实践催发更深层次的真理现实力量的表达。</span></p><p>&nbsp;</p><p><span>　</span><img src="img/实践、认识和真理的关系.png" style="zoom:30%;border-radius:20px;"/><span> </span></p><p>&nbsp;</p><p><strong><span>论对象性关系</span></strong></p><p><span>　　所谓客观规律</span><small style="color:gray;"><span>（“真理”）</span></small><span>，其实是一种与实践相对应的</span><small style="color:gray;"><span>（以实践为对象、与实践互为对象性关系的）</span></small><span>的对象性的规律</span><small style="color:gray;"><span>（真理）</span></small><span>。这种对象性的规律，即是实践自身的法则、实践的法则。</span></p><p><span>　　所谓“实践自身的法则、实践的法则”，即是说该法则是由实践创造的，该法则的存在依据的是实践的存在，该法则因实践的存在而存在，因实践的不复存在而不复存在，强调是“实践的法则”即是说该法则不是客观规律自身，而是实践的法则、对象性的法则。同时，实践创造了这种法则的同时又受到这种法则的约束</span><small style="color:gray;"><span>（即实践无法超越实践本身的限制而实现）</span></small><span>，所以这种法则又是“实践自身的法则”。这告诉我们，对于“客观规律”，一定不能臆想，而一定要让它在实践的过程中发生，然后观察总结，一定不能把它作孤立地、静止地看待，一定要落实到某种对应的实践上去，才能理解这种“客观规律”的本质其实是对应某种实践的法则。</span></p><blockquote><p style="margin-top:10px;">　　马克思说，传统的认识论，先把<b>主体与客体</b>区分开来，没有发现这两者<b>之间其实是种对象性关系，主体同时是那个客体的对象，互相彼此都是对象，这才是存在的真实的证明。</b>人分男人和女人，女人怎么证明自己的存在？因为男人对她的迫切需要和她对男人的迫切需要，她就是存在的。男人也通过对女人的迫切需要和女人对他的迫切需要，证明他也是存在的。<small style="color:gray;">（存在是一种对象性关系，不存在独立存在的事物，存在一定是对象性的存在，）</small>对事物的存在有着这种最根本的论证方法。</p><p><span>　　爱情是有存在论意义的，它是不可遏制的需要，这就叫存在。世间万物的存在，都是对象性关系的存在。这样马克思就在他的哲学革命当中提出了自己的真理观：</span><strong><span>真理是对象性的真理，而不是客观的真理。</span></strong><span>我们通常的语言总是说“客观的”，不会用“对象性的”。语言是很顽固的，在语言的一种表达形式当中，隐藏了某种哲学上的谬见、形而上学的错误，但是没办法，所以你要跟随着马克思经历一场哲学革命是很困难的事情。</span></p><p><span>　　我们现在还在说客观发展规律，“客观的”词还在用。客观规律意味着有一个认识它的主体，又是主客二分。什么叫客观规律？客观规律就是实践自身的法则，是实践的法则</span><small style="color:gray;"><span>（即客观规律其实只是由实践创生出来的法则，是因为有了实践才有了客观规律）</span></small><span>，而不是事物自身的客观规律</span><small style="color:gray;"><span>（不存在事物自身的客观规律，而是通过实践为事物立法，客观规律即实践自身的法则）</span></small><span>。离开实践讲客观规律，严重的后果就会隐藏在其中：谁有权宣布客观规律？虽然我们不信上帝，但是客观规律充当了上帝，然后认识上帝的人颁布了客观规律给我们，然后我们服从，这是有极大的社会实践后果的。离开了民众的实践，谁有资格颁布客观真理给我们？以前认为有，然后你不服从就叫违背客观规律，服从就叫符合客观规律。</span><strong><span>在这种唯物主义的客观规律的词语当中隐藏着一个上帝在呢！我们不要去讲这种所谓客观规律，我们讲的是实践自身生发出真理来！</span></strong></p><p><span>　　“实践是检验真理的唯一标准”，这话说对了，但是不够，“实践还是真理的源泉”。如果光讲标准，就是说先要有一个真理，然后拿实践检验一下，实践变成一个已经形成的真理是否真的是真理的一个标准，一个检验的标准。不！</span><strong><span>实践是什么？实践是真理的现实力量的表达！</span></strong><span>所以我们要读懂马克思的本意，不要被某种词语迷惑了。</span></p><div style="text-align:right;font-size:smaller;padding-bottom:10px;">—— 王德峰<a href="https://www.bilibili.com/video/BV1WG411q7u3/">《实践是检验真理的唯一标准，这话说对了，但是不够！》</a></div></blockquote><p>&nbsp;</p><p><strong><span>再论对象性关系</span></strong></p><p><span>　　实践、认识、真理，三者的关系就像三根互相支撑的筷子，抽掉了谁，另外两个都不复存在，他们同生共死。</span></p><p><span>　　所以不存在全知全能，全知全能了，实践就坍塌了；实践坍塌了，真理也就坍塌了，还全知全能？反证矛盾。</span></p><p><span>　　所以王阳明的“知行合一”说法，本质上并不是在混淆知行的概念，而是在强调“知”和“行”的对象性关系，知不离行，行不离知。知行是本末的关系，但本末并不意味着偏重</span><small style="color:gray;"><span>（有偏重就会有偏废）</span></small><span>，而是强调他们是一体的，是“根”与“梢”的关系，“根”与“梢”都在一棵树上，必须一以贯之，而不能斩断他们单独去看。斩断了知和行的共生关系，知就死了，行也就死了，只有二者相互发挥，才能共生，谁离了谁也不能独活。</span></p><p>&nbsp;</p><p><strong><span>论辩证法</span></strong></p><p><span>　　鸡生蛋，蛋生鸡。先有鸡还是先有蛋？</span></p><p><span>　　这个问题的答案并不重要，鸡和蛋其实也是一种对象性关系。这个问题其实是想引导我们辩证地看待事物。这个问题中蕴含着这样一个事实，先有蛋就可以孵小鸡，先有鸡就可以生鸡蛋，最终形成一个循环。那么要想进入一个循环，应该考虑的不是先有鸡还是先有蛋的问题，而是当下自己能做到哪个。能做到哪个就先去做哪个，然后殊途同归，最终都能补完循环。</span></p><p><span>　　所以，是先有强大的意志才能保证持续的锻炼，还是先有持续的锻炼才能塑造强大的意志，这都不重要。意志不足，可以先去锻炼身体。身体孱弱，可以先去磨练意志。为了磨练意志，去锻炼身体，不是走错了路，而是你现在能做到的只有锻炼身体。为了锻炼身体，去磨练意志，也不是走错了路，而是你现在能做到的只有磨练意志。前者比如一个意志薄弱的健全人，后者比如一个因伤残缺卧病的人。</span></p><p><span>　　事情总会得到解决，但并不总是正面解决、就本身而解决。为了磨练意志去磨练意志，往往效果不好</span><small style="color:gray;"><span>（内耗）</span></small><span>。为了锻炼身体去锻炼身体，往往中途放弃</span><small style="color:gray;"><span>（怠惰）</span></small><span>。事物总是相互关联，而并非完全分割，如根是根、叶是叶，但都长在一株植物上，是一体两面、本来合一的关系。譬如跷跷板，譬如杠杆，为了抬高这头不一定要通过抬高这头的方式，也可以通过压低那头的方式，能做到哪个就先去做哪个，最后都会传导到你的目标上去。要知道万事万物都是相连着的，要看到这种联系并善加利用。</span></p><p><span>　　如果你求的是道，就不要受法的限制。道是念头通达，不滞循环，而不是拘泥有法，自我设限。</span></p><p><span>　　所以，先有鸡还是先有蛋？爱先有谁先有谁，老子只要先有一个，最后就全都会有，全都会来。</span></p><p>&nbsp;</p><p><strong><span>再论辩证法</span></strong></p><p><span>　　辩证法不追求静止的、割裂的结论，辩证法追求的是互动地、永续地前进。实践和真理的关系就是辩证的关系，一切对象性的关系，都是辩证的关系。因为一切存在，都是对象性关系的存在，所以一切存在，都是辩证的存在，都是牵一发而动全身的存在，不能也不可能孤立地存在。</span></p><p><span>　　所以，要辩证地看问题，要以联系和发展的眼光来看问题，防止以孤立和静止的形而上学观点来看问题。世界万事万物都是相互联系和不断发展的，任何事物、现象和过程都不是孤立存在的，联系是一切事物、现象和过程所共有的对象性的、普遍的本性，整个世界是一个相互联系、相互依存的统一体，每一具体事物、现象和过程都是这个统一体上的一个“环节”或“链条”。正是客观世界的这种相互联系和相互作用从而构成了事物的运动和发展。</span></p><p><span>　　辩证地看问题绝不是简单的既要看到事物好的一面，又要看到事物坏的一面，而是要看到事物的对象性关系的层面，要看到一切和被观察物相关联的其他物</span><small style="color:gray;"><span>（包括正在观察的我与之有没有关联、有什么关联）</span></small><span>并考察这种对象性关系，先宏观、后微观，先作为整体观察其与其他外部实体的关联，再作为全体观察其内部的各个矛盾的方面，一个事物会以内因为根据、外因为条件发展变化，所以</span><strong><span>辩证地看问题其实质是联系地看问题</span></strong><span>，联系就不是以面来看问题，以面来看问题，无论一面</span><small style="color:gray;"><span>（非黑即白）</span></small><span>、两面</span><small style="color:gray;"><span>（有好有坏）</span></small><span>还是多面</span><small style="color:gray;"><span>（多角度观察）</span></small><span>，本质上还是在孤立、静止地看待这一个问题，联系地看问题是要看到与该问题相关的其他问题以及该问题的内部动力结构，看到问题与问题间以及问题内部发生的关系，看到这些关系是如何引导、促进、成就了被观察的问题成为了当下的问题，并从中找到解决问题的思路。联系地看问题，要能够</span><strong><span>看到各方作用的传导，看到发展变化的可能</span></strong><span>。譬如观察一台机器，不能孤立地只观察到机器自身，而是要观察到它所在的工厂，观察到所在流水线上下游的机器，观察到操作机器的师傅，观察到机器内部的构造，观察到他们之间的关系作用机制和发展变化的可能。譬如观察一个问题，不能孤立地只观察到问题自身，而是要观察到它出现的场合，观察到所在大系统上下级的问题，观察到问题相关的人员，观察到问题内部的矛盾，观察到他们之间的关系作用机制和发展变化的可能。</span></p><p><span>　　独立地看问题，则问题不可解；联系地看问题，则解题有思路。看得到万事万物之间的联系，就看得到解决问题的思路、多种多样的方案，就看得到改造世界的可能、发展变化的可能。有联系就不孤立，有发展就不静止，有联系就有发展，这就叫辩证法！</span></p><p>&nbsp;</p><p><strong><span>还说对象性关系</span></strong></p><p><span>　　“对象性关系”一言，我以为就是马克思主义哲学的宗旨，新的世界观和方法论就隐藏在其中，这是一场哲学的革命！</span></p><p><span>　　旧的唯物主义</span><small style="color:gray;"><span>（纯客观主义）</span></small><span>的哲学家只是在静观世界、单纯地解释世界，只是在描绘世界的图景，似乎这个世界不是人创造的，它和生活在其中的人没有什么关系，人在这个世界中如何生活，是什么样的生存状况，都几乎难以进入哲学的视野。是马克思为旧哲学补全了缺失已久的主体性维度</span><small style="color:gray;"><span>（哲学不能只关注客体，而忽视了认识客体的主体，哲学应当把这个主体也包含进去考量，即考虑的人的存在、人的认识、人的实践对客体的影响）</span></small><span>，唤起了人们在实践中改天换地的巨大激情，是马克思指出了哲学不能只是忙着解释世界而自欺欺人般地忽略掉了人的维度、人的存在，是马克思将哲学拉回到了现实论域，解放了那些畏惧现实、只是沉浸于空想、虚度年华、自我降格的真实的人和他们的人生！是马克思将我们从习惯自我意淫的“头脑风暴”中拉回到现实世界的实践语境，指出哲学家们只是用不同的方式解释世界，而问题在于改变世界。改变世界靠的不是自我催眠以改变那个对世界的看法</span><small style="color:gray;"><span>（是看法，不是认识）</span></small><span>，改变世界靠的是真真切切的实践，是要基于实践去从物理意义和精神意义上改变世界。特别地，马氏在精神意义上的改变世界，是指借由基于实践产生的新的认识在精神意义上改变世界，而不是借由基于空想产生的新的看法在精神意义上改变世界，两者都能实现自洽，但后者只能是一种幻觉。</span></p><p><span>　　“对象性关系”一言中包含了真理观</span><small style="color:gray;"><span>（实践、认识和真理的关系）</span></small><span>，包含了辩证法，包含了马克思主义的全部延展！所以真理，你不能孤立地、静止地看待它，而一定要联系结合实践去看待它，真理因实践而生，因实践而发展，因放弃实践而消灭。这种以对象性关系审察事物的方法，主张和引导你看到事物间对象性关系的方法，就叫辩证法！马克思主义既不是“一元论”，也不是“二元论”，更不是“多元论”，若非要以论的形式划分，或可以划分为“关系论”、“关系运动论”。</span></p><p><span>　　马克思唯物，但不是机械唯物</span><small style="color:gray;"><span>（死的唯物）</span></small><span>，而是辩证唯物</span><small style="color:gray;"><span>（活的唯物）</span></small><span>。唯物强调的是物质第一性，辩证强调的是相比于物质第一性，物质与意识间的辩证关系更加重要。或者按马克思的原话，“实践唯物主义”，强调物质第一性，强调实践第一性。第一并不是唯一，只是个方便的法门，只是能做到哪个就先去做哪个，物质更容易把握，实践更容易完成，但最后的最后，一定是物质与意识兼备、实践与真理环生的活的、动态的局面。</span></p><p><span>　　辩证唯物主义，即是说：——</span></p><p><span>　　（1）物质和意识是对象性关系，但强调物质的第一性，物质是本，意识是末，意识反作用于物质。</span></p><p><span>　　（2）实践和真理是对象性关系，但强调实践的第一性，实践是本，真理是末，真理指导发展实践。</span></p><p><span>　　再次重申，本末并不意味着偏重</span><small style="color:gray;"><span>（有偏重就会有偏废）</span></small><span>，而是强调他们是一体的，是“根”与“梢”的关系，“根”与“梢”都在一棵树上，必须一以贯之，而不能斩断他们单独去看。斩断了物质和意识的共生关系，物质就死了，意识也就死了，斩断了实践和真理的共生关系，实践就死了，真理也就死了，只有二者相互发挥，才能共生，谁离了谁也不能独活。本吸收地里的营养生出末，末展开光合的作用培育本，以此循环，往复新生。</span></p><p>&nbsp;</p><p><span>　　马克思主义最吊诡的地方在于它仍然只是一个理论、学说，你可以选择相信或不相信，当你选择相信的时候，你就会开始实践起来，当你选择不相信的时候，一旦你想去验证它，你就必须展开实践，一旦你进入实践，实际上就已经是认同马克思主义了。马克思实践的理论，从最一开始，就已经把学习这套理论的人</span><small><span style="color:gray;">（认识客体的主体）</span></small><span>考虑在内，这就是对象性关系的极致运用。</span></p><p>&nbsp;</p><h2 id='二三个方法'><span>二、三个方法</span></h2><p><span>　</span><img src="img/三个方法.png" style="zoom:40%;" /><span> </span></p><h3 id='1-立即行动的奥秘1秒钟决策'><span>1. 立即行动的奥秘：“1秒钟决策”</span></h3><p><span>　　当我们极度地痛苦或疲劳时，大脑就会质疑你当时的行为，如果你不能</span><strong><span>在1秒钟内坚决地回应大脑的质疑</span></strong><span>，行为本身就会接受本能的驱使，放弃就会成为唯一的选择。</span><strong><span>大脑会在你的潜能开发到40%左右时开始质疑你当时的行为</span></strong><span>，如果你能在1秒钟内予以坚决回应，便能继续坚持下去。</span></p><p><span>　　当我们身处痛苦中时，我们会认为痛苦永无止境，看不到尽头，其实这只是大脑在那1秒钟产生的假象。认清这一点并永远牢记：痛苦只是暂时的，痛苦总有尽头！在最糟糕的境况中展现出最好的自己，没有什么能比在这种极致的对象性关系中更能证明自己的存在与超越了！不要在自己的身体放弃之前意志就先放弃了，制定一个目标、计划，执行时的意志形态就是连续不断地</span><strong><span>“又坚持1秒，再坚持1秒，……”</span></strong><span>，坚决达成。每当大脑质疑甚至要质疑正在坚持的行为时就坚决予以回绝！直到只有意志还在顽抗，身体已经彻底不行，才能放弃。</span></p><p><span>　　养成这样的习惯，需要提高你承受痛苦的能力，可以从体能锻炼入手，你的任务就是</span><strong><span>不断地超过你正常的停止点</span></strong><span>。就比如你每天锻炼的时候，都要坚持到你能承受的极点，然后逐渐去增加自己的运动量，通过这样的方式来提高自己的痛苦承受能力。在不断突破体能限制的过程中，</span><strong><span>量变会引起质变</span></strong><span>，你会获得扎实的精神力量和真实的自信，这种精神力量和自信会延伸到你平时的学习和工作中。反之，如果你没能在体能挑战中完全发挥，那么你在学习和工作中也会如此。</span></p><p><span>　　立即行动的道理和坚持的道理并无二致，因为所谓</span><strong><span>坚持就是在每一个即将放弃的时刻立即行动起来</span></strong><span>，而</span><strong><span>立即行动就是在每一个即将放弃的时刻坚持予以回绝</span></strong><span>。</span></p><h3 id='2-进入状态的奥秘先做5分钟'><span>2. 进入状态的奥秘：“先做5分钟”</span></h3><p><span>　　人在做事情的时候，不能是先等有了状态后才做事情，而是要先做事情去进入状态。所以，进入状态的奥秘靠的不是静静地等状态来临，而是要先做点什么，哪怕</span><strong><span>把要做的事情先做个5分钟，不要追究细节和考虑完美，就告诉自己先做5分钟</span></strong><span>，然后去做就可以了。事情的发展往往是做着做着，状态就来了，然后状态就会推着你自然地向前走，而不需要你苦心维持，最终完成你想要做的事情。</span></p><p><span>　　“完美主义”扼杀实践，不要追求“完美主义”，要知道完美是建立在完成之上的，最基本的追求应该是“完成主义”。没有完成，完美无从谈起。</span><strong><span>不是不做就还有完美的可能，而是做了才有完美的可能，不做永远不可能完美</span></strong><span>。“要么不做，要做就做到最好”，这句话最是害人，因为“最好”只是个“想象的最好”，而“做”却是一个实践的概念。我们不能用一个想象的、死的框架去框住真实的、鲜活的实践，那样就会杀死实践，连带着那个想象的框架也会被杀死，最后一无所有。因为想象和实践也是对象性关系，没有实践的想象都是空想，但是实践了，想象就能得到实现或者修正，想象和实践就都能立得住，最后收获全部。</span></p><p><span>　　正确的做法是先从做事情开始去进入状态，然后在状态</span><small style="color:gray;"><span>（心流，一种几乎自动的，毫不费力的，但高度集中的意识状态。Flow, an almost automatic, effortless, yet highly focused state of consciousness.）</span></small><span>中，推进事情的发展直至完成。</span><strong><span>完美要在实践中去追求，而不能在想象中去达到</span></strong><span>。“优化主义”，主张</span><strong><span>在不断实践、多次实践的过程中，渐次达到可实现的最高水平</span></strong><span>，“想象”在这个过程中体现为对实践的观察和总结，进而思考更优化的可能性和方案，而不是脱离实践的空想。错误的“完美主义”，妄图“不鸣则已，一鸣惊人”地“一次性达到最高水准”，而对于最高水准和如何达到的认识仍然处于空想阶段，结果往往是扼杀效率、扼杀实践，扼杀了行动力，也彻底扼杀了“完美主义”本身</span><small style="color:gray;"><span>（因为这样的“完美主义”不能指导达成实践的完美、完美的实践，“完美主义”不完美，“完美主义”在实践上的矛盾最终扼杀了自身）</span></small><span>。</span></p><p><span>　　“完美主义”</span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="2.106ex" role="img" focusable="false" viewBox="0 -716 778 931" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.486ex;"><defs><path id="MJX-1-TEX-N-2260" d="M166 -215T159 -215T147 -212T141 -204T139 -197Q139 -190 144 -183L306 133H70Q56 140 56 153Q56 168 72 173H327L406 327H72Q56 332 56 347Q56 360 70 367H426Q597 702 602 707Q605 716 618 716Q625 716 630 712T636 703T638 696Q638 692 471 367H707Q722 359 722 347Q722 336 708 328L451 327L371 173H708Q722 163 722 153Q722 140 707 133H351Q175 -210 170 -212Q166 -215 159 -215Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="2260" xlink:href="#MJX-1-TEX-N-2260"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≠</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">≠</script><span>“要么不做，要做就做到最好”，</span><strong><span>“完美主义”</span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="1.505ex" role="img" focusable="false" viewBox="0 -583 778 665" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.186ex;"><defs><path id="MJX-2-TEX-N-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="3D" xlink:href="#MJX-2-TEX-N-3D"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>=</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">=</script><span>“完成主义”+“优化主义”</span></strong><span>。</span></p><h3 id='3-持续实践的奥秘最小可行性方案'><span>3. 持续实践的奥秘：“最小可行性方案”</span></h3><p><span>　　“大小多少。图难于其易，为大于其细。天下难事，必作于易，天下大事，必作于细。是以圣人终不为大，故能成其大。”</span></p><p><span>　　大是由小成长起来的，多是由少积累起来的，量变引起质变，</span><strong><span>一定要重视量的积累，不失时机地促成事物的飞跃</span></strong><span>。难事是在事后看才是个难事，大事是在事后看才是个大事，做事的时候只有当前这件易事、细事</span><small style="color:gray;"><span>（小事）</span></small><span>。坚持适度原则，掌握个火候分寸，讲究个过犹不及，治大国若烹小鲜。何谓“治大国若烹小鲜”？就是举重若轻，就是在战略上藐视、战术上重视，大事分拆化小，小事逐件化了，这就叫分治</span><small style="color:gray;"><span>（MapReduce，分而治之）</span></small><span>。知道“常为小”而终“不妄为大”的道理，终以“烹小鲜”的心态、方式，去在实践中成长、积累，最终反而得以发展壮大，实现“治大国”的目标。要知道“行百里者半九十”</span><small style="color:gray;"><span>（一百里的路程，走到九十里也只能算是才开始一半而已，因为做事的规律是越接近成功越困难）</span></small><span>，</span><strong><span>只有“持续实践”才能厚积薄发，急功近利往往会走向“间歇性踌躇满志，持续性混吃等死”的局面</span></strong><span>。</span></p><p><span>　　促成飞跃要不失时机，急功近利显然不是促成飞跃的正确方法。</span><strong><span>坚持适度原则，做小事，不要总想着做大事</span></strong><span>。做最小的可行性方案</span><small style="color:gray;"><span>（核心问题，必要解决，接收反馈，验证迭代）</span></small><span>，不要做周密的长期规划，周密的长期规划在当下没有任何意义，正确的做法是：</span><strong><span>保持开放心态，走一步、看一步，随时调整下一步，看五年、想三年、认真干好一两年，如此推进</span></strong><span>。即便韩兵仙，正式统兵之后也是从小战</span><small style="color:gray;"><span>（出陈仓、败章邯、定三秦的是刘邦，韩信第一战是擒魏豹，而且刘邦还分析了韩信能否成功，体现出刘邦知己知彼、知人善任的能力，详见《资治通鉴·汉纪一·汉高帝二年》）</span></small><span>开始打起，然后背水一战，到最后十面埋伏围项羽；即便毛主席，也是从小战开始打起</span><small style="color:gray;"><span>（1917年，24岁的毛泽东组织和带领湖南一师100名学生军成功缴械3000名北洋军，正式的指挥生涯要到10年后，从1927年的秋收起义算起）</span></small><span>，然后四渡赤水，到最后百万雄师过大江。只不过这些历史上的“天才”都起点颇高、成长速度极快，但这并不意味着他们能在初出茅庐之时便可以“毕其功于一役”，反而正是由于他们没有急于求成，而是在持续的实践过程中不断学习和总结经验教训，随着挑战难度和复杂度的不断提高和自身的成功应对，坚实地踏出一步一步，才最终做成了一番丰功伟业。这种丰功伟业是不能在事前就可以周密计划好的，是</span><strong><span>不能用一个想象的路径代替真实的发展的，只能通过持续的实践完成</span></strong><span>，而能够保证持续实践和形成正反馈路径的奥秘，正是不断地制定和执行最小可行性方案。</span></p><p><img src="img/最小可行性方案.png" style="zoom:50%;" /><span> </span></p><p><span>　　何谓“最小可行性方案”？最小可行性方案是一种实践思想，它是</span><strong><span>以极低的成本、最快的速度去落地一个最小的、可行的方案，直接去解决问题的主要矛盾并占据主动</span></strong><span>，通过</span><strong><span>及早地接触实际</span></strong><span>，从而</span><strong><span>获取真实的反馈和验证来改进方案、迭代升级</span></strong><span>，以避免窝在原地做不可持续的方案，纸上谈兵却自以为很有进度，自我陶醉梦想即将实现。“磨刀不误砍柴工”的真正含义，不是让你在砍柴之前先磨刀，只要磨到锋利无比就能够以慢打快、后发制人，而是马上先砍一下，然后再磨、再砍，够用了就不要再磨了，或者发现刀不够用就换锯了，否则只是磨刀却从不砍柴，那就真的会误了砍柴工了，也更不可能发现更好的方法。完美不是刀有多锋利，完美是契合，是所用刀的锋利程度刚好够按工时砍完柴而不误工，是问题的主要矛盾刚好能被最合适地、恰到好处地解决。所以，问题的解决是一个发展的过程，不能追求一蹴而就、一劳永逸，而应当是逐步解决、持续解决。</span><strong><span>先解决问题的主要矛盾，即“完成主义”，再解决问题的次要矛盾，即“优化主义”，这样的解决问题，才是完美主义</span></strong><span>。</span></p><p>&nbsp;</p><p><span>　　</span><strong><span>哲学的解放哪怕再彻底，人的解放也并没有前进一步；只有在现实的世界中使用现实的手段才能实现真正的解放</span></strong><span>。“解放”是一种历史活动，是由历史的关系，即由工业状况、商业状况、农业状况等</span><small style="color:gray;"><span>（生产力）</span></small><span>及其交换关系的状况</span><small style="color:gray;"><span>（生产关系）</span></small><span>促成的，而不是思想活动。历史是现实人类社会实践的历史，而不是可以随心所欲地设想但就是不涉及现实的所谓“历史”。历史的条件成就了我们的实践，也限制了我们的实践，一切都要回到历史发展的角度和现实中来，不能脱离实践妄想，也不能只悬想不实践。</span></p><p><span>　　什么是梦想？</span><strong><span>梦想不应该是一个远大缥缈的、未经实践的、静止的目标，而应该是一种立足现实的、持续实践的、发展的状态</span></strong><span>。所以，不要好高骛远，意思是你要立足现实不断地开展实践，在实践中调整方向，最后在你的时间耗尽之前，你走到了哪里，就是哪里，就在哪里。只要在这个过程中，你一直是处于一种稳定迭代的发展的状态之中，便使所有的时间都充满了意义。应对好高骛远的方法就是实践，而不是劝谏。好高骛远是一种通过想象中的自我、引导者、神圣的事业和团体带来的自我陶醉，好高骛远中存在恐惧因素且缺乏容忍度，以至于最终通向自我排斥，甚至因为目标太过高远，导致旧的“完美主义”作祟，而从未开展实践，以至于最终一事无成；而只有</span><strong><span>通过实践，有所行动、有所成就，将对自我的描绘建立在真实的基础上，建立在自身的潜力和取得的成就上，才能真正达到自我的认同</span></strong><span>。</span></p><p><span>　　开眼看世界！去实践吧！</span><strong><span>实践的结果无所谓痛苦或快乐，真实自有真实的价值</span></strong><span>。面对真实，能骗自己一辈子的人也不是凡人，大多数人骗不了自己一辈子，</span><strong><span>所向、所愿，要建立在真实的基础上去尽可能追求</span></strong><span>，而只要你这样做了，结果也就不重要了，因为你已在实践的过程中经历了自己全部真实的人生，全部真实的人生正是意义本身。</span></p><p><span>　　什么是人生的意义？不要脱离实践去探寻人生的意义！</span><strong><span>人生的意义就是经历本身！</span></strong><span>意义是认识层面的，经历是实践层面的，而认识和实践是一种对象性关系，也就是说意义和经历是一种对象性关系，经历，就有意义！没经历，就没意义！如此而已。所以，每个人的人生意义不同，这回你懂了吗？因为每个人的人生经历不同，所以你</span><strong><span>不必去追求别人的人生意义，因为你无论怎么追求，最终也只能得到自己的人生意义，即你的人生经历本身</span></strong><span>。</span></p><p><span>　　保持主动，有位置先占上，有机会先实操，不要犹豫、不要纠结，做当下能做的，用实践填满自己的一生！足矣。</span></p></div></div>
+</body>
+</html>
